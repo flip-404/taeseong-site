@@ -1,0 +1,31 @@
+name: Auto Create PR from dev to main
+
+on:
+  push:
+    branches:
+      - dev # dev 브랜치에 push가 있을 때 실행
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Create a Pull Request from dev to main
+        run: |
+          # PR 생성에 필요한 변수 설정
+          BASE_BRANCH="main"       # PR의 기본 브랜치
+          HEAD_BRANCH="dev"        # PR의 비교할 브랜치 (source)
+          PR_TITLE="Auto PR from dev to main"  # PR 제목
+          PR_BODY="This PR is automatically created from dev to main."  # PR 본문
+
+          # GitHub API를 사용하여 PR 생성
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -d '{
+                  "title": "'"$PR_TITLE"'",
+                  "body": "'"$PR_BODY"'",
+                  "head": "'"$HEAD_BRANCH"'",
+                  "base": "'"$BASE_BRANCH"'"
+                }' \
+            "https://api.github.com/repos/${{ github.repository }}/pulls"
