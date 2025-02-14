@@ -1,5 +1,5 @@
 const AboutPage = () => {
-  return <>배포 테스트2</>;
+  return <>배포 테스트3</>;
 };
 
 export default AboutPage;
