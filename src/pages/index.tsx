@@ -1,6 +1,6 @@
-import * as React from "react";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import BlogPreview from "../components/BlogPreview";
+import Layout from "../components/Layout";
 
 type BlogListProps = {
   data: {
@@ -25,20 +25,24 @@ type BlogListProps = {
 const IndexPage = ({ data }: BlogListProps) => {
   const posts = data.allMarkdownRemark.edges;
   console.log("posts", posts);
-  return posts.map(({ node }) => (
-    <Link
-      to={`/blog${node.fields.slug}`}
-      key={node.fields.slug}
-      style={{ textDecoration: "none" }}
-    >
-      <BlogPreview
-        title={node.frontmatter.title}
-        description={node.frontmatter.description}
-        date={node.frontmatter.date}
-        tag={node.frontmatter.tag}
-      />
-    </Link>
-  ));
+  return (
+    <Layout>
+      {posts.map(({ node }) => (
+        <Link
+          to={`/blog${node.fields.slug}`}
+          key={node.fields.slug}
+          style={{ textDecoration: "none" }}
+        >
+          <BlogPreview
+            title={node.frontmatter.title}
+            description={node.frontmatter.description}
+            date={node.frontmatter.date}
+            tag={node.frontmatter.tag}
+          />
+        </Link>
+      ))}
+    </Layout>
+  );
 };
 
 export default IndexPage;
