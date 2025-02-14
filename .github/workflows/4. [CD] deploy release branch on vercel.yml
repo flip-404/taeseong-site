@@ -1,23 +1,20 @@
-name: Auto Merge to Release
+name: Deploy to Vercel
 
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
-  merge:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Merge main -> release
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout release
-          git merge --no-ff main -m "chore: Merge main into release"
-          git push origin release
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy to Vercel
+        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
