@@ -5,6 +5,10 @@ on:
     branches:
       - dev # dev 브랜치에 push가 있을 때 실행
 
+permissions:
+  contents: write # 코드 변경에 대한 권한 부여
+  pull-requests: write # PR을 생성하고 수정할 권한 부여
+
 jobs:
   create-pr:
     runs-on: ubuntu-latest
