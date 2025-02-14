@@ -57,12 +57,12 @@ const BlogPreview = ({
   title,
   description,
   date,
-  tags,
+  tag,
 }: {
   title: string;
   description: string;
   date: string;
-  tags: string[];
+  tag: string;
 }) => {
   return (
     <BlogPreviewWrapper>
@@ -72,9 +72,7 @@ const BlogPreview = ({
         <span>{date}</span>
       </Meta>
       <TagList>
-        {tags.map((tag, index) => (
-          <Tag key={index}>{tag}</Tag>
-        ))}
+        <Tag>{tag}</Tag>
       </TagList>
     </BlogPreviewWrapper>
   );
