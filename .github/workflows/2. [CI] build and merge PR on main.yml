@@ -27,18 +27,22 @@ jobs:
         run: yarn build
 
   merge:
-    needs: build
-    runs-on: ubuntu-latest
-    if: success()
+  needs: build
+  runs-on: ubuntu-latest
+  if: success()
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+  steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      - name: Merge PR if build is successful
-        run: |
-          PR_NUMBER=$(jq --raw-output .pull_request.number $GITHUB_EVENT_PATH)
-          echo "Merging PR #$PR_NUMBER"
-          curl -X PUT -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -d '{"commit_message": "Auto-merging PR"}' \
-            "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER/merge"
+    - name: Extract PR number and Merge
+      run: |
+        PR_NUMBER=$(jq --raw-output .pull_request.number $GITHUB_EVENT_PATH)
+        echo "PR Number: $PR_NUMBER"
+
+        # PR 머지
+        response=$(curl -X PUT -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -d '{"commit_message": "Auto-merging PR"}' \
+          "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER/merge")
+
+        echo "Merge response: $response"
