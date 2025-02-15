@@ -17,8 +17,21 @@ const Footer = () => {
     <FooterContainer>
       <p>
         © {new Date().getFullYear()}{" "}
-        <Link to="https://www.gatsbyjs.com/">Taeseong</Link>, Built with
-        <Link to="https://github.com/flip-404"> Gatsby</Link>
+        <Link
+          to="https://www.gatsbyjs.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Taeseong
+        </Link>
+        , Built with
+        <Link
+          to="https://github.com/flip-404"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gatsby
+        </Link>
       </p>
     </FooterContainer>
   );

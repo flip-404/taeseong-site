@@ -1,36 +1,38 @@
 import styled from "@emotion/styled";
 
 const BlogPreviewWrapper = styled.div`
-  border: 1px solid #e0e0e0;
+  width: 100%;
   border-radius: 8px;
   padding: 16px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
+  margin-bottom: 16px;
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #d2ebd1;
   }
 `;
 
 const Title = styled.h2`
   font-size: 1.6rem;
-  color: #333;
-  margin: 0 0 8px;
   font-weight: bold;
+  color: #40d60d;
+  margin: 0 0 8px;
 `;
 
 const Description = styled.p`
   font-size: 1rem;
-  color: #666;
+  color: black;
   margin: 0 0 12px;
+  overflow: hidden;
 `;
 
 const Meta = styled.div`
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+`;
+
+const CreatedAt = styled.div`
+  font-size: 12px;
   color: #999;
-  margin: 0 0 12px;
+  margin-right: 8px;
 `;
 
 const TagList = styled.div`
@@ -39,18 +41,12 @@ const TagList = styled.div`
 `;
 
 const Tag = styled.span`
-  background-color: #f1f1f1;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 16px;
-  font-size: 0.9rem;
-  color: #007bff;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
+  font-size: 0.7rem;
+  color: black;
+  margin-right: 6px;
+  border: 1px solid #57d72c;
 `;
 
 const BlogPreview = ({
@@ -69,11 +65,11 @@ const BlogPreview = ({
       <Title>{title}</Title>
       <Description>{description}</Description>
       <Meta>
-        <span>{date}</span>
+        <CreatedAt>{date}</CreatedAt>
+        <TagList>
+          <Tag>{tag}</Tag>
+        </TagList>
       </Meta>
-      <TagList>
-        <Tag>{tag}</Tag>
-      </TagList>
     </BlogPreviewWrapper>
   );
 };
