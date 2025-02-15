@@ -1,5 +1,5 @@
-import BasicInformation from "../../components/\babout/BasicInformation";
-import Introduction from "../../components/\babout/Introduction";
+import BasicInformation from "../../components/about/BasicInformation";
+import Introduction from "../../components/about/Introduction";
 import Layout from "../../components/Layout";
 
 const AboutPage = () => {
