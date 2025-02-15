@@ -1,13 +1,21 @@
-import BasicInformation from "../../components/\babout/BasicInformation";
-import Introduction from "../../components/\babout/Introduction";
+import BasicInformation from "../../components/about/BasicInformation";
+import Experience from "../../components/about/Experience";
+import Introduction from "../../components/about/Introduction";
 import Layout from "../../components/Layout";
+import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
   return (
-    <Layout>
-      <BasicInformation />
-      <Introduction />
-    </Layout>
+    <>
+      <Helmet>
+        <title>Taeseong Dev Blog | Resume</title>
+      </Helmet>
+      <Layout>
+        <BasicInformation />
+        <Introduction />
+        <Experience />
+      </Layout>
+    </>
   );
 };
 

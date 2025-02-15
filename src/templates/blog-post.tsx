@@ -3,12 +3,7 @@ import Layout from "../components/Layout";
 import styled from "@emotion/styled";
 import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
-
-const BlogPostContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
+import { Helmet } from "react-helmet";
 
 const PostDetails = styled.div`
   border-bottom: 1px solid #d0d0d0;
@@ -61,18 +56,23 @@ interface BlogPostProps {
 export default function BlogPost({ data }: BlogPostProps) {
   const post = data.markdownRemark;
   return (
-    <Layout>
-      <PostDetails>
-        <Title>{post.frontmatter.title}</Title>
-        <CreatedAt>{post.frontmatter.date}</CreatedAt>
-        <Tags>
-          {["React", "CSS"].map((e) => (
-            <Tag>{e}</Tag>
-          ))}
-        </Tags>
-      </PostDetails>
-      <Content dangerouslySetInnerHTML={{ __html: post.html }} />
-    </Layout>
+    <>
+      <Helmet>
+        <title>Taeseong Dev Blog | {post.frontmatter.title}</title>
+      </Helmet>
+      <Layout>
+        <PostDetails>
+          <Title>{post.frontmatter.title}</Title>
+          <CreatedAt>{post.frontmatter.date}</CreatedAt>
+          <Tags>
+            {["React", "CSS"].map((e) => (
+              <Tag>{e}</Tag>
+            ))}
+          </Tags>
+        </PostDetails>
+        <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Layout>
+    </>
   );
 }
 

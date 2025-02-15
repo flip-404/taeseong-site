@@ -19,5 +19,17 @@ module.exports = {
         plugins: [`gatsby-remark-prismjs`],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Taeseong Dev Blog`,
+        short_name: `Taeseong Dev Blog`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `minimal-ui`,
+        icon: `static/favicon.png`,
+      },
+    },
   ],
 };
