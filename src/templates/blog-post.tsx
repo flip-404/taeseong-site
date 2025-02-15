@@ -4,12 +4,6 @@ import styled from "@emotion/styled";
 import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-const BlogPostContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-
 const PostDetails = styled.div`
   border-bottom: 1px solid #d0d0d0;
 `;
