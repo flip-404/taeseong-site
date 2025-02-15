@@ -30,7 +30,6 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {" "}
           Gatsby
         </Link>
       </p>
