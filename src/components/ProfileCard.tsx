@@ -72,7 +72,13 @@ const ProfileCard = () => {
         </Description>
         <Links>
           <Link to="/about">About</Link>
-          <Link to="https://github.com/flip-404">Github</Link>
+          <Link
+            to="https://github.com/flip-404"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </Link>
         </Links>
       </Info>
     </ProfileCardContainer>
