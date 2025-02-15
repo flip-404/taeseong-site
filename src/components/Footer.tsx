@@ -18,15 +18,15 @@ const Footer = () => {
       <p>
         © {new Date().getFullYear()}{" "}
         <Link
-          to="https://www.gatsbyjs.com/"
+          to="https://github.com/flip-404"
           target="_blank"
           rel="noopener noreferrer"
         >
           Taeseong
         </Link>
-        , Built with
+        , Built with&nbsp;
         <Link
-          to="https://github.com/flip-404"
+          to="https://www.gatsbyjs.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
