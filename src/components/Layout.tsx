@@ -13,7 +13,7 @@ const LayoutContainer = styled.div`
 
 const Main = styled.main`
   padding-top: 80px;
-  min-width: 780px;
+  max-width: 780px;
 `;
 
 type LayoutProps = {
