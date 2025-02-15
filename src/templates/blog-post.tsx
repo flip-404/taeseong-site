@@ -1,7 +1,8 @@
-import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import styled from "@emotion/styled";
+import "prismjs/themes/prism-solarizedlight.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 const BlogPostContainer = styled.div`
   width: 100%;
@@ -37,6 +38,12 @@ const Tag = styled.span`
 
 const Content = styled.div`
   padding-top: 24px;
+
+  pre {
+    background: #d5ddef !important;
+    border-radius: 5px;
+    padding: 10px;
+  }
 `;
 
 interface BlogPostProps {
