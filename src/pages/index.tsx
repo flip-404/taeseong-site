@@ -1,3 +1,4 @@
+import "../globalStyle.css";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import BlogPreview from "../components/BlogPreview";
 import Layout from "../components/Layout";
