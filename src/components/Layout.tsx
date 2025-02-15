@@ -6,13 +6,13 @@ import Footer from "./Footer";
 const LayoutContainer = styled.div`
   position: relative;
   margin-top: 60px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 const Main = styled.main`
+  padding-top: 80px;
   min-width: 780px;
 `;
 

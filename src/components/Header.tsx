@@ -3,6 +3,7 @@ import { Link as Link_ } from "gatsby";
 import styled from "@emotion/styled";
 
 const HeaderContainer = styled.header`
+  z-index: 1000;
   position: fixed;
   top: 0px;
   height: 60px;

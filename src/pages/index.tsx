@@ -2,6 +2,7 @@ import "../globalStyle.css";
 import { graphql, Link, type HeadFC, type PageProps } from "gatsby";
 import BlogPreview from "../components/BlogPreview";
 import Layout from "../components/Layout";
+import ProfileCard from "../components/ProfileCard";
 
 type BlogListProps = {
   data: {
@@ -28,6 +29,7 @@ const IndexPage = ({ data }: BlogListProps) => {
   console.log("posts", posts);
   return (
     <Layout>
+      <ProfileCard />
       {posts.map(({ node }) => (
         <Link
           to={`/blog${node.fields.slug}`}
