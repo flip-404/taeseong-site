@@ -1,5 +1,3 @@
-import React from "react";
-import { Link as Link_ } from "gatsby";
 import styled from "@emotion/styled";
 
 const FooterContainer = styled.footer`
@@ -10,28 +8,26 @@ const FooterContainer = styled.footer`
   font-size: 12px;
 `;
 
-const Link = styled(Link_)``;
-
 const Footer = () => {
   return (
     <FooterContainer>
       <p>
         © {new Date().getFullYear()}{" "}
-        <Link
-          to="https://github.com/flip-404"
+        <a
+          href="https://github.com/flip-404"
           target="_blank"
           rel="noopener noreferrer"
         >
           Taeseong
-        </Link>
+        </a>
         , Built with&nbsp;
-        <Link
-          to="https://www.gatsbyjs.com/"
+        <a
+          href="https://www.gatsbyjs.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Gatsby
-        </Link>
+        </a>
       </p>
     </FooterContainer>
   );

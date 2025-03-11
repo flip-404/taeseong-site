@@ -12,13 +12,13 @@ const CHEXCAR = () => {
         <RowWrapper>
           <T_Key>Company</T_Key>
           <T_Value>
-            <Link
-              to="https://www.chexcar.co.kr"
+            <a
+              href="https://www.chexcar.co.kr"
               target="_blank"
               rel="noopener noreferrer"
             >
               CHEXCAR
-            </Link>
+            </a>
           </T_Value>
         </RowWrapper>
         <RowWrapper>
@@ -38,13 +38,13 @@ const CHEXCAR = () => {
         </RowWrapper>
       </CustomTable>
       올해 10월 준공 예정인
-      <Link
-        to="https://www.newsis.com/view/NISX20240911_0002884091"
+      <a
+        href="https://www.newsis.com/view/NISX20240911_0002884091"
         target="_blank"
         rel="noopener noreferrer"
       >
         화성 PDI 센터
-      </Link>
+      </a>
       의 웹/웹앱 서비스 개발을 담당했습니다. 의 웹/웹앱 서비스 개발을
       담당했습니다. 의 웹/웹앱 서비스 개발을 담당했습니다. 의 웹/웹앱 서비스
       개발을 담당했습니다. 의 웹/웹앱 서비스 개발을 담당했습니다. 의 웹/웹앱

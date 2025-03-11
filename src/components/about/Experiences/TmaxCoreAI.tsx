@@ -1,8 +1,8 @@
 import { Link } from "gatsby";
 import { CompanySection, CompanyTitle } from "../../../styles/common";
 import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
-import KGM_Project from "./Projects/KGM_Project";
-import Catholic_Project from "./Projects/Catholic_Project";
+import KGM_Project from "./Projects/KGM_chatbot";
+import Catholic_Project from "./Projects/Catholic";
 
 const TmaxCoreAI = () => {
   return (
@@ -13,13 +13,13 @@ const TmaxCoreAI = () => {
         <RowWrapper>
           <T_Key>Company</T_Key>
           <T_Value>
-            <Link
-              to="https://www.tmax.co.kr/tmaxai"
+            <a
+              href="https://www.tmax.co.kr/tmaxai"
               target="_blank"
               rel="noopener noreferrer"
             >
               Tmax AI
-            </Link>
+            </a>
           </T_Value>
         </RowWrapper>
         <RowWrapper>

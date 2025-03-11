@@ -36,13 +36,13 @@ const KGM_Project = () => {
       <Detail>Frontend Engineer</Detail>
       <Detail>2022.09 - 2023.01</Detail>
       <Description>
-        <Link
-          to="https://www.kg-mobility.com/"
+        <a
+          href="https://www.kg-mobility.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
           KGM 공식 홈페이지&nbsp;
-        </Link>
+        </a>
         내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는&nbsp;
         <CustomLink
           onClick={() => openInNewWindow("https://kgchat.kg-mobility.com/")}
