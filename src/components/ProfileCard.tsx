@@ -49,6 +49,13 @@ const Description = styled.div`
 const Links = styled.div`
   display: flex;
   gap: 5px;
+
+  a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #35ba09;
+    font-weight: 600;
+  }
 `;
 
 const Link = styled(Link_)`
@@ -72,13 +79,13 @@ const ProfileCard = () => {
         </Description>
         <Links>
           <Link to="/about">About</Link>
-          <Link
-            to="https://github.com/flip-404"
+          <a
+            href="https://github.com/flip-404"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
-          </Link>
+          </a>
         </Links>
       </Info>
     </ProfileCardContainer>

@@ -59,31 +59,31 @@ const Introduction = () => {
         <RowWrapper>
           <T_Key>Github</T_Key>
           <T_Value>
-            <Link
-              to="https://github.com/flip-404"
+            <a
+              href="https://github.com/flip-404"
               target="_blank"
               rel="noopener noreferrer"
             >
               github.com/flip-404
-            </Link>
+            </a>
           </T_Value>
         </RowWrapper>
         <RowWrapper>
           <T_Key>Blog</T_Key>
           <T_Value>
-            <Link
-              to="https://taeseong-site.vercel.app/"
+            <a
+              href="https://taeseong-site.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
               taeseong-site.vercel.app
-            </Link>
+            </a>
           </T_Value>
         </RowWrapper>
         <RowWrapper>
           <T_Key>Email</T_Key>
           <T_Value>
-            <Link to="mailto:aka404365@gmail.com">aka404365@gmail.com</Link>
+            <a href="mailto:aka404365@gmail.com">aka404365@gmail.com</a>
           </T_Value>
         </RowWrapper>
       </CustomTable>
