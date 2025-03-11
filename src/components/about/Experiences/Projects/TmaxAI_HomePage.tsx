@@ -1,31 +1,7 @@
 import styled from "@emotion/styled";
-import { Link } from "gatsby";
+import { CustomLink, Description, Detail, Label } from "./styles";
 
-const Label = styled.h4`
-  margin: 0;
-  font-size: 1.5rem;
-`;
-
-const Detail = styled.p`
-  margin: 8px 0;
-  color: #949494;
-`;
-
-const Description = styled.div`
-  margin-bottom: 50px;
-
-  li {
-    margin-bottom: 10px;
-  }
-`;
-
-const CustomLink = styled.span`
-  color: #0000ee;
-  text-decoration: underline;
-  cursor: pointer;
-`;
-
-const KGM_Project = () => {
+const TmaxAIHomePage = () => {
   const openInNewWindow = (url: string) => {
     window.open(url, "_blank", "width=400,height=649");
   };
@@ -89,4 +65,4 @@ const KGM_Project = () => {
   );
 };
 
-export default KGM_Project;
+export default TmaxAIHomePage;

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import { CustomLink, Description, Detail, Label } from "./styles";
 
-const KGM_Project = () => {
+const RGNews = () => {
   const openInNewWindow = (url: string) => {
     window.open(url, "_blank", "width=400,height=649");
   };
@@ -66,4 +66,4 @@ const KGM_Project = () => {
   );
 };
 
-export default KGM_Project;
+export default RGNews;

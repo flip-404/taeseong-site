@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { CustomLink, Description, Detail, Label } from "./styles";
 
-const Catholic_Project = () => {
+const Catholic = () => {
   const openInNewWindow = (url: string) => {
     window.open(url, "_blank", "width=400,height=649");
   };
@@ -45,4 +45,4 @@ const Catholic_Project = () => {
   );
 };
 
-export default Catholic_Project;
+export default Catholic;

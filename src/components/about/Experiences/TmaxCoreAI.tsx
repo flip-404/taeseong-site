@@ -3,6 +3,8 @@ import { CompanySection, CompanyTitle } from "../../../styles/common";
 import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
 import KGM_Project from "./Projects/KGM_chatbot";
 import Catholic_Project from "./Projects/Catholic";
+import TmaxAIHomePage from "./Projects/TmaxAI_HomePage";
+import RGNews from "./Projects/RGNews";
 
 const TmaxCoreAI = () => {
   return (
@@ -39,6 +41,8 @@ const TmaxCoreAI = () => {
       </CustomTable>
       <KGM_Project />
       <Catholic_Project />
+      <TmaxAIHomePage />
+      <RGNews />
     </CompanySection>
   );
 };
