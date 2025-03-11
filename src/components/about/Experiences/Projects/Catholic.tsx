@@ -1,25 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "gatsby";
-
-const Label = styled.h4`
-  margin: 0;
-  font-size: 1.5rem;
-`;
-
-const Detail = styled.p`
-  margin: 8px 0;
-  color: #949494;
-`;
-
-const Description = styled.div`
-  margin-bottom: 50px;
-`;
-
-const CustomLink = styled.span`
-  color: #0000ee;
-  text-decoration: underline;
-  cursor: pointer;
-`;
+import { CustomLink, Description, Detail, Label } from "./styles";
 
 const Catholic_Project = () => {
   const openInNewWindow = (url: string) => {
