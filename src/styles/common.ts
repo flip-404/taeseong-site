@@ -8,3 +8,12 @@ export const SectionTitle = styled.h1`
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
 `;
+
+export const CompanySection = styled.div`
+  margin-bottom: 40px;
+`;
+
+export const CompanyTitle = styled.h3`
+  margin: 0px;
+  font-size: 2rem;
+`;

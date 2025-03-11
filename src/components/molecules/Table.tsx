@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 export const CustomTable = styled.div`
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
