@@ -14,6 +14,15 @@ export const CompanySection = styled.div`
 `;
 
 export const CompanyTitle = styled.h3`
+  display: flex;
+  align-items: center;
   margin: 0px;
   font-size: 2rem;
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
 `;

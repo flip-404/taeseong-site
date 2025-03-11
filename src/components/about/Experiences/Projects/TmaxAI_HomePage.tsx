@@ -1,5 +1,10 @@
-import styled from "@emotion/styled";
-import { CustomLink, Description, Detail, Label } from "./styles";
+import {
+  CustomLink,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const TmaxAIHomePage = () => {
   const openInNewWindow = (url: string) => {
@@ -7,7 +12,7 @@ const TmaxAIHomePage = () => {
   };
 
   return (
-    <>
+    <ProjectContainer>
       <Label>KGM 챗봇</Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2022.09 - 2023.01</Detail>
@@ -61,7 +66,7 @@ const TmaxAIHomePage = () => {
           </li>
         </ul>
       </Description>
-    </>
+    </ProjectContainer>
   );
 };
 

@@ -1,6 +1,10 @@
-import styled from "@emotion/styled";
-import { Link } from "gatsby";
-import { CustomLink, Description, Detail, Label } from "./styles";
+import {
+  CustomLink,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const KGM_Project = () => {
   const openInNewWindow = (url: string) => {
@@ -8,7 +12,7 @@ const KGM_Project = () => {
   };
 
   return (
-    <>
+    <ProjectContainer>
       <Label>KGM 챗봇</Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2022.09 - 2023.01</Detail>
@@ -62,7 +66,7 @@ const KGM_Project = () => {
           </li>
         </ul>
       </Description>
-    </>
+    </ProjectContainer>
   );
 };
 

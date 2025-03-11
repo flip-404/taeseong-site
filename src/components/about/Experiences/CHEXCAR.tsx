@@ -2,11 +2,15 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import { CompanySection, CompanyTitle } from "../../../styles/common";
 import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
+import ChexcarLogo from "../../../images/chexcar_logo.png";
 
 const CHEXCAR = () => {
   return (
     <CompanySection>
-      <CompanyTitle>CHEXCAR</CompanyTitle>
+      <CompanyTitle>
+        <img src={ChexcarLogo} alt="Company logo" />
+        CHEXCAR
+      </CompanyTitle>
       국내 최초 중고차 원스톱 상품화 플랫폼, 체카
       <CustomTable>
         <RowWrapper>

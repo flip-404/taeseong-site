@@ -1,5 +1,17 @@
 import styled from "@emotion/styled";
 
+export const ProjectContainer = styled.div`
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+`;
+
 export const Label = styled.h4`
   margin: 0;
   font-size: 1.5rem;
