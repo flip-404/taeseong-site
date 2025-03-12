@@ -1,6 +1,10 @@
-import styled from "@emotion/styled";
-import { Link } from "gatsby";
-import { CustomLink, Description, Detail, Label } from "./styles";
+import {
+  CustomLink,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const RGNews = () => {
   const openInNewWindow = (url: string) => {
@@ -8,8 +12,8 @@ const RGNews = () => {
   };
 
   return (
-    <>
-      <Label>KGM 챗봇</Label>
+    <ProjectContainer>
+      <Label>RGNews</Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2022.09 - 2023.01</Detail>
       <Description>
@@ -62,7 +66,7 @@ const RGNews = () => {
           </li>
         </ul>
       </Description>
-    </>
+    </ProjectContainer>
   );
 };
 

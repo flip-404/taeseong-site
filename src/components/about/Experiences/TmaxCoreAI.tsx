@@ -5,11 +5,15 @@ import KGM_Project from "./Projects/KGM_chatbot";
 import Catholic_Project from "./Projects/Catholic";
 import TmaxAIHomePage from "./Projects/TmaxAI_HomePage";
 import RGNews from "./Projects/RGNews";
+import TmaxLogo from "../../../images/tmaxai_logo.jpeg";
 
 const TmaxCoreAI = () => {
   return (
     <CompanySection>
-      <CompanyTitle>TmaxCoreAI</CompanyTitle>
+      <CompanyTitle>
+        <img src={TmaxLogo} alt="Company logo" />
+        TmaxCoreAI
+      </CompanyTitle>
       티맥스 그룹의 AI 서비스 전문 기업
       <CustomTable>
         <RowWrapper>

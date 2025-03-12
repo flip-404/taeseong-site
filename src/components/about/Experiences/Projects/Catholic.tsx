@@ -1,5 +1,10 @@
-import styled from "@emotion/styled";
-import { CustomLink, Description, Detail, Label } from "./styles";
+import {
+  CustomLink,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const Catholic = () => {
   const openInNewWindow = (url: string) => {
@@ -7,7 +12,7 @@ const Catholic = () => {
   };
 
   return (
-    <>
+    <ProjectContainer>
       <Label>가톨릭대백과</Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2022.09 - 2023.01</Detail>
@@ -41,7 +46,7 @@ const Catholic = () => {
       <Description>
         <Label>What I did.</Label>
       </Description>
-    </>
+    </ProjectContainer>
   );
 };
 
