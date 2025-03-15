@@ -13,25 +13,13 @@ const TmaxAIHomePage = () => {
 
   return (
     <ProjectContainer>
-      <Label>KGM 챗봇</Label>
+      <Label>TmaxAI 홈페이지</Label>
       <Detail>Frontend Engineer</Detail>
-      <Detail>2022.09 - 2023.01</Detail>
+      <Detail>2023.12 - 2024.03</Detail>
       <Description>
-        <a
-          href="https://www.kg-mobility.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          KGM 공식 홈페이지&nbsp;
-        </a>
-        내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는&nbsp;
-        <CustomLink
-          onClick={() => openInNewWindow("https://kgchat.kg-mobility.com/")}
-        >
-          챗봇 서비스
-        </CustomLink>
-        를 개발하였습니다. 2명의 FE 개발자와 2명의 개발자, 백엔드 개발자,
-        디자이너, PO와 함 팀을 이뤄 애자일 프로세스로 작업을 진행했습니다.
+        TmaxAI 공식 홈페이지입니다. STT(음성 인식), TTS(텍스트 음성 변환),
+        OCR(문자 인식) 등의 AI 기술을 직접 체험할 수 있는 기능을 제공하며, AI
+        기술 도입을 원하는 기업이나 개인을 위한 문의 기능을 지원합니다.
         <br />
         <br />
         React, Typescript, Recoil, Styled-Components를 이용해 개발했습니다.

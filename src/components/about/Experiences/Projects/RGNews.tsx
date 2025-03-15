@@ -15,23 +15,12 @@ const RGNews = () => {
     <ProjectContainer>
       <Label>RGNews</Label>
       <Detail>Frontend Engineer</Detail>
-      <Detail>2022.09 - 2023.01</Detail>
+      <Detail>2023.06 - 2023.11</Detail>
       <Description>
-        <a
-          href="https://www.kg-mobility.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          KGM 공식 홈페이지&nbsp;
-        </a>
-        내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는&nbsp;
-        <CustomLink
-          onClick={() => openInNewWindow("https://kgchat.kg-mobility.com/")}
-        >
-          챗봇 서비스
-        </CustomLink>
-        를 개발하였습니다. 2명의 FE 개발자와 2명의 개발자, 백엔드 개발자,
-        디자이너, PO와 함 팀을 이뤄 애자일 프로세스로 작업을 진행했습니다.
+        개인 맞춤형 뉴스 서비스로, 사용자의 관심사에 맞춘 뉴스를 제공하는
+        서비스입니다. 사용자의 검색 기록, 읽은 기사, 선호하는 주제 등을 분석하여
+        최적화된 뉴스 콘텐츠를 추천하며, 실시간으로 업데이트되는 최신 뉴스를
+        제공합니다
         <br />
         <br />
         React, Typescript, Recoil, Styled-Components를 이용해 개발했습니다.
@@ -54,7 +43,6 @@ const RGNews = () => {
             수 있도록 사용성을 개선하였습니다. [상세 코드]
           </li>
           <li>
-            {" "}
             주소 검색을 위한 API 연동 및 Intersection Observer를 이용한 무한
             스크롤 도입을 작업했습니다. 한번에 수백가지의 주소를 모두 가져오지
             않고, 20개씩 끊어서 데이터를 가져올 수 있게 하여 사용자 경험을

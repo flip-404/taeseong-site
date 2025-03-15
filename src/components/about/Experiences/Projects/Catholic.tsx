@@ -15,30 +15,11 @@ const Catholic = () => {
     <ProjectContainer>
       <Label>가톨릭대백과</Label>
       <Detail>Frontend Engineer</Detail>
-      <Detail>2022.09 - 2023.01</Detail>
+      <Detail>2024.08 - 2024.12</Detail>
       <Description>
-        <a
-          href="https://www.kg-mobility.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          KGM 공식 홈페이지&nbsp;
-        </a>
-        내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는&nbsp;
-        <CustomLink
-          onClick={() => openInNewWindow("https://kgchat.kg-mobility.com/")}
-        >
-          챗봇 서비스
-        </CustomLink>
-        <a
-          href="https://kgchat.kg-mobility.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          KGM 공식 홈페이지&nbsp;
-        </a>
-        를 개발하였습니다. 2명의 FE 개발자와 2명의 개발자, 백엔드 개발자,
-        디자이너, PO와 함 팀을 이뤄 애자일 프로세스로 작업을 진행했습니다.
+        가톨릭대사전을 디지털화하기 위한 검수 페이지를 개발하였습니다. OCR을
+        활용해 디지털화된 사전의 잘못 인식된 부분을 쉽고 효율적으로 수정할 수
+        있는 기능을 제공합니다.
         <br />
         <br />
         React, Typescript, Recoil, Styled-Components를 이용해 개발했습니다.

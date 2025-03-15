@@ -31,7 +31,7 @@ export const Description = styled.div`
 `;
 
 export const CustomLink = styled.span`
-  color: #0000ee;
+  color: #2db400;
   text-decoration: underline;
   cursor: pointer;
 `;

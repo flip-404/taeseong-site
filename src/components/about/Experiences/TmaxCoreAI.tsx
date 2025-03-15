@@ -6,6 +6,7 @@ import Catholic_Project from "./Projects/Catholic";
 import TmaxAIHomePage from "./Projects/TmaxAI_HomePage";
 import RGNews from "./Projects/RGNews";
 import TmaxLogo from "../../../images/tmaxai_logo.jpeg";
+import HyperChatbot from "./Projects/HyperChatbot";
 
 const TmaxCoreAI = () => {
   return (
@@ -43,10 +44,11 @@ const TmaxCoreAI = () => {
           </T_Value>
         </RowWrapper>
       </CustomTable>
-      <KGM_Project />
       <Catholic_Project />
+      <KGM_Project />
       <TmaxAIHomePage />
       <RGNews />
+      <HyperChatbot />
     </CompanySection>
   );
 };
