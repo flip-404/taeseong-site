@@ -3,16 +3,9 @@ import Layout from "../components/Layout";
 import "prismjs/themes/prism-solarizedlight.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import { Helmet } from "react-helmet";
-import {
-  Content,
-  CreatedAt,
-  PostDetails,
-  Tag,
-  Tags,
-  Title,
-} from "../styles/post";
+import { Content } from "../styles/post";
 
-interface BlogPostProps {
+interface DetailPostProps {
   data: {
     markdownRemark: {
       frontmatter: {
@@ -24,23 +17,14 @@ interface BlogPostProps {
   };
 }
 
-export default function BlogPost({ data }: BlogPostProps) {
+export default function DetailPost({ data }: DetailPostProps) {
   const post = data.markdownRemark;
   return (
     <>
       <Helmet>
-        <title>Taeseong Dev Blog | {post.frontmatter.title}</title>
+        <title>Taeseong Dev Blog | 상세 코드</title>
       </Helmet>
       <Layout>
-        <PostDetails>
-          <Title>{post.frontmatter.title}</Title>
-          <CreatedAt>{post.frontmatter.date}</CreatedAt>
-          <Tags>
-            {["React", "CSS"].map((e) => (
-              <Tag>{e}</Tag>
-            ))}
-          </Tags>
-        </PostDetails>
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       </Layout>
     </>
