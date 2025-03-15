@@ -38,4 +38,8 @@ export const Content = styled.div`
   li {
     margin-top: 8px;
   }
+
+  img {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  }
 `;

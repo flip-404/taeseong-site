@@ -1,109 +1,54 @@
+<h2>What I did.</h2>
+<h3>내 정보 페이지 구현</h3>
+
+- 사용자가 앱을 사용하며 관심 있는 뉴스와 언론사를 저장하고 관리할 수 있는 마이 페이지를 구현했습니다.
+- react-beautiful-dnd 라이브러리를 활용하여 사용자가 아이템을 직관적으로 편집할 수 있는 기능을 구현했습니다.
+
 <h2>Example</h2>
 
-<div style="display: flex; justify-content: center; gap: 40px; height: 500px">
-<img src="https://velog.velcdn.com/images/flip_404/post/da76e87a-1549-4098-868d-e51eb20100cc/image.png" style=" object-fit:contain;">
-<img src="https://velog.velcdn.com/images/flip_404/post/7134a51a-6054-4db1-9ea3-6c62c6daadfe/image.png" style=" object-fit:contain;">
+- 내 정보 페이지/키워드 알림 뉴스
+
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-bottom: 60px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/cdcf9685-67ad-4d9e-96c8-5f6a41a6c914/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/9548baba-897e-454f-b61d-c5defaddad48/image.png" style=" object-fit:contain;">
 </div>
 
-<h2>What I did.</h2>
-<li><strong>뉴스 조회 API 무한 스크롤 기능</strong></li>
+- 관심 카테고리 페이지
 
-뉴스 조회를 위한 API 연동과 Intersection Observer를 활용한 무한 스크롤 기능을 구현했습니다. 한 번에 수백 개의 뉴스를 모두 가져오는 대신, 10개씩 데이터를 페이징하여 불러오도록 하여 사용자 경험을 개선하고 성능을 최적화했습니다.
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-bottom: 60px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/a5d61013-3e62-4866-b404-03f865a80202/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/cb2e1df2-3e2e-40b9-8fbc-a469db8830bc/image.png" style=" object-fit:contain;">
+</div>
 
-<small>\* 예시 코드입니다.</small>
+- 관심 키워드 페이지
 
-```javascript
-const {
-  data,
-  status,
-  hasNextPage,
-  fetchNextPage,
-  isFetchingNextPage,
-  error,
-  refetch,
-} = useInfiniteQuery(createQueryConfig(currentCategory), {
-  staleTime: 5 * 60 * 1000,
-  retry: 2,
-  retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
-});
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-bottom: 60px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/71fb4802-8fa8-406a-bb09-1e63913a8223/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/f8e657c0-b5c1-4cad-9f29-66968ff4f036/image.png" style=" object-fit:contain;">
+</div>
 
-const handleObserver = useCallback(
-  (entries) => {
-    const [target] = entries;
-    if (target.isIntersecting && hasNextPage) {
-      fetchNextPage();
-    }
-  },
-  [fetchNextPage, hasNextPage]
-);
+- 폴더편집 페이지
 
-useEffect(() => {
-  const element = observerElem.current;
-  const option = { threshold: 0 };
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-bottom: 60px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/e09f74cb-aa2d-4e10-9eb7-badf8fef4192/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/5365a6b6-f8e7-47f7-a82c-dd7aa98e10ba/image.png" style=" object-fit:contain;">
+</div>
 
-  if (element) {
-    const observer = new IntersectionObserver(handleObserver, option);
-    observer.observe(element);
-    return () => observer.unobserve(element);
-  }
-}, [observerElem, handleObserver]);
-```
+- 구독 언론사 편집 페이지
 
-<li style="margin-top:50px;"><strong>뉴스 컴포넌트 에러 처리 및 재시도 기능 구현</strong></li>
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-bottom: 60px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/64efe33f-41a6-4257-a82b-824b0d50d8ed/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/0b5d4eec-6589-43b8-9ca4-2fa8edab4f7d/image.png" style=" object-fit:contain;">
+</div>
 
-뉴스 컴포넌트가 새로운 뉴스 목록을 불러오는 과정에서 발생하는 런타임 에러를 감지하고, 사용자가 쉽게 재시도할 수 있도록 에러 바운더리를 구현하였습니다.
+- 북마크 편집 페이지
 
-<small>\* 예시 코드입니다.</small>
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-top: 30px; margin-bottom: 30px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/036150b7-bf55-47f4-9989-ee0c394a79b3/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/75b1dbda-59f2-4a7d-880b-bec58dd954d9/image.png" style=" object-fit:contain;">
+</div>
 
-```javascript
-import React, { Component } from "react";
-
-// 에러 바운더리 컴포넌트
-class NewsErrorBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      retryCount: 0,
-      isRetrying: false,
-    };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  handleReset = () => {
-    this.setState({ hasError: false });
-  };
-
-  handleRetry = () => {
-    this.setState({ isRetrying: true, retryCount: this.state.retryCount + 1 });
-    setTimeout(() => {
-      this.setState({ hasError: false, isRetrying: false });
-      // ... (retry 로직 생략)
-    }, 1000);
-  };
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div>
-          <p>뉴스 데이터를 불러오는 중 오류가 발생했습니다.</p>
-          <button onClick={this.handleRetry}>다시 시도</button>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-
-// 에러 바운더리 적용
-const NewestNews = (props) => (
-  <NewsErrorBoundary>
-    <NewestNewsInner {...props} />
-  </NewsErrorBoundary>
-);
-
-export default NewestNews;
-```
+<div style="display: flex; justify-content: center; gap: 40px; height: 700px; margin-top: 30px; margin-bottom: 30px;">
+<img src="https://velog.velcdn.com/images/flip_404/post/e06746d2-e5cb-4ea7-a1d2-17645383657f/image.png" style=" object-fit:contain;">
+<img src="https://velog.velcdn.com/images/flip_404/post/84258e89-46d3-4a46-af33-56abcf3f7aad/image.png" style=" object-fit:contain;">
+</div>
