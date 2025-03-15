@@ -34,4 +34,8 @@ export const Content = styled.div`
     border-radius: 5px;
     padding: 10px;
   }
+
+  li {
+    margin-top: 8px;
+  }
 `;
