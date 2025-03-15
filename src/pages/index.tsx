@@ -57,7 +57,10 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/content/posts/" } }
+      sort: { frontmatter: { date: DESC } }
+    ) {
       edges {
         node {
           frontmatter {
