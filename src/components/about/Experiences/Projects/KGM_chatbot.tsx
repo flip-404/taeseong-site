@@ -1,15 +1,8 @@
-import {
-  CustomLink,
-  Description,
-  Detail,
-  Label,
-  ProjectContainer,
-} from "./styles";
+import { ExternalLink } from "../../../molecules/Links";
+import { Description, Detail, Label, ProjectContainer } from "./styles";
 
 const KGM_Project = () => {
-  const openInNewWindow = (url: string) => {
-    window.open(url, "_blank", "width=400,height=649");
-  };
+  const openInNewWindow = (url: string) => {};
 
   return (
     <ProjectContainer>
@@ -17,17 +10,23 @@ const KGM_Project = () => {
       <Detail>Frontend Engineer</Detail>
       <Detail>2024.04 - 2024.10</Detail>
       <Description>
-        <CustomLink
-          onClick={() => openInNewWindow("https://kgchat.kg-mobility.com/")}
-        >
+        <ExternalLink href="https://www.kg-mobility.com/">
           KGM 공식 홈페이지
-        </CustomLink>
+        </ExternalLink>
         내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는&nbsp;
-        <CustomLink
-          onClick={() => openInNewWindow("https://kgchat.kg-mobility.com/")}
+        <ExternalLink
+          href="https://kgchat.kg-mobility.com/"
+          onClick={(event) => {
+            event.preventDefault();
+            window.open(
+              "https://kgchat.kg-mobility.com/",
+              "_blank",
+              "width=400,height=649"
+            );
+          }}
         >
           챗봇 서비스
-        </CustomLink>
+        </ExternalLink>
         입니다. 2명의 FE 개발자와 2명의 개발자, 백엔드 개발자, 디자이너, PO와 함
         팀을 이뤄 애자일 프로세스로 작업을 진행했습니다.
         <br />

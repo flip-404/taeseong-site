@@ -1,16 +1,6 @@
-import {
-  CustomLink,
-  Description,
-  Detail,
-  Label,
-  ProjectContainer,
-} from "./styles";
+import { Description, Detail, Label, ProjectContainer } from "./styles";
 
 const Catholic = () => {
-  const openInNewWindow = (url: string) => {
-    window.open(url, "_blank", "width=400,height=649");
-  };
-
   return (
     <ProjectContainer>
       <Label>가톨릭대백과</Label>

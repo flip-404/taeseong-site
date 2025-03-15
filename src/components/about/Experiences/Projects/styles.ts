@@ -30,12 +30,6 @@ export const Description = styled.div`
   }
 `;
 
-export const CustomLink = styled.span`
-  color: #2db400;
-  text-decoration: underline;
-  cursor: pointer;
-`;
-
 export const CodeBlock = styled.code`
   padding: 2.52px 5.44px;
   background-color: rgb(242, 242, 242);

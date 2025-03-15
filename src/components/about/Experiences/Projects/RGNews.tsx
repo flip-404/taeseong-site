@@ -6,6 +6,7 @@ import {
   Label,
   ProjectContainer,
 } from "./styles";
+import { InternalLink } from "../../../molecules/Links";
 
 const RGNews = () => {
   return (
@@ -33,37 +34,28 @@ const RGNews = () => {
             동적으로 opacity를 조정하는 로직을 구현해 사용자 경험을
             개선했습니다. 또한, 모든 뉴스 아이템을 한 번에 렌더링하여 발생하는
             성능 저하 문제를 해결하기 위해 현재 보고 있는 아이템 주변의 일정
-            범위만 렌더링하는 방식으로 최적화 작업을 진행했습니다.
-            <Link
-              to={`/detail/RGNews/detail_1`}
-              style={{ textDecoration: "none" }}
-            >
-              &nbsp; [상세 코드]
-            </Link>
+            범위만 렌더링하는 방식으로 최적화 작업을 진행했습니다.&nbsp;
+            <InternalLink href="/detail/RGNews/detail_1">
+              [상세 코드]
+            </InternalLink>
           </li>
           <li>
             검색창, 맞춤 검색어, 트렌딩 이슈, 연관 검색어, 검색 결과를 제공하는
             종합 검색 페이지를 구현했습니다. 검색 성능 최적화를 위해 사용자의
             검색 상태를 추적하여 렌더링과 불필요한 서버 호출을 최적화하는 작업을
-            진행했습니다.
-            <Link
-              to={`/detail/RGNews/detail_2`}
-              style={{ textDecoration: "none" }}
-            >
-              &nbsp; [상세 코드]
-            </Link>
+            진행했습니다.&nbsp;
+            <InternalLink href="/detail/RGNews/detail_2">
+              [상세 코드]
+            </InternalLink>
           </li>
           <li>
             뉴스 검색을 위한 API 연동과 Intersection Observer를 활용한 무한
             스크롤 기능을 구현했습니다. 한 번에 수백 개의 뉴스를 모두 가져오는
             대신, 10개씩 데이터를 페이징하여 불러오도록 하여 사용자 경험을
-            개선하고 성능을 최적화했습니다.
-            <Link
-              to={`/detail/RGNews/detail_3`}
-              style={{ textDecoration: "none" }}
-            >
-              &nbsp; [상세 코드]
-            </Link>
+            개선하고 성능을 최적화했습니다.&nbsp;
+            <InternalLink href="/detail/RGNews/detail_3">
+              [상세 코드]
+            </InternalLink>
           </li>
           <li>
             텍스트 콘텐츠를 음성으로 변환하여 재생하는 TTS(Text-to-Speech)
