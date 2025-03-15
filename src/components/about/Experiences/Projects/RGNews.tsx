@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import {
   CodeBlock,
   Description,
