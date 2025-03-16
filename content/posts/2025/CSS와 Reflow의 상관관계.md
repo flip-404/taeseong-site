@@ -1,13 +1,13 @@
 ---
 title: "CSS와 Reflow의 상관관계"
-description: "CSS와 Reflow의 상관관계"
-tag: "monorepo"
-date: "2024-02-14"
+description: "CSS 옵션을 통해 렌더링 속도를 높일 수 있다는 것을 알고 계셨나요?"
+tag: "Reflow"
+date: "2025-01-20"
 ---
 
 # 1. Reflow가 발생하는 이유
 
-브라우저의 렌더링 엔진이 DOM 요소들의 **위치와 크기**를 계산하는 과정(레이아웃 단계)에 영향을 미치기 때문입니다. 각 속성은 요소의 **배치, 크기, 관계**에 변화를 일으켜 브라우저가 레이아웃을 다시 계산해야 하는 상황을 만듭니다. 
+브라우저의 렌더링 엔진이 DOM 요소들의 **위치와 크기**를 계산하는 과정(레이아웃 단계)에 영향을 미치기 때문입니다. 각 속성은 요소의 **배치, 크기, 관계**에 변화를 일으켜 브라우저가 레이아웃을 다시 계산해야 하는 상황을 만듭니다.
 
 Reflow의 단점은 레이아웃 이후의 렌더링 단계들도 모두 다시 수행되기 때문에 Reflow를 줄이는 것은 렌더링 성능에 영향을 미칩니다.
 
@@ -70,14 +70,14 @@ Paint Layer는 HTML 요소를 기반으로 생성된 레이어로, 요소들이 
 
 Graphics Layer는 Paint Layer를 GPU에서 렌더링하기 위해 **합성(Compositing)** 단계에서 생성된 레이어입니다.
 
-|  | **Paint Layer** | **Graphics Layer** |
-| --- | --- | --- |
-| **생성 주체** | HTML 요소와 스타일 정보 | GPU에서 합성을 위해 Paint Layer 기반으로 생성 |
-| **역할** | 요소를 픽셀로 페인팅 | Paint Layer를 GPU에서 합성 및 렌더링 처리 |
-| **연관 속성** | `z-index`, `position` 등 | `transform`, `opacity`, `will-change` 등 |
-| **주 사용 영역** | CPU에서의 렌더링 | GPU 가속을 활용한 합성 |
+|                  | **Paint Layer**          | **Graphics Layer**                            |
+| ---------------- | ------------------------ | --------------------------------------------- |
+| **생성 주체**    | HTML 요소와 스타일 정보  | GPU에서 합성을 위해 Paint Layer 기반으로 생성 |
+| **역할**         | 요소를 픽셀로 페인팅     | Paint Layer를 GPU에서 합성 및 렌더링 처리     |
+| **연관 속성**    | `z-index`, `position` 등 | `transform`, `opacity`, `will-change` 등      |
+| **주 사용 영역** | CPU에서의 렌더링         | GPU 가속을 활용한 합성                        |
 
-**Graphics Layer**는 Paint Layer(Render Layer)에서 한 단계 더 나아가, 화면에 출력될 요소들의 처리를 GPU가 담당하도록 하기 위해 생성되는 레이어입니다. **GPU에게는 하나의 렌더링 단위**로 작용하며, 이를 통해 렌더링 성능을 최적화합니다. 
+**Graphics Layer**는 Paint Layer(Render Layer)에서 한 단계 더 나아가, 화면에 출력될 요소들의 처리를 GPU가 담당하도록 하기 위해 생성되는 레이어입니다. **GPU에게는 하나의 렌더링 단위**로 작용하며, 이를 통해 렌더링 성능을 최적화합니다.
 
 **Graphics Layer**는 GPU의 강력한 병렬 처리 능력을 활용하기 위해 생성되며, CPU가 해야 할 일부 작업을 GPU로 위임함으로써 **렌더링 성능을 대폭 향상**시킵니다. GPU가 Graphics Layer를 묶어 처리하는 과정을 **하드웨어 가속** 또는 **GPU 가속**이라고 합니다.
 
@@ -85,7 +85,7 @@ Graphics Layer는 Paint Layer를 GPU에서 렌더링하기 위해 **합성(Compo
 
 - **GPU가 처리**: Graphics Layer에 위치한 요소는 **CPU가 아닌 GPU**가 처리합니다.
 - **하드웨어 가속(GPU 가속)**: CPU가 처리할 작업을 GPU에 위임하여, Graphics Layer를 묶어 하나의 이미지(텍스처)로 생성합니다.
-    - **텍스처**: GPU에 전달되는 비트맵 이미지 형식.
+  - **텍스처**: GPU에 전달되는 비트맵 이미지 형식.
 
 **Graphics Layer가 생성되는 경우**
 
@@ -104,7 +104,7 @@ Graphics Layer는 다음과 같은 조건에서 생성됩니다.
 **Graphics Layer의 GPU 처리 방식**
 
 1. CPU는 Graphics Layer를 **텍스처 형식**으로 변환합니다.
-    - 텍스처는 GPU에 전달될 **비트맵 이미지**를 의미합니다.
+   - 텍스처는 GPU에 전달될 **비트맵 이미지**를 의미합니다.
 2. GPU는 이 텍스처를 받아 화면에 빠르게 렌더링합니다.
 
 # 3. transform 속성으로 레이아웃 & 페인팅 단계 피하기
@@ -131,7 +131,6 @@ Graphics Layer를 활용하면 여기서 사람 모양의 그림만 분리해서
 - 여러 스타일을 한 번에 변경:
 
 ```jsx
-
 element.style.width = "100px";
 element.style.height = "50px";
 
