@@ -1,8 +1,8 @@
 ---
-title: "모노레포 적용하기 with Turborepo (2/2)"
+title: "모노레포 적용하기 with 🚀Turborepo (2/2)"
 description: "모노레포에 대해 정리해보았습니다."
 tag: "monorepo"
-date: "2024-02-14"
+date: "2025-01-05"
 ---
 
 # Turborepo 도입기
@@ -293,8 +293,8 @@ json
 - `build`: `.next/` 폴더를 빌드 결과물로 캐시함
 - `lint`: 실행 가능
 - `dev`:
-    - `cache: false` → 개발 서버 실행 결과를 캐시하지 않음
-    - `persistent: true` → 개발 서버가 지속 실행됨
+  - `cache: false` → 개발 서버 실행 결과를 캐시하지 않음
+  - `persistent: true` → 개발 서버가 지속 실행됨
 
 ---
 
@@ -349,21 +349,19 @@ json
 📌 **코드 변경 후 실행해보기**
 
 ```tsx
-tsx
-복사편집
+tsx;
+복사편집;
 // apps/docs/pages/index.tsx
 import { Button } from "ui";
 
 export default function Docs() {
   return (
     <div>
--     <h1>Docs</h1>
-+     <h1>My great docs</h1>
+      - <h1>Docs</h1>+ <h1>My great docs</h1>
       <Button />
     </div>
   );
 }
-
 ```
 
 📌 다시 lint 실행 시:

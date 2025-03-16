@@ -1,14 +1,13 @@
 ---
 title: "Vite 살펴보기"
-description: "모노레포에 대해 정리해보았습니다."
+description: "Vite에 대해 정리해보았습니다."
 tag: "monorepo"
-date: "2024-02-14"
+date: "2024-03-14"
 ---
-
 
 ## Vite란?
 
-Vite는 `빠르다(Quick`) 을 의미하는 프랑스어를 의미하며 이름에 걸맞게 개발 서버 구동 시간이 거의 0에 가까울 정도(기존 번들러 대비해서는 10 ~ 100배 정도 빠르다)로 빠른 속도가 특징이다. “빠르고 간결한” 모던 웹 프로젝트 개발 경험에 초점을 맞춘다. 
+Vite는 `빠르다(Quick)` 을 의미하는 프랑스어를 의미하며 이름에 걸맞게 개발 서버 구동 시간이 거의 0에 가까울 정도(기존 번들러 대비해서는 10 ~ 100배 정도 빠르다)로 빠른 속도가 특징이다. “빠르고 간결한” 모던 웹 프로젝트 개발 경험에 초점을 맞춘다.
 
 ---
 
@@ -24,7 +23,7 @@ Vite는 `빠르다(Quick`) 을 의미하는 프랑스어를 의미하며 이름�
 
 위와 같은 문제를 해결하기 위해 모듈 단위의 개발 방식이 탄생하였고, 이를 쉽게 설치할 수 있도록 도와주는 `NPM`을 사용하기 시작했다. NPM으로 라이브러리를 설치하면 node_modules라는 폴더가 생기고 우리는 import를 통해 간단히 라이브러리를 사용할 수 있었다.
 
-하지만 NPM 또한 아래와 같은 문제가 생겼다. 
+하지만 NPM 또한 아래와 같은 문제가 생겼다.
 
 1. node_modules 폴더의 용량이 커지는 경우가 많음
 2. import/require 문법이 브라우저 친화적이지 않음(그 당시 기준)
@@ -42,7 +41,7 @@ Vite는 `빠르다(Quick`) 을 의미하는 프랑스어를 의미하며 이름�
 
 **Webpack**
 
-NPM을 사용함에 따라 반필수적으로 번들러가 필요하게 되었는데 이 때 가장 많이 사용되었던 번들러가 바로 Webpack이다. 
+NPM을 사용함에 따라 반필수적으로 번들러가 필요하게 되었는데 이 때 가장 많이 사용되었던 번들러가 바로 Webpack이다.
 
 Webpack은 Node.js 기반의 Javascript 모듈 번들러다.
 
@@ -56,7 +55,7 @@ Webpack은 Node.js 기반의 Javascript 모듈 번들러다.
 
 Webpack은 이처럼 다양한 장점을 가지고 있었고 복잡하긴 하지만 설정값, 플러그인, 로더의 디테일한 설정까지 가능했다. 하지만 이런 Webpack의 디테일한 설정 방식은 초보자에겐 진입 장벽이 높았다.
 
-CRA는 이런 Webpack의 복잡한 설정을 내부적으로 포함시켜 `zero-configuration`, 즉 별다른 설정 필요 없이 React를 시작할 수 있도록 했다. 
+CRA는 이런 Webpack의 복잡한 설정을 내부적으로 포함시켜 `zero-configuration`, 즉 별다른 설정 필요 없이 React를 시작할 수 있도록 했다.
 
 ```bash
 npx create-react-app my-app
@@ -74,7 +73,7 @@ CRA는 이처럼 Webpack을 기반으로 한 강력한 도구였지만 Webpack�
 
 **문제 상황**
 
-기존의 브라우저는 ESM을 지원하지 않았기 때문에 소스 모듈을 브라우저에서 실행할 수 있도록 번들링하는 과정이 필요했다. 
+기존의 브라우저는 ESM을 지원하지 않았기 때문에 소스 모듈을 브라우저에서 실행할 수 있도록 번들링하는 과정이 필요했다.
 
 이를 위해 Webpack, Rollup, Parcel과 같은 도구들이 등장해 번들링 작업을 진행해주었다.
 
@@ -98,33 +97,28 @@ Javascript 기반한 도구들이 느린 이유
 일단 Vite는 모듈을 `Dependencies` 와 `Source code` 두 가지 카테고리로 나눈다.
 
 1. Dependencies
-    
-    개발 시 내용이 바뀌지 않을 Plain Javascript 소스들을 말한다.
-    
-    예를 들면, 컴포넌트 라이브러리와 같은 일반적인 node_modules 패키지들이 있다.
-    
-    Vite는 이러한 Dependencies 들을 **Esbuild를 사용하여 Pre-bundling** 함으로써 각 파일에서 필요한 모듈만을 추출한다. Go로 작성된 Esbuild는 작업을 병렬로 처리하기 때문에 기존 번들러보다 훨씬 빠르다.
-    
-    - Esbuild
-        
-        이전까지는 모두 Javascript 기반의 번들러였으나 Esbuild는 Go로 작성된 번들러로 매우 빠르다.
-        
-        병렬처리 최적화, 메모리 사용 최적화, 자체 Javascript 파서 사용 등의 장점이 있다.
-        
+
+   개발 시 내용이 바뀌지 않을 Plain Javascript 소스들을 말한다.
+
+   예를 들면, 컴포넌트 라이브러리와 같은 일반적인 node_modules 패키지들이 있다.
+
+   Vite는 이러한 Dependencies 들을 **Esbuild를 사용하여 Pre-bundling** 함으로써 각 파일에서 필요한 모듈만을 추출한다. Go로 작성된 Esbuild는 작업을 병렬로 처리하기 때문에 기존 번들러보다 훨씬 빠르다.
+
+   - Esbuild
+     이전까지는 모두 Javascript 기반의 번들러였으나 Esbuild는 Go로 작성된 번들러로 매우 빠르다.
+     병렬처리 최적화, 메모리 사용 최적화, 자체 Javascript 파서 사용 등의 장점이 있다.
+
 2. Source Code
-    
-    jsx, css와 같이 컴파일링이 필요하고, 수정이 매우 잦은 Non-plain Javascript 소스들을 말한다.
-    
-    Vite는 Native ESM(ESModule)을 사용해 소스코드를 제공하고 브라우저가 번들러 작업을 수행하도록 한다. 즉, Vite는 번들링없이 브라우저의 요청대로 소스코드를 변환해 제공하기만 하면 된다.
-    
-    Vite는 ESM을 활용하여 변경된 파일만 변환해 브라우저에 전달한다.
-    
-    - ESM(ECMAScript Module)
-        
-        모듈화된 코드를 관리하고 가져오는 방식을 표준화한 것
-        
-        import, export를 별도의 도구 없이 브라우저에서 바로 사용 가능한 모듈 방식
-        
+
+   jsx, css와 같이 컴파일링이 필요하고, 수정이 매우 잦은 Non-plain Javascript 소스들을 말한다.
+
+   Vite는 Native ESM(ESModule)을 사용해 소스코드를 제공하고 브라우저가 번들러 작업을 수행하도록 한다. 즉, Vite는 번들링없이 브라우저의 요청대로 소스코드를 변환해 제공하기만 하면 된다.
+
+   Vite는 ESM을 활용하여 변경된 파일만 변환해 브라우저에 전달한다.
+
+   - ESM(ECMAScript Module)
+     모듈화된 코드를 관리하고 가져오는 방식을 표준화한 것
+     import, export를 별도의 도구 없이 브라우저에서 바로 사용 가능한 모듈 방식
 
 📍 정리하자면 **Vite는 Dependencies는 미리 번들링하며, Source Code는 브라우저가 ESM 방식으로 처리하도록** 한다!
 

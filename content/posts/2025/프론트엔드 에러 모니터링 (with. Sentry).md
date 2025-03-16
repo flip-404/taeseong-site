@@ -1,10 +1,9 @@
 ---
 title: "프론트엔드 에러 모니터링"
-description: "모노레포에 대해 정리해보았습니다."
-tag: "monorepo"
-date: "2024-02-14"
+description: "프론트엔드에서 어떻게 에러를 모니터링할까?"
+tag: "Sentry"
+date: "2025-02-14"
 ---
-
 
 서비스를 배포하고 지속적으로 유지보수하려면 발생하는 에러를 신속하게 분석하고 대응할 수 있어야 합니다.
 
@@ -23,25 +22,24 @@ Sentry는 **실시간 로그 수집 및 분석 도구이자 모니터링 플랫�
 다음은 Sentry의 주요 특징에 대해 간략하게 설명한 내용입니다.
 
 1. **이벤트 로그 상세 정보 제공**
-    
-    Sentry는 이벤트가 발생했을 때 관련된 다양한 정보를 제공합니다.
-    
-    - **Exception & Message**: 발생한 이벤트 로그의 메시지 및 코드 라인 정보 (정확한 코드 라인 정보는 source map 설정을 통해 확인할 수 있습니다.)
-    - **Device**: 이벤트가 발생한 장치의 정보 (이름, 모델, 메모리 등)
-    - **Browser**: 이벤트가 발생한 브라우저의 정보 (브라우저 이름, 버전 등)
-    - **OS**: 이벤트가 발생한 운영 체제의 정보 (이름, 버전, 빌드, 커널 버전 등)
-    - **Breadcrumbs**: 이벤트 발생 과정에서의 정보
-    
-    또한, 기본적으로 제공되는 정보 외에도 **Context** 기능을 사용해 특정 이벤트에 대한 추가 정보를 수집할 수 있습니다. **Context**에 대한 자세한 내용은 이 아티클의 [하단](https://tech.kakaopay.com/post/frontend-sentry-monitoring/#-context)에서 확인하실 수 있습니다.
-    
+
+   Sentry는 이벤트가 발생했을 때 관련된 다양한 정보를 제공합니다.
+
+   - **Exception & Message**: 발생한 이벤트 로그의 메시지 및 코드 라인 정보 (정확한 코드 라인 정보는 source map 설정을 통해 확인할 수 있습니다.)
+   - **Device**: 이벤트가 발생한 장치의 정보 (이름, 모델, 메모리 등)
+   - **Browser**: 이벤트가 발생한 브라우저의 정보 (브라우저 이름, 버전 등)
+   - **OS**: 이벤트가 발생한 운영 체제의 정보 (이름, 버전, 빌드, 커널 버전 등)
+   - **Breadcrumbs**: 이벤트 발생 과정에서의 정보
+
+   또한, 기본적으로 제공되는 정보 외에도 **Context** 기능을 사용해 특정 이벤트에 대한 추가 정보를 수집할 수 있습니다. **Context**에 대한 자세한 내용은 이 아티클의 [하단](https://tech.kakaopay.com/post/frontend-sentry-monitoring/#-context)에서 확인하실 수 있습니다.
+
 2. **유사 오류 통합**
-    
-    Sentry는 **이슈 그룹화(Issue Grouping)** 기능을 통해 유사한 이벤트 로그를 하나의 이슈로 묶어 관리할 수 있습니다. 이를 통해 비슷한 오류를 빠르게 식별하고 추적할 수 있어 매우 유용합니다.
-    
+
+   Sentry는 **이슈 그룹화(Issue Grouping)** 기능을 통해 유사한 이벤트 로그를 하나의 이슈로 묶어 관리할 수 있습니다. 이를 통해 비슷한 오류를 빠르게 식별하고 추적할 수 있어 매우 유용합니다.
+
 3. **다양한 알림 채널 지원**
-    
-    발생한 이슈에 대해 실시간 알림을 받을 수 있는 다양한 채널을 지원합니다. 예를 들어, Slack, Teams, Jira, GitHub 등과 연동하여 알림을 받을 수 있습니다. 현재 제 회사에서는 Slack을 통해 실시간으로 오류를 추적하고 있습니다.
-    
+
+   발생한 이슈에 대해 실시간 알림을 받을 수 있는 다양한 채널을 지원합니다. 예를 들어, Slack, Teams, Jira, GitHub 등과 연동하여 알림을 받을 수 있습니다. 현재 제 회사에서는 Slack을 통해 실시간으로 오류를 추적하고 있습니다.
 
 # 코드보며 이해하기 (with Sentry/react)
 
@@ -50,58 +48,55 @@ Sentry는 **실시간 로그 수집 및 분석 도구이자 모니터링 플랫�
 ## **설치 및 설정**
 
 - **설치**
-    
-    Sentry를 사용하기 위해 필요한 패키지를 설치합니다. Sentry는 애플리케이션 런타임 내에서 SDK를 활용해 데이터를 캡처하므로 `@sentry/react`, `@sentry/tracing` 패키지를 설치해야 합니다.
-    
-    ```bash
-    # npm 사용
-    npm install --save @sentry/react @sentry/tracing
-    
-    # yarn 사용
-    yarn add @sentry/react @sentry/tracing
-    ```
-    
-    `@sentry/browser`에서 제공되는 모든 메소드는 `@sentry/react`에서도 사용할 수 있습니다.
-    
+  Sentry를 사용하기 위해 필요한 패키지를 설치합니다. Sentry는 애플리케이션 런타임 내에서 SDK를 활용해 데이터를 캡처하므로 `@sentry/react`, `@sentry/tracing` 패키지를 설치해야 합니다.
+
+  ```bash
+  # npm 사용
+  npm install --save @sentry/react @sentry/tracing
+
+  # yarn 사용
+  yarn add @sentry/react @sentry/tracing
+  ```
+
+  `@sentry/browser`에서 제공되는 모든 메소드는 `@sentry/react`에서도 사용할 수 있습니다.
+
 - **설정**
-    
-    ```jsx
-    import React from 'react';
-    import ReactDOM from 'react-dom';
-    import * as Sentry from '@sentry/react';
-    import { BrowserTracing } from '@sentry/tracing';
-    import App from './App';
-    
-    Sentry.init({
-      dsn: 'dsn key',
-      release: 'release version',
-      environment: 'production',
-      normalizeDepth: 6,
-      integrations: [
-        new Sentry.Integrations.Breadcrumbs({ console: true }),
-        new BrowserTracing(),
-      ],
-    });
-    
-    ReactDOM.render(<App />, document.getElementById('root'));
-    ```
-    
-    Sentry 설정을 위한 주요 항목은 다음과 같습니다:
-    
-    - **dsn**: 이벤트를 전송할 때 사용하는 식별 키
-    - **release**: 애플리케이션 버전 (보통 `package.json`에 명시된 버전 사용, 이는 버전별 오류 추적을 용이하게 합니다)
-    - **environment**: 애플리케이션 환경 (예: dev, production 등)
-    - **normalizeDepth**: 컨텍스트 데이터를 주어진 깊이까지 정규화 (기본값: 3)
-    - **integrations**: 플랫폼 SDK와의 통합 설정 (React에서는 `react-router` 통합 설정 가능) 이벤트를 전송하기 전 선택적으로 데이터를 수정할 수 있는 `beforeSend`와 같은 옵션도 제공합니다.
-    
+
+  ```jsx
+  import React from "react";
+  import ReactDOM from "react-dom";
+  import * as Sentry from "@sentry/react";
+  import { BrowserTracing } from "@sentry/tracing";
+  import App from "./App";
+
+  Sentry.init({
+    dsn: "dsn key",
+    release: "release version",
+    environment: "production",
+    normalizeDepth: 6,
+    integrations: [
+      new Sentry.Integrations.Breadcrumbs({ console: true }),
+      new BrowserTracing(),
+    ],
+  });
+
+  ReactDOM.render(<App />, document.getElementById("root"));
+  ```
+
+  Sentry 설정을 위한 주요 항목은 다음과 같습니다:
+
+  - **dsn**: 이벤트를 전송할 때 사용하는 식별 키
+  - **release**: 애플리케이션 버전 (보통 `package.json`에 명시된 버전 사용, 이는 버전별 오류 추적을 용이하게 합니다)
+  - **environment**: 애플리케이션 환경 (예: dev, production 등)
+  - **normalizeDepth**: 컨텍스트 데이터를 주어진 깊이까지 정규화 (기본값: 3)
+  - **integrations**: 플랫폼 SDK와의 통합 설정 (React에서는 `react-router` 통합 설정 가능) 이벤트를 전송하기 전 선택적으로 데이터를 수정할 수 있는 `beforeSend`와 같은 옵션도 제공합니다.
     추가적인 설정 옵션은 [공식 문서](https://docs.sentry.io/platforms/javascript/guides/react/configuration/options/)에서 확인할 수 있습니다.
-    
 
 추가적으로 React SDK는 자동으로 JavaScript 오류를 탐지하고 Sentry로 전송할 수 있도록 Error Boundary 컴포넌트를 제공하며 다음과 같이 사용할 수 있습니다.
 
 ```jsx
-import React from 'react';
-import * as Sentry from '@Sentry/react';
+import React from "react";
+import * as Sentry from "@Sentry/react";
 
 <Sentry.ErrorBoundary
   fallback={<p>에러가 발생하였습니다. 잠시 후 다시 시도해주세요.</p>}
@@ -129,8 +124,8 @@ try {
 ```
 
 - **주요 특징**:
-    - 예외 객체를 그대로 전송하기 때문에 오류의 스택 트레이스와 상세한 정보를 포함합니다.
-    - 자동으로 오류 발생 위치와 관련된 정보를 포함해, 오류를 추적하기 쉽게 도와줍니다.
+  - 예외 객체를 그대로 전송하기 때문에 오류의 스택 트레이스와 상세한 정보를 포함합니다.
+  - 자동으로 오류 발생 위치와 관련된 정보를 포함해, 오류를 추적하기 쉽게 도와줍니다.
 
 **`captureMessage`**
 
@@ -142,20 +137,20 @@ Sentry.captureMessage("This is a custom warning message", "warning");
 ```
 
 - **주요 특징**:
-    - `captureMessage`는 예외가 아니므로, 메시지 자체와 그 수준(level)을 지정할 수 있습니다.
-    - `"info"`, `"warning"`, `"error"` 등의 메시지 레벨을 설정할 수 있습니다.
+  - `captureMessage`는 예외가 아니므로, 메시지 자체와 그 수준(level)을 지정할 수 있습니다.
+  - `"info"`, `"warning"`, `"error"` 등의 메시지 레벨을 설정할 수 있습니다.
 
 Sentry의 전송 API는 위의 예시 외에도 다양한 추가 기능을 제공합니다.
 
-| API | 설명 |
-| --- | --- |
-| `captureEvent` | 사용자 정의 이벤트 객체를 직접 전송 |
-| `captureException` | 예외 객체를 전송 (기존) |
-| `captureMessage` | 단순 메시지 전송 (기존) |
-| `addBreadcrumb` | 로그나 이벤트에 대한 추가적인 정보를 기록 |
-| `setUser` | 사용자 정보를 설정하여 해당 사용자에 대한 이벤트 추적 |
-| `setTag` | 이벤트에 태그를 추가하여 필터링을 용이하게 함 |
-| `setContext` | 이벤트에 추가적인 컨텍스트(상황 정보)를 설정 |
+| API                | 설명                                                  |
+| ------------------ | ----------------------------------------------------- |
+| `captureEvent`     | 사용자 정의 이벤트 객체를 직접 전송                   |
+| `captureException` | 예외 객체를 전송 (기존)                               |
+| `captureMessage`   | 단순 메시지 전송 (기존)                               |
+| `addBreadcrumb`    | 로그나 이벤트에 대한 추가적인 정보를 기록             |
+| `setUser`          | 사용자 정보를 설정하여 해당 사용자에 대한 이벤트 추적 |
+| `setTag`           | 이벤트에 태그를 추가하여 필터링을 용이하게 함         |
+| `setContext`       | 이벤트에 추가적인 컨텍스트(상황 정보)를 설정          |
 
 ## Scope의 주요 기능
 
@@ -164,51 +159,55 @@ Sentry는 `scope` **단위로 이벤트 데이터를 관리**합니다. 이벤
 ### configureScope - 스코프 전역 설정
 
 1. **User Information (사용자 정보)**
-    - 사용자의 ID, 이름, 이메일 등을 추가하여 발생한 에러가 어느 사용자에게 관련된 것인지 추적할 수 있습니다.
-    
-    ```jsx
-    Sentry.configureScope(scope => {
-      scope.setUser({ id: '123', email: 'user@example.com' });
-    });
-    ```
-    
+
+   - 사용자의 ID, 이름, 이메일 등을 추가하여 발생한 에러가 어느 사용자에게 관련된 것인지 추적할 수 있습니다.
+
+   ```jsx
+   Sentry.configureScope((scope) => {
+     scope.setUser({ id: "123", email: "user@example.com" });
+   });
+   ```
+
 2. **Tags (태그)**
-    - 이벤트에 대한 추가적인 메타데이터를 태그로 붙여서, 나중에 Sentry 대시보드에서 에러를 필터링하거나 분석하는 데 유용합니다.
-    
-    ```jsx
-    Sentry.configureScope(scope => {
-      scope.setTag('feature', 'checkout');
-    });
-    ```
-    
+
+   - 이벤트에 대한 추가적인 메타데이터를 태그로 붙여서, 나중에 Sentry 대시보드에서 에러를 필터링하거나 분석하는 데 유용합니다.
+
+   ```jsx
+   Sentry.configureScope((scope) => {
+     scope.setTag("feature", "checkout");
+   });
+   ```
+
 3. **Extra Data (추가 데이터)**
-    - 에러 발생 시 더 많은 정보를 함께 전송할 수 있습니다. 예를 들어, 특정 상태나 환경 변수, 앱의 상태 등을 추가할 수 있습니다.
-    
-    ```jsx
-    Sentry.configureScope(scope => {
-      scope.setExtra('app_version', '1.0.0');
-    });
-    ```
-    
+
+   - 에러 발생 시 더 많은 정보를 함께 전송할 수 있습니다. 예를 들어, 특정 상태나 환경 변수, 앱의 상태 등을 추가할 수 있습니다.
+
+   ```jsx
+   Sentry.configureScope((scope) => {
+     scope.setExtra("app_version", "1.0.0");
+   });
+   ```
+
 4. **Breadcrumbs (브레드크럼)**
-    - 사용자가 수행한 특정 작업들을 기록하여, 에러가 발생하기 전 어떤 일이 있었는지 추적할 수 있습니다. 이를 통해 에러 발생 경로를 추적할 수 있습니다.
-    
-    ```jsx
-    Sentry.addBreadcrumb({
-      message: 'User clicked checkout button',
-      level: 'info',
-    });
-    ```
-    
+
+   - 사용자가 수행한 특정 작업들을 기록하여, 에러가 발생하기 전 어떤 일이 있었는지 추적할 수 있습니다. 이를 통해 에러 발생 경로를 추적할 수 있습니다.
+
+   ```jsx
+   Sentry.addBreadcrumb({
+     message: "User clicked checkout button",
+     level: "info",
+   });
+   ```
+
 5. **Clearing Scope**
-    - 특정 이벤트가 발생한 후, 범위를 초기화하거나 변경할 수 있습니다. 예를 들어, 특정 사용자에 대한 이벤트를 추적한 후, 그 범위를 리셋할 수 있습니다.
-    
-    ```jsx
-    Sentry.configureScope(scope => {
-      scope.setUser(null); // 사용자 정보 초기화
-    });
-    ```
-    
+
+   - 특정 이벤트가 발생한 후, 범위를 초기화하거나 변경할 수 있습니다. 예를 들어, 특정 사용자에 대한 이벤트를 추적한 후, 그 범위를 리셋할 수 있습니다.
+
+   ```jsx
+   Sentry.configureScope((scope) => {
+     scope.setUser(null); // 사용자 정보 초기화
+   });
+   ```
 
 ### withScope - 스코프 지역 설정
 
@@ -221,13 +220,13 @@ Sentry는 `scope` **단위로 이벤트 데이터를 관리**합니다. 이벤
 ### 사용 예시
 
 ```jsx
-Sentry.withScope(scope => {
+Sentry.withScope((scope) => {
   // 이 블록 내에서만 scope가 설정됩니다.
-  scope.setUser({ id: '123', email: 'user@example.com' });
-  scope.setTag('page', 'checkout');
+  scope.setUser({ id: "123", email: "user@example.com" });
+  scope.setTag("page", "checkout");
 
   // 범위 내에서 발생한 이벤트는 설정된 사용자 정보와 태그를 포함
-  Sentry.captureException(new Error('Something went wrong'));
+  Sentry.captureException(new Error("Something went wrong"));
 });
 ```
 
@@ -236,11 +235,11 @@ Sentry.withScope(scope => {
 Sentry에서는 기본적인 정보 외에도 **custom context**를 추가하여, 개발자가 정의한 특정 정보도 함께 전달할 수 있습니다. 예를 들어, 특정 API 호출의 응답 데이터나 사용자가 선택한 옵션을 기록하는 등의 작업이 가능합니다.
 
 ```jsx
-Sentry.configureScope(scope => {
-  scope.setContext('api_call', {
-    endpoint: '/users',
-    method: 'POST',
-    status: 'failed',
+Sentry.configureScope((scope) => {
+  scope.setContext("api_call", {
+    endpoint: "/users",
+    method: "POST",
+    status: "failed",
   });
 });
 ```
@@ -257,8 +256,8 @@ Sentry.configureScope(scope => {
 `scope.setTag()`를 사용하여 커스텀 태그를 설정할 수 있습니다. 예를 들어, 특정 페이지나 기능에서 발생한 에러를 태그로 기록할 수 있습니다.
 
 ```jsx
-Sentry.configureScope(scope => {
-  scope.setTag('feature', 'checkout');
+Sentry.configureScope((scope) => {
+  scope.setTag("feature", "checkout");
 });
 ```
 
@@ -267,7 +266,7 @@ Sentry.configureScope(scope => {
 Sentry에서는 이벤트가 fingerprint를 기반으로 자동 그룹화됩니다. fingerprint는 stacktrace, exception, message 등 정보를 바탕으로 생성되며, 같은 fingerprint를 가진 이벤트는 하나의 이슈로 묶입니다. 그러나 때때로 이슈 그룹화가 예상과 다르게 이루어질 수 있습니다. 예를 들어, 동일한 API에서 발생한 400, 404, 500 오류는 요청 URI가 같으면 하나의 이슈로 묶입니다. 이를 해결하려면 HTTP method, status, url을 fingerprint 조건으로 설정하여 각각의 오류를 독립적인 이슈로 그룹화할 수 있습니다.
 
 ```jsx
-import * as Sentry from '@Sentry/react';
+import * as Sentry from "@Sentry/react";
 
 const { method, url } = error.config; // axios의 error객체
 const { status } = error.response; // axios의 error객체
