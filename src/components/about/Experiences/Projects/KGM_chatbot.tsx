@@ -36,13 +36,7 @@ const KGM_Project = () => {
       <Description>
         <Label>What I did.</Label>
         <ul>
-          <li>설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</li>
-          <li>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-          </li>
-          <li>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-          </li>
+          <li>KGM API를 챗봇에 연동하여 규칙 기반 챗봇을 개발하였습니다</li>
         </ul>
       </Description>
     </ProjectContainer>

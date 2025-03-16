@@ -17,12 +17,10 @@ const TmaxAIHomePage = () => {
       <Description>
         <Label>What I did.</Label>
         <ul>
-          <li>설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</li>
+          <li>광학문자인식(OCR) 기능 체험하기 기능 개발</li>
+          <li>Canvas API를 활용한 OCR Bounding Box 시각화</li>
           <li>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-          </li>
-          <li>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
+            React-hook-form을 활용한 문의하기(도입문의) 기능 개발 및 폼 최적화
           </li>
         </ul>
       </Description>
