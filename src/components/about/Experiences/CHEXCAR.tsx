@@ -1,8 +1,7 @@
-import styled from "@emotion/styled";
-import { Link } from "gatsby";
 import { CompanySection, CompanyTitle } from "../../../styles/common";
 import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
 import ChexcarLogo from "../../../images/chexcar_logo.png";
+import Catholic from "./Projects/Catholic";
 
 const CHEXCAR = () => {
   return (
@@ -41,18 +40,8 @@ const CHEXCAR = () => {
           </T_Value>
         </RowWrapper>
       </CustomTable>
-      올해 10월 준공 예정인
-      <a
-        href="https://www.newsis.com/view/NISX20240911_0002884091"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        화성 PDI 센터
-      </a>
-      의 웹/웹앱 서비스 개발을 담당했습니다. 의 웹/웹앱 서비스 개발을
-      담당했습니다. 의 웹/웹앱 서비스 개발을 담당했습니다. 의 웹/웹앱 서비스
-      개발을 담당했습니다. 의 웹/웹앱 서비스 개발을 담당했습니다. 의 웹/웹앱
-      서비스 개발을 담당했습니다.
+      {/* 홈페이지 앱 */}
+      {/* 파트너스 앱 */}
     </CompanySection>
   );
 };

@@ -1,5 +1,11 @@
 import { ExternalLink } from "../../../molecules/Links";
-import { Description, Detail, Label, ProjectContainer } from "./styles";
+import {
+  CodeBlock,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const Catholic = () => {
   return (
@@ -18,10 +24,23 @@ const Catholic = () => {
         에 등재하였습니다.
         <br />
         <br />
-        React, Typescript, Recoil, Styled-Components를 이용해 개발했습니다.
+        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,
+        <CodeBlock>dompurify</CodeBlock>,&nbsp;
+        <CodeBlock>Styled-Components</CodeBlock>를 이용해 개발했습니다.
       </Description>
       <Description>
         <Label>What I did.</Label>
+        <ul>
+          <li>
+            가톨릭 대백과 원본과 OCR 결과를 비교 검수할 수 있는 검수 페이지를
+            개발하였습니다.
+          </li>
+          <li>
+            HTML5 요소(텍스트, 이미지, 테이블 등)를 다룰 수 있는 커스텀 에디터를
+            개발하였습니다.
+          </li>
+          <li>커스텀 에디터의 '찾기/바꾸기' 기능을 구현하였습니다.</li>
+        </ul>
       </Description>
     </ProjectContainer>
   );

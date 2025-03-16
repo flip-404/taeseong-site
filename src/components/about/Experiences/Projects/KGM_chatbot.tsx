@@ -1,5 +1,11 @@
 import { ExternalLink } from "../../../molecules/Links";
-import { Description, Detail, Label, ProjectContainer } from "./styles";
+import {
+  CodeBlock,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const KGM_Project = () => {
   const openInNewWindow = (url: string) => {};
@@ -31,18 +37,17 @@ const KGM_Project = () => {
         팀을 이뤄 애자일 프로세스로 작업을 진행했습니다.
         <br />
         <br />
-        React, Typescript, Recoil, Styled-Components를 이용해 개발했습니다.
+        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>
+        ,&nbsp;
+        <CodeBlock>styled-components</CodeBlock>
+        ,&nbsp;
+        <CodeBlock>recoil</CodeBlock>,<CodeBlock>swr</CodeBlock>,&nbsp;를 이용해
+        개발했습니다.
       </Description>
       <Description>
         <Label>What I did.</Label>
         <ul>
-          <li>설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명</li>
-          <li>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-          </li>
-          <li>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명
-          </li>
+          <li>KGM API를 챗봇에 연동하여 규칙 기반 챗봇을 개발하였습니다</li>
         </ul>
       </Description>
     </ProjectContainer>

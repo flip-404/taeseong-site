@@ -36,7 +36,7 @@ const IndexPage = ({ data }: BlogListProps) => {
         <ProfileCard />
         {posts.map(({ node }) => (
           <Link
-            to={`/blog${node.fields.slug}`}
+            to={`${node.fields.slug}`}
             key={node.fields.slug}
             style={{ textDecoration: "none" }}
           >
