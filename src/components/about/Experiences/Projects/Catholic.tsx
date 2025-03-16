@@ -1,5 +1,11 @@
 import { ExternalLink } from "../../../molecules/Links";
-import { Description, Detail, Label, ProjectContainer } from "./styles";
+import {
+  CodeBlock,
+  Description,
+  Detail,
+  Label,
+  ProjectContainer,
+} from "./styles";
 
 const Catholic = () => {
   return (
@@ -18,7 +24,9 @@ const Catholic = () => {
         에 등재하였습니다.
         <br />
         <br />
-        React, Typescript, Recoil, Styled-Components를 이용해 개발했습니다.
+        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,
+        <CodeBlock>dompurify</CodeBlock>,&nbsp;
+        <CodeBlock>Styled-Components</CodeBlock>를 이용해 개발했습니다.
       </Description>
       <Description>
         <Label>What I did.</Label>
