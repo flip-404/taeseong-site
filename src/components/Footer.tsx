@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 const FooterContainer = styled.footer`
+  margin-top: 100px;
   display: flex;
   justify-content: start;
   padding: 26px 0px;

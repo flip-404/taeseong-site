@@ -1,7 +1,7 @@
 ---
 title: "웹 워커(Web Worker)"
 description: "웹 워커(Web Worker)에 대해 정리해보았습니다."
-tag: "monorepo"
+tags: ["Web Worker"]
 date: "2024-10-07"
 ---
 

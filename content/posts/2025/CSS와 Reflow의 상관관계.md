@@ -1,7 +1,7 @@
 ---
 title: "CSS와 Reflow의 상관관계"
 description: "CSS 옵션을 통해 렌더링 속도를 높일 수 있다는 것을 알고 계셨나요?"
-tag: "Reflow"
+tags: ["Reflow", "Css"]
 date: "2025-01-20"
 ---
 
@@ -58,11 +58,14 @@ JavaScript에서 일부 속성을 읽으려고 하면 브라우저는 최신 레
 const width = element.offsetWidth; // 레이아웃 강제 재계산
 ```
 
+<br/>
+<br/>
+
 # 2. **Graphics Layer 이해하기**
 
 먼저 다음 그림으로 같이 브라우저 렌더링 과정을 살펴봅시다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a9b80d4c-4a37-42ae-a85f-e30c8590fe02/f17a1abb-eeac-4b59-9254-6093d4f8895b/image.png)
+![렌더링 과정](https://velog.velcdn.com/images/flip_404/post/b0289728-478e-4ac1-960b-de39faa84b61/image.png)
 
 그림에선 나오지 않지만, Composite 단계 이전에 Layout과 Paint 단계를 거치면 Layer Tree가 형성되고 **Paint Layer**와 **Graphics Layer** 이 두 가지로 나뉘게 됩니다.
 
@@ -107,9 +110,12 @@ Graphics Layer는 다음과 같은 조건에서 생성됩니다.
    - 텍스처는 GPU에 전달될 **비트맵 이미지**를 의미합니다.
 2. GPU는 이 텍스처를 받아 화면에 빠르게 렌더링합니다.
 
+<br/>
+<br/>
+
 # 3. transform 속성으로 레이아웃 & 페인팅 단계 피하기
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a9b80d4c-4a37-42ae-a85f-e30c8590fe02/c28d81ef-9954-45db-a65e-c372dacce638/image.png)
+![예시 이미지](https://velog.velcdn.com/images/flip_404/post/089f4948-d435-4663-bf51-c5640c99ee41/image.png)
 
 브라우저에서 위 그림과 같이 사람 모양의 그림이 이동하는 것을 구현하고 싶을 때 배경까지 프레임 단위로 다시 그리면 굉장히 비효율적일 것 입니다.
 
@@ -123,6 +129,9 @@ Graphics Layer를 활용하면 여기서 사람 모양의 그림만 분리해서
 - `transform`은 요소의 렌더링된 결과(합성 단계)를 변경합니다.즉, **레이아웃 단계 없이** 요소의 시각적 표현만 변경되며, 레이아웃 계산에 영향을 미치지 않습니다.
 - 요소가 이동하거나 크기가 변경되어도 다른 요소의 배치에는 영향을 주지 않습니다.
 - 이는 **레벨 3 합성(compositing)** 단계에서 기존 레이아웃 정보를 그대로 사용하면서 GPU 가속을 통해 요소를 이동하거나 회전시킵니다.
+
+<br/>
+<br/>
 
 # 4. 그 외의 Reflow를 줄이는 방법
 

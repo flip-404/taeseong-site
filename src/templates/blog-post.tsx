@@ -18,7 +18,7 @@ interface BlogPostProps {
       frontmatter: {
         title: string;
         date: string;
-        tag: string;
+        tags: string[];
       };
       html: string;
     };
@@ -37,8 +37,8 @@ export default function BlogPost({ data }: BlogPostProps) {
           <Title>{post.frontmatter.title}</Title>
           <CreatedAt>{post.frontmatter.date}</CreatedAt>
           <Tags>
-            {[post.frontmatter.tag].map((e) => (
-              <Tag>{e}</Tag>
+            {post.frontmatter.tags.map((tag) => (
+              <Tag>{tag}</Tag>
             ))}
           </Tags>
         </PostDetails>
@@ -54,7 +54,7 @@ export const query = graphql`
       frontmatter {
         title
         date
-        tag
+        tags
       }
       html
     }

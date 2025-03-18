@@ -1,19 +1,21 @@
 ---
 title: "모노레포 적용하기 with 🚀Turborepo (1/2)"
 description: "모노레포에 대해 정리해보았습니다."
-tag: "monorepo"
+tags: ["Monorepo", "Turborepo"]
 date: "2025-01-05"
 ---
 
-![위 그림은 리포운영 방식의 히스토리다. Monolithic Application은 고전 개발방식이니 본글에서 다루지 않겠다.](attachment:5de2c08e-4ed8-4e73-81c7-de401c563b97:74ee8f5b-cc03-4442-9bf1-4c525f047961.png)
-
-위 그림은 리포운영 방식의 히스토리다. Monolithic Application은 고전 개발방식이니 본글에서 다루지 않겠다.
+<div style="display:flex; justify-content:center; margin:30px">
+<img src="https://velog.velcdn.com/images/flip_404/post/eb01f6c4-3bfd-4382-8874-7be4748a8e8d/image.png" alt="기존 리포운영 히스토리 이미지">
+</div>
 
 # 모노레포 등장배경
 
 모노레포란 버전 관리 시스템에서 두 개 이상의 프로젝트 코드가 **동일한 저장소**에 저장되는 소프트웨어 개발 전략다. [Google](https://qeunit.com/blog/how-google-does-monorepo/), [Facebook](https://buck.build/), [Microsoft](https://rushjs.io/), Uber, Airbnb, 그리고 [Twitter](https://www.pantsbuild.org/docs/welcome-to-pants) 등 글로벌 테크 회사들은 이미 각자 자신들의 운영 전략 아래 대규모 모노레포를 운영하고 있다.
 
-![image.png](attachment:5c7816a2-7757-46dc-87dd-611a1c9e861a:image.png)
+<div style="display:flex; justify-content:center; margin:30px">
+<img src="https://velog.velcdn.com/images/flip_404/post/68ca6e36-4cc5-48f8-9d47-69cec5a5365d/image.png" alt="멀티레포와 모노레포 비교 이미지">
+</div>
 
 모노레포를 알아보기 전에, 멀티레포를 알아보자.
 
@@ -47,7 +49,9 @@ date: "2025-01-05"
 
 모노레포(monorepo) 구조는 두 개 이상의 프로젝트가 동일한 저장소에 저장되는 소프트웨어 개발 전략이다. 앞선 예시의 분리된 모듈들은 모노레포에서 여전히 독자 프로젝트로 존재하지만 저장소는 같은 곳을 사용한다.
 
-![image.png](attachment:ac8b337e-2f0a-4bcb-a9f8-6595c6e63b6b:image.png)
+<div style="display:flex; justify-content:center; margin:30px">
+<img src="https://velog.velcdn.com/images/flip_404/post/9d84ec97-736a-48f0-b8f3-2cc08d6fc8ba/image.png" alt="모노레포 이미지">
+</div>
 
 ### 모노레포가 해결하는 멀티레포의 문제
 

@@ -53,12 +53,12 @@ const BlogPreview = ({
   title,
   description,
   date,
-  tag,
+  tags,
 }: {
   title: string;
   description: string;
   date: string;
-  tag: string;
+  tags: string[];
 }) => {
   return (
     <BlogPreviewWrapper>
@@ -67,7 +67,9 @@ const BlogPreview = ({
       <Meta>
         <CreatedAt>{date}</CreatedAt>
         <TagList>
-          <Tag>{tag}</Tag>
+          {tags.map((tag) => (
+            <Tag>{tag}</Tag>
+          ))}
         </TagList>
       </Meta>
     </BlogPreviewWrapper>

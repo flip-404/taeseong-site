@@ -13,7 +13,7 @@ type BlogListProps = {
           frontmatter: {
             title: string;
             description: string;
-            tag: string;
+            tags: string[];
             date: string;
           };
           fields: {
@@ -44,7 +44,7 @@ const IndexPage = ({ data }: BlogListProps) => {
               title={node.frontmatter.title}
               description={node.frontmatter.description}
               date={node.frontmatter.date}
-              tag={node.frontmatter.tag}
+              tags={node.frontmatter.tags}
             />
           </Link>
         ))}
@@ -66,7 +66,7 @@ export const query = graphql`
           frontmatter {
             title
             description
-            tag
+            tags
             date
           }
           fields {
