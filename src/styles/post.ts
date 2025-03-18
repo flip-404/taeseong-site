@@ -29,6 +29,14 @@ export const Tag = styled.span`
 export const Content = styled.div`
   padding-top: 24px;
 
+  h1 {
+    margin: 40px 0px 20px 0px;
+  }
+
+  h2 {
+    margin: 30px 0px 20px 0px;
+  }
+
   pre {
     background: #d5ddef !important;
     border-radius: 5px;
