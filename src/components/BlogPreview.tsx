@@ -37,7 +37,6 @@ const CreatedAt = styled.div`
 
 const TagList = styled.div`
   display: flex;
-  gap: 8px;
 `;
 
 const Tag = styled.span`
