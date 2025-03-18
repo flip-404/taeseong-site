@@ -40,6 +40,18 @@ export const Content = styled.div`
   }
 
   img {
+    max-width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+  }
+
+  hr {
+    margin: 3rem 0;
+  }
+
+  aside {
+    background-color: #f8f8f7;
+    padding: 12px 20px 12px 12px;
+    border-radius: 4px;
   }
 `;
