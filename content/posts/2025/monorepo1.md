@@ -1,7 +1,7 @@
 ---
 title: "모노레포 적용하기 with 🚀Turborepo (1/2)"
 description: "모노레포에 대해 정리해보았습니다."
-tag: "monorepo"
+tags: ["Monorepo", "Turborepo"]
 date: "2025-01-05"
 ---
 

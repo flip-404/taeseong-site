@@ -1,7 +1,7 @@
 ---
 title: "Docker 시작하기"
 description: "도커(Docker) 튜토리얼"
-tag: "monorepo"
+tags: ["Docker"]
 date: "2024-05-18"
 ---
 

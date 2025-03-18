@@ -1,7 +1,7 @@
 ---
 title: "프론트엔드 에러 모니터링"
 description: "프론트엔드에서 어떻게 에러를 모니터링할까?"
-tag: "Sentry"
+tags: ["Sentry", "Error"]
 date: "2025-02-14"
 ---
 

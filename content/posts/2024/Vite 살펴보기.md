@@ -1,7 +1,7 @@
 ---
 title: "Vite 살펴보기"
 description: "Vite에 대해 정리해보았습니다."
-tag: "monorepo"
+tags: ["Vite"]
 date: "2024-03-14"
 ---
 

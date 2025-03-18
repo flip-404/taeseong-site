@@ -1,7 +1,7 @@
 ---
 title: "CSS와 Reflow의 상관관계"
 description: "CSS 옵션을 통해 렌더링 속도를 높일 수 있다는 것을 알고 계셨나요?"
-tag: "Reflow"
+tags: ["Reflow", "Css"]
 date: "2025-01-20"
 ---
 
