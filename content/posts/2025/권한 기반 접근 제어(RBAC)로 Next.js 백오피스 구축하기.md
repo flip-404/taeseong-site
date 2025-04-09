@@ -18,7 +18,7 @@ date: "2025-04-09"
 ![](https://velog.velcdn.com/images/flip_404/post/c9e76439-c6b6-4e6b-bb5f-0b63cc00f16e/image.png)
 
 
-아래부터 관련한 예시 코드와 함께 권한(Role) 기반 접근 제어 방식에 대해 정리해보겠습니다.
+아래부터 관련한 예시 코드와 함께 권한(Role) 기반 접근 제어 방식에 대해 알아보겠습니다.
 
 ---
 
