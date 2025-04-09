@@ -1,7 +1,7 @@
 ---
 title: "React 렌더링 과정"
 description: ""
-tags: ["React"]
+tags: ["React.js"]
 date: "2023-01-03"
 ---
 
