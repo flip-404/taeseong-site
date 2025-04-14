@@ -24,7 +24,7 @@ const CHEXCARNova = () => {
         <CodeBlock>vanilla-extract</CodeBlock>을 이용해 개발했습니다.
       </Description>
       <Description>
-        <Label>What I did.</Label>
+        <Label>What I did. (기여도: 100%)</Label>
         <ul>
           <li>
             프론트엔드 아키텍처 설계 및 초기 세팅을 진행했습니다. 권한별 페이지

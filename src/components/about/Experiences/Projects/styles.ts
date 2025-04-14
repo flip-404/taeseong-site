@@ -14,7 +14,7 @@ export const ProjectContainer = styled.div`
 
 export const Label = styled.h4`
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
 `;
 
 export const Detail = styled.p`

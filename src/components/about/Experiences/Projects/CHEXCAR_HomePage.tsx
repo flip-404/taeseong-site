@@ -35,7 +35,7 @@ const CHEXCARHomePage = () => {
         이용해 개발했습니다.
       </Description>
       <Description>
-        <Label>What I did.</Label>
+        <Label>What I did. (기여도: 100%)</Label>
         <ul>
           <li>
             다양한 페이지에 position: sticky 속성과 스크롤 이벤트를 활용하여
