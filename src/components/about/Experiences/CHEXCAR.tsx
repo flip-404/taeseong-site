@@ -1,7 +1,8 @@
 import { CompanySection, CompanyTitle } from "../../../styles/common";
 import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
 import ChexcarLogo from "../../../images/chexcar_logo.png";
-import Catholic from "./Projects/Catholic";
+import CHEXCARHomePage from "./Projects/CHEXCAR_HomePage";
+import CHEXCARNova from "./Projects/CHEXCAR_Nova";
 
 const CHEXCAR = () => {
   return (
@@ -40,6 +41,8 @@ const CHEXCAR = () => {
           </T_Value>
         </RowWrapper>
       </CustomTable>
+      <CHEXCARNova />
+      <CHEXCARHomePage />
       {/* 홈페이지 앱 */}
       {/* 파트너스 앱 */}
     </CompanySection>

@@ -1,11 +1,11 @@
 import { CompanySection, CompanyTitle } from "../../../styles/common";
 import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
-import KGM_Project from "./Projects/KGM_chatbot";
-import Catholic from "./Projects/Catholic";
+import KGM_Project from "./Projects/TmaxAI_KGM_chatbot";
+import Catholic from "./Projects/TmaxAI_Catholic";
 import TmaxAIHomePage from "./Projects/TmaxAI_HomePage";
-import RGNews from "./Projects/RGNews";
+import RGNews from "./Projects/TmaxAI_RGNews";
 import TmaxLogo from "../../../images/tmaxai_logo.jpeg";
-import HyperChatbot from "./Projects/HyperChatbot";
+import HyperChatbot from "./Projects/TmaxAI_HyperChatbot";
 
 const TmaxCoreAI = () => {
   return (
