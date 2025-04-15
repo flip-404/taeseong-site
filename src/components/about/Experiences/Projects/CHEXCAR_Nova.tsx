@@ -27,12 +27,13 @@ const CHEXCARNova = () => {
         <Label>What I did.</Label>
         <ul>
           <li>
-            프론트엔드 아키텍처 설계 및 초기 세팅을 진행했습니다. 권한별 페이지
-            접근 제어 및 권한 관리 기능을 구현했습니다. &nbsp;
+            프로젝트 초기 세팅을 진행했습니다. 협업을 위해 commitlint 및 husky를 적용하여 커밋
+            규칙을 설정했습니다.
+          </li>
+          <li>라우터 구조 및 상태 관리 방식을 포함한 전반적인 프론트엔드 아키텍처 설계를 진행했습니다. 권한별 페이지 접근 제어 및 권한 관리 기능을 구현하여 사용자의 권한에 따라 접근할 수 있는 페이지를 제한했습니다. &nbsp;
             <InternalLink href="/blog/2025/Next.js로%20권한%20기반%20접근%20제어(RBAC)%20구축하기/">
               [관련 포스트]
-            </InternalLink>
-          </li>
+            </InternalLink></li>
         </ul>
       </Description>
     </ProjectContainer>
