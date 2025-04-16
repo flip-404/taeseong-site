@@ -37,8 +37,11 @@ const CHEXCARHomePage = () => {
       <Description>
         <Label>What I did.</Label>
         <ul>
+              <li>
+ㅇㅇ
+          </li>
           <li>
-            다양한 페이지에서 position: sticky와 스크롤 이벤트를 활용해 인터랙션 UI를 구현했습니다. React Profiler를 통해 각 화면의 성능을 측정하고, 불필요한 리렌더링을 최소화하기 위해 transform 속성을 사용해 GPU 가속을 적용했습니다. &nbsp;
+            각 페이지의 인터랙션 UI 성능을 React Profiler로 측정하고, 불필요한 리렌더링을 방지하기 위해 transform 속성 기반 GPU 가속을 적용했습니다. &nbsp;
             <InternalLink href="/">
               [상세 코드]
             </InternalLink>
