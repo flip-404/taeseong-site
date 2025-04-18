@@ -23,6 +23,7 @@ export const Detail = styled.p`
 `;
 
 export const Description = styled.div`
+  line-height: 24px;
   margin-bottom: 50px;
 
   li {
