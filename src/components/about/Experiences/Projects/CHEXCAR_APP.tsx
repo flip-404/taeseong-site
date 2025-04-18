@@ -45,12 +45,7 @@ const CHEXCARApp = () => {
               [상세 코드]
             </InternalLink>
           </li>
-          <li>
-          스크롤 이벤트 최적화, 이미지 및 비디오의 WebP/WebM 포맷 변환을 통해 렌더링 성능을 개선하고, 시맨틱 태그 및 ARIA 속성을 활용해 웹 접근성을 강화했습니다. 이러한 개선을 통해 Lighthouse(웹 성능 측정 도구) 점수를 크게 향상시켰으며, 성능(Performance), 접근성(Accessibility), SEO, PWA 항목에서 각각 92, 100, 100, 100점을 기록했습니다. &nbsp;
-            <InternalLink href="/">
-              [결과 화면]
-            </InternalLink>
-          </li>
+
         </ul>
       </Description>
     </ProjectContainer>
