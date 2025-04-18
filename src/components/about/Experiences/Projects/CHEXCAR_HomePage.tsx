@@ -35,7 +35,7 @@ const CHEXCARHomePage = () => {
         이용해 개발했습니다.
       </Description>
       <Description>
-        <Label>What I did.</Label>
+        <Label>What I did. (기여도: 100%)</Label>
         <ul>
           <li>
             각 페이지의 인터랙션 UI 성능을 React Profiler로 측정하고, 불필요한 리렌더링을 방지하기 위해 transform 속성 기반 GPU 가속을 적용했습니다. &nbsp;

@@ -24,7 +24,7 @@ const CHEXCARNova = () => {
         <CodeBlock>vanilla-extract</CodeBlock>을 이용해 개발했습니다.
       </Description>
       <Description>
-        <Label>What I did.</Label>
+        <Label>What I did. (기여도: 100%)</Label>
         <ul>
           
           <li>
