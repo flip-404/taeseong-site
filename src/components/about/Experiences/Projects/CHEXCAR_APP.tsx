@@ -10,12 +10,12 @@ import {
 const CHEXCARApp = () => {
   return (
     <ProjectContainer>
-      <Label>CHEXCAR 딜러 & 파트너스 앱</Label>
+      <Label>상품화 서비스 앱</Label>
       <Detail>Frontend Engineer</Detail>
           <Detail>2025.01 ~ 현재</Detail>
           
           <Description>
-             CHEXCAR 서비스를 이용할 수 있는 원스톱 중고차 상품화 플랫폼 앱 개발을 맡아 작업하고 있습니다. 팀에 중간 합류하여 중고차 매매업체와 개인 고객을 위한   <ExternalLink
+             팀에 중간 합류하여 CHEXCAR 서비스를 이용할 수 있는 원스톱 중고차 상품화 플랫폼 앱 개발을 맡아 작업하고 있습니다. 중고차 매매업체와 개인 고객을 위한   <ExternalLink
           href="https://play.google.com/store/apps/details?id=kr.co.chexcar.dealer"
           onClick={(event) => {
             event.preventDefault();
