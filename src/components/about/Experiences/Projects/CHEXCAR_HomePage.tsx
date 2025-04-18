@@ -29,7 +29,7 @@ const CHEXCARHomePage = () => {
         92점을 기록하였으며, 현재도 꾸준한 업데이트를 통해 성능을 개선하고
         있습니다. 또한, CI/CD 환경을 직접 설정하여 배포 자동화까지
         구현하였습니다.
-        <br />
+          <br/>
         <CodeBlock>Next</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
         <CodeBlock>emotion</CodeBlock>, <CodeBlock>vanilla-extract</CodeBlock>을
         이용해 개발했습니다.
@@ -38,14 +38,18 @@ const CHEXCARHomePage = () => {
         <Label>What I did. (기여도: 100%)</Label>
         <ul>
           <li>
-            다양한 페이지에 position: sticky 속성과 스크롤 이벤트를 활용하여
-            인터랙션 기능을 구현했습니다. 각 화면별로 리액트 Profiler를 통해
-            성능을 측정하고, 불필요한 리렌더링을 방지하기 위해 transform 속성을
-            활용하여 GPU 가속을 적용했습니다. &nbsp;
-            <InternalLink href="/detail/TmaxAI_Homepage/detail_1">
+            각 페이지의 인터랙션 UI 성능을 React Profiler로 측정하고, 불필요한 리렌더링을 방지하기 위해 transform 속성 기반 GPU 가속을 적용했습니다. &nbsp;
+            <InternalLink href="/">
               [상세 코드]
             </InternalLink>
             {/* https://velog.io/@flip_404/%EC%B2%B4%EC%B9%B4-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A6%AC%EB%A0%8C%EB%8D%94%EB%A7%81-%ED%9A%9F%EC%88%98-%EC%B8%A1%EC%A0%95 */}
+          </li>
+          
+          <li>
+          스크롤 이벤트 최적화, 이미지 및 비디오의 포맷 변환을 통해 렌더링 성능을 개선하고, 시맨틱 태그 및 ARIA 속성을 활용해 웹 접근성을 강화했습니다. 이러한 개선을 통해 Lighthouse(웹 성능 측정 도구) 점수를 크게 향상시켰으며, 성능(Performance), 접근성(Accessibility), SEO, PWA 항목에서 각각 92, 100, 100, 100점을 기록했습니다. &nbsp;
+            <InternalLink href="/">
+              [결과 화면]
+            </InternalLink>
           </li>
         </ul>
       </Description>

@@ -26,13 +26,14 @@ const CHEXCARNova = () => {
       <Description>
         <Label>What I did. (기여도: 100%)</Label>
         <ul>
+          
           <li>
-            프론트엔드 아키텍처 설계 및 초기 세팅을 진행했습니다. 권한별 페이지
-            접근 제어 및 권한 관리 기능을 구현했습니다. &nbsp;
+            초기 프로젝트 세팅을 담당하여 개발 환경을 구축하고, commitlint와 husky를 적용해 일관된 커밋 메시지 규칙을 설정했습니다. 또한, TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전 관리 프로세스를 구축했습니다.
+          </li>
+          <li>라우팅 구조와 상태 관리 전략을 포함한 전반적인 프론트엔드 아키텍처를 설계했습니다. RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근을 제어하고, <CodeBlock>Next.js</CodeBlock>의 middleware와 클라이언트 사이드 재검증을 통해 보안성과 사용성을 동시에 강화했습니다.  &nbsp;
             <InternalLink href="/blog/2025/Next.js로%20권한%20기반%20접근%20제어(RBAC)%20구축하기/">
               [관련 포스트]
-            </InternalLink>
-          </li>
+            </InternalLink></li>
         </ul>
       </Description>
     </ProjectContainer>

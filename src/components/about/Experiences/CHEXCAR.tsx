@@ -3,6 +3,7 @@ import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
 import ChexcarLogo from "../../../images/chexcar_logo.png";
 import CHEXCARHomePage from "./Projects/CHEXCAR_HomePage";
 import CHEXCARNova from "./Projects/CHEXCAR_Nova";
+import CHEXCARApp from "./Projects/CHEXCAR_APP";
 
 const CHEXCAR = () => {
   return (
@@ -36,15 +37,14 @@ const CHEXCAR = () => {
         <RowWrapper>
           <T_Key>Stack</T_Key>
           <T_Value>
-            React, TanStack Query, Jotai, Typescript, ShadCN, Tailwindcss,
+            Next, React, TanStack Query, Jotai, Typescript, ShadCN, Tailwindcss,
             Storybook
           </T_Value>
         </RowWrapper>
       </CustomTable>
       <CHEXCARNova />
       <CHEXCARHomePage />
-      {/* 홈페이지 앱 */}
-      {/* 파트너스 앱 */}
+      <CHEXCARApp/>
     </CompanySection>
   );
 };
