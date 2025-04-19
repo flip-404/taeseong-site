@@ -72,9 +72,8 @@ const Introduction = () => {
         저는 <span>_ _ _ _ _ _</span> 하는 개발자 입니다.
       </OneLineIntroduction>
       <BlankList>
-        <li>더 좋은 결과를 위해 끝까지 파고드는</li>
-        <li>빠르고 직관적인 서비스를 고민하는</li>
-        <li>직관보다 근거를 바탕으로 판단하는</li>
+        <li>옆자리 동료와 함께 성장하는</li>
+        <li>만드는 제품에 진심을 담는</li>
       </BlankList>
       <CustomTable>
         <RowWrapper>
