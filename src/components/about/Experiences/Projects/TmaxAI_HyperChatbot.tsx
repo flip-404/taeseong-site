@@ -1,30 +1,43 @@
-import { InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
+
+import { LinkIcon } from "../../../molecules/ProjectLink";
 
 const HyperChatbot = () => {
   return (
     <ProjectContainer>
-      <Label>하이퍼챗봇</Label>
+      <Label
+        className="hasLink"
+        onClick={() =>
+          window.open("https://www.tmax.co.kr/hyperchatbot", "_blank")
+        }
+      >
+        하이퍼챗봇
+        <LinkIcon />
+        <Contribution>(기여도: 30%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2023.01 - 2023.06</Detail>
       <Description>
         검색 기반 챗봇 서비스입니다. 사용자와의 대화를 미리 정해진 플로우로
         응답하도록 설정할 수 있어 특정 시나리오나 업무 프로세스에 맞게
         커스터마이징할 수 있습니다.
-        <br />
-        <br />
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>Recoil</CodeBlock>, <CodeBlock>Styled-Components</CodeBlock>
-        ,&nbsp;
-        <CodeBlock>reactFlow</CodeBlock>를 이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock>
+        <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>Recoil</CodeBlock> <CodeBlock>Styled-Components</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -38,13 +51,13 @@ const HyperChatbot = () => {
           <li>
             대화 흐름을 설계할 수 있는 플로우 페이지를 구현하였습니다. reactFlow
             라이브러리를 사용해 다양한 노드를 생성 후 드래그 앤 드롭하여 원하는
-            대화 흐름을 만들 수 있습니다.{" "}
-            <InternalLink href="/detail/HyperChatbot/detail_1">
-              [예시 화면]
-            </InternalLink>
+            대화 흐름을 만들 수 있습니다.
+            <ExternalLink href="/detail/HyperChatbot/detail_1">
+              [결과 화면]
+            </ExternalLink>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

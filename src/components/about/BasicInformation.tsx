@@ -15,7 +15,7 @@ const Name = styled.h1`
 `;
 
 const Label = styled.h2`
-  margin: 32px 0px;
+  margin: 0;
 `;
 
 const BasicInformation = () => {

@@ -36,12 +36,14 @@ export const InternalLink = ({
 };
 
 const StyledAnchor = styled.a`
+  margin-left: 5px;
   color: #2db400;
   text-decoration: underline;
   cursor: pointer;
 `;
 
 const StyledLink = styled(Link)`
+  margin-left: 5px;
   color: #2db400;
   text-decoration: underline;
   cursor: pointer;

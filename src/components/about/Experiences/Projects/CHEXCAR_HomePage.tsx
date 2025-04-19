@@ -1,58 +1,68 @@
-import { ExternalLink, InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
+import { LinkIcon } from "../../../molecules/ProjectLink";
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const CHEXCARHomePage = () => {
   return (
     <ProjectContainer>
-      <Label>CHEXCAR 홈페이지</Label>
+      <Label
+        className="hasLink"
+        onClick={() => window.open("https://chexcar.co.kr/", "_blank")}
+      >
+        CHEXCAR 홈페이지 <LinkIcon />
+        <Contribution>(기여도: 100%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2025.03</Detail>
       <Description>
-        <ExternalLink
-          href="https://chexcar.co.kr/"
-          onClick={(event) => {
-            event.preventDefault();
-            window.open("https://chexcar.co.kr/", "_blank");
-          }}
-        >
-          CHEXCAR의 공식 홈페이지
-        </ExternalLink>
-        를 1인 개발로 제작하였으며, 총 7개의 주요 페이지로 구성되어 있습니다.
-        반응형 디자인을 적용해 데스크탑, 태블릿, 모바일 등 다양한 디바이스에서
-        최적화된 사용자 경험을 제공합니다. Google Lighthouse 기준 성능 점수는
-        92점을 기록하였으며, 현재도 꾸준한 업데이트를 통해 성능을 개선하고
-        있습니다. 또한, CI/CD 환경을 직접 설정하여 배포 자동화까지
-        구현하였습니다.
-          <br/>
-        <CodeBlock>Next</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>emotion</CodeBlock>, <CodeBlock>vanilla-extract</CodeBlock>을
-        이용해 개발했습니다.
+        체카 공식 홈페이지를 단독으로 개발하여 7개의 핵심 페이지를 구축했습니다.
+        다양한 화면 크기에 최적화된 반응형 디자인을 적용해 데스크탑부터 태블릿,
+        모바일까지 일관된 사용자 경험을 제공했습니다. CI/CD 파이프라인을
+        구축하여 배포 자동화 시스템을 구현했습니다.
       </Description>
-      <Description>
-        <Label>What I did. (기여도: 100%)</Label>
+      <TechStack>
+        <CodeBlock>Next</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>emotion</CodeBlock> <CodeBlock>vanilla-extract</CodeBlock>
+      </TechStack>
+      <MyRole>
+        <Label>What I did. </Label>
         <ul>
           <li>
-            각 페이지의 인터랙션 UI 성능을 React Profiler로 측정하고, 불필요한 리렌더링을 방지하기 위해 transform 속성 기반 GPU 가속을 적용했습니다. &nbsp;
-            <InternalLink href="/">
-              [상세 코드]
-            </InternalLink>
-            {/* https://velog.io/@flip_404/%EC%B2%B4%EC%B9%B4-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A6%AC%EB%A0%8C%EB%8D%94%EB%A7%81-%ED%9A%9F%EC%88%98-%EC%B8%A1%EC%A0%95 */}
+            각 페이지의 인터랙션 UI 성능을 React Profiler로 측정하여 불필요한
+            리렌더링 방지
+            <ExternalLink href="/detail/CHEXCAR_Homepage/detail_1">
+              [상세]
+            </ExternalLink>
+            <ul className="innerList">
+              <li>transform 속성 기반 GPU 가속 적용</li>
+            </ul>
           </li>
-          
+
           <li>
-          스크롤 이벤트 최적화, 이미지 및 비디오의 포맷 변환을 통해 렌더링 성능을 개선하고, 시맨틱 태그 및 ARIA 속성을 활용해 웹 접근성을 강화했습니다. 이러한 개선을 통해 Lighthouse(웹 성능 측정 도구) 점수를 크게 향상시켰으며, 성능(Performance), 접근성(Accessibility), SEO, PWA 항목에서 각각 92, 100, 100, 100점을 기록했습니다. &nbsp;
-            <InternalLink href="/">
+            Lighthouse 기준의 웹 성능 성능(92), 접근성(100), SEO(100),
+            PWA(100)으로 점수 기록
+            <ExternalLink href="/detail/CHEXCAR_Homepage/detail_2">
               [결과 화면]
-            </InternalLink>
+            </ExternalLink>
+            <ul className="innerList">
+              <li>
+                스크롤 이벤트 최적화와 이미지·비디오 포맷 변환을 통해 렌더링
+                성능 개선
+              </li>
+              <li>시맨틱 태그와 ARIA 속성을 활용해 웹 접근성 개선</li>
+            </ul>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

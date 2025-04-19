@@ -30,7 +30,7 @@ const TmaxCoreAI = () => {
         </RowWrapper>
         <RowWrapper>
           <T_Key>Position</T_Key>
-          <T_Value>Service Development Team (Frontend Web)</T_Value>
+          <T_Value>Frontend Web (서비스 개발팀)</T_Value>
         </RowWrapper>
         <RowWrapper>
           <T_Key>Period</T_Key>

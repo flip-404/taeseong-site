@@ -6,7 +6,7 @@ import { CustomTable, RowWrapper, T_Key, T_Value } from "../molecules/Table";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 `;
 
 const Label = styled.h2`
@@ -40,8 +40,26 @@ const BlankList = styled.ul`
     margin: 8px 0;
   }
 `;
+
 const IntroductionDescription = styled.div`
   line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  div {
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  ul {
+    margin: 0 0 0 24px;
+    padding: 12px 0;
+  }
 `;
 
 const Introduction = () => {
@@ -92,26 +110,42 @@ const Introduction = () => {
       </CustomTable>
       <SectionTitle>Introduction.</SectionTitle>
       <IntroductionDescription>
-        3년 차 프론트엔드 개발자 김태성입니다. 더 나은 결과를 만들기 위해 끝까지
-        파고드는 성향을 가지고 있으며, 사내 스터디와 블로그를 통해 꾸준히
-        학습하고 성장하고 있습니다. 또한, 적극적인 코드 리뷰와 동료들과의 협업을
-        즐기며 함께 발전하는 것을 중요하게 생각합니다. 토이 프로젝트를 통해
-        다양한 기술을 활용해 아이디어를 실현하는 과정에 큰 흥미를 느끼며, 새로운
-        기술을 탐색하고 도입하는 것을 좋아합니다. <br />
-        <br />
-        티맥스에이아이에서 2년간 약 5개의 프로젝트를 수행하며 문제를 신속하게
-        해결하는 역량을 키웠고, 협업과 애자일 프로세스를 경험했습니다. AI
-        도메인에 대한 깊은 이해를 바탕으로, AI 서비스 개발을 위한 효율적인
-        프론트엔드 아키텍처를 설계하고 최적화하는 작업을 수행했습니다. 또한,
-        디자인과 개발의 일관성을 유지하기 위해 체계적인 컴포넌트 관리 및 성능
-        최적화를 경험하며 더욱 전문적인 프론트엔드 개발자로 성장했습니다. <br />
-        <br />
-        현재 CHEXCAR에서 원스톱 중고차 상품화 플랫폼 앱 개발을 담당하고
-        있습니다. 팀에 중간 합류하여, 기존에 렌더링 시마다 발생하던 API 요청을
-        TanStack Query를 활용한 캐싱 로직으로 리팩토링하여 API 호출 횟수와
-        불필요한 리렌더링을 대폭 줄였습니다. 또한, 회사의 기존 홈페이지를 기획자
-        및 디자이너와 협업하여 기획부터 디자인, 개발까지 전반적인 설계를
-        주도하며 구축하고 있으며, CI/CD 설정도 진행하였습니다.
+        <div>
+          <h5>옆자리 동료와 함께 성장하기 위해 코딩합니다.</h5>
+          <ul>
+            <li>
+              <strong>옆자리 동료가 편안하게 읽을 수 있는 코드</strong>를
+              작성하기 위해 꾸준히 학습하고 소통합니다.
+            </li>
+            <li>
+              더 나은 방향을 함께 고민하는 과정을 소중히 여기며,
+              <strong>팀 전체의 시너지를 높이는 개발</strong>을 지향합니다.
+            </li>
+            <li>
+              개발자라는 직무를 넘어,{" "}
+              <strong>믿을 수 있는 동료이자 팀원</strong>이 되기 위해
+              노력합니다.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5>만드는 제품에 진심을 담습니다.</h5>
+          <ul>
+            <li>
+              제품은 <strong>저와 팀의 가치를 증명하는 결과물</strong>입니다.
+              직접 만든 서비스에 책임감을 갖고, 더 나은 결과를 위해 끝까지
+              파고드는 성향을 가지고 있습니다.
+            </li>
+            <li>
+              프로젝트의 요구사항에 맞춰 <strong>최적의 기술 스택</strong>을
+              선택하며, 새로운 기술을 학습하는 것을 두려워하지 않습니다.
+            </li>
+            <li>
+              <strong>성능 최적화에 깊은 관심</strong>을 가지고 있으며, 이를
+              위해 다양한 접근법을 실험하고 개선해 나갑니다.
+            </li>
+          </ul>
+        </div>
       </IntroductionDescription>
     </Container>
   );
