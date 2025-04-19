@@ -1,4 +1,4 @@
-import { InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
   Contribution,
@@ -51,10 +51,10 @@ const HyperChatbot = () => {
           <li>
             대화 흐름을 설계할 수 있는 플로우 페이지를 구현하였습니다. reactFlow
             라이브러리를 사용해 다양한 노드를 생성 후 드래그 앤 드롭하여 원하는
-            대화 흐름을 만들 수 있습니다.{" "}
-            <InternalLink href="/detail/HyperChatbot/detail_1">
-              [예시 화면]
-            </InternalLink>
+            대화 흐름을 만들 수 있습니다.
+            <ExternalLink href="/detail/HyperChatbot/detail_1">
+              [결과 화면]
+            </ExternalLink>
           </li>
         </ul>
       </MyRole>

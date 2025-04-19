@@ -1,4 +1,4 @@
-import { ExternalLink, InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
   Contribution,
@@ -33,20 +33,31 @@ const CHEXCARNova = () => {
         <Label>What I did.</Label>
         <ul>
           <li>
-            초기 프로젝트 세팅을 담당하여 개발 환경을 구축하고, commitlint와
-            husky를 적용해 일관된 커밋 메시지 규칙을 설정했습니다. 또한,
-            TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전
-            관리 프로세스를 구축했습니다.
+            초기 프로젝트 세팅을 담당하여 개발 환경 구축
+            <ul className="innerList">
+              <li>commitlint와 husky를 적용해 일관된 커밋 메시지 규칙 설정</li>
+              <li>
+                TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및
+                버전 관리 프로세스 구축
+              </li>
+            </ul>
           </li>
           <li>
             라우팅 구조와 상태 관리 전략을 포함한 전반적인 프론트엔드 아키텍처를
-            설계했습니다. RBAC(Role-Based Access Control) 방식으로 사용자 권한에
-            따라 페이지 접근을 제어하고, <CodeBlock>Next.js</CodeBlock>의
-            middleware와 클라이언트 사이드 재검증을 통해 보안성과 사용성을
-            동시에 강화했습니다. &nbsp;
-            <InternalLink href="/blog/2025/Next.js로%20권한%20기반%20접근%20제어(RBAC)%20구축하기/">
+            설계
+            <ExternalLink href="/blog/2025/Next.js로%20권한%20기반%20접근%20제어(RBAC)%20구축하기/">
               [관련 포스트]
-            </InternalLink>
+            </ExternalLink>
+            <ul className="innerList">
+              <li>
+                RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라
+                페이지 접근 제어
+              </li>
+              <li>
+                <CodeBlock>Next.js</CodeBlock>의 middleware를 활용한 쿠키 기반
+                인증으로 서버 사이드 검증 로직 구현
+              </li>
+            </ul>
           </li>
         </ul>
       </MyRole>

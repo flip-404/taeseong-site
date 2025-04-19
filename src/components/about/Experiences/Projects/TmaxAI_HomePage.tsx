@@ -1,4 +1,4 @@
-import { InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
   Contribution,
@@ -31,33 +31,43 @@ const TmaxAIHomePage = () => {
         <Label>What I did.</Label>
         <ul>
           <li>
-            TmaxAI 소개 페이지를 위한 인터랙티브 스크롤 애니메이션을
-            개발했습니다. 사용자의 스크롤 동작에 반응하여 세 개의 원형 요소가
-            자연스럽게 중앙에 모이는 시각적 효과를 구현했습니다.&nbsp;
-            <InternalLink href="/detail/TmaxAI_Homepage/detail_1">
-              [상세 코드]
-            </InternalLink>
+            인터랙티브 스크롤 애니메이션 개발
+            <ExternalLink href="/detail/TmaxAI_Homepage/detail_1">
+              [상세]
+            </ExternalLink>{" "}
+            <ul className="innerList">
+              <li>
+                스크롤 이벤트의 과도한 호출 방지하기 위한 쓰로틀링(throttling)
+                기법 적용
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            광학문자인식(OCR) 기능 체험하기 기능 개발
+            <ExternalLink href="/detail/TmaxAI_Homepage/detail_2">
+              [상세]
+            </ExternalLink>
+            <ul className="innerList">
+              <li>
+                원본 이미지 위의 텍스트 영역을 확인하고 상호작용할 수 있는
+                인터페이스 구현
+              </li>
+              <li>
+                대량의 바운딩 박스를 메인 스레드 블로킹 없이 처리하기 위해 Web
+                Worker와 OffscreenCanvas API를 활용한 로직 구현
+              </li>
+            </ul>
           </li>
           <li>
-            광학문자인식(OCR) 기능 체험하기 기능 개발했습니다. 이미지에서 추출된
-            텍스트 정보를 구조화하고, 원본 이미지 위에 직관적인 바운딩 박스로
-            시각화하여 사용자가 텍스트 영역을 쉽게 확인하고 상호작용할 수 있는
-            인터페이스를 구현했습니다. 이 과정에서 대량의 바운딩 박스를 메인
-            스레드 블로킹 없이 처리하기 위해 Web Worker와 OffscreenCanvas API를
-            활용해 개발했습니다. &nbsp;
-            <InternalLink href="/detail/TmaxAI_Homepage/detail_2">
-              [상세 코드]
-            </InternalLink>
-          </li>
-          <li>
-            기술 도입 문의하기 기능을 개발했습니다. React-hook-form을 활용하여
-            사용자의 입력값을 유효성 검사하고, 서버로 전송하는 로직을
-            구현했습니다. 또한, 사용자가 입력한 정보를 서버로 전송하는 과정에서
-            발생할 수 있는 오류를 최소화하고 리렌더링을 최적화하기 위해 폼을
-            최적화했습니다. &nbsp;
-            <InternalLink href="/detail/TmaxAI_Homepage/detail_3">
-              [예시 화면]
-            </InternalLink>
+            기술 도입 문의하기 기능 개발
+            <ExternalLink href="/detail/TmaxAI_Homepage/detail_3">
+              [결과 화면]
+            </ExternalLink>
+            <ul className="innerList">
+              <li>React-hook-form을 활용한 유효성 검사 구현</li>
+              <li>입력에 따른 리렌더링 방지를 통한 폼 성능 최적화</li>
+            </ul>
           </li>
         </ul>
       </MyRole>

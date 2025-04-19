@@ -8,7 +8,7 @@ import {
   ProjectContainer,
   TechStack,
 } from "./styles";
-import { InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
 
 const RGNews = () => {
   return (
@@ -33,9 +33,7 @@ const RGNews = () => {
         <ul>
           <li>
             스와이프 기반 뉴스 페이지 개선
-            <InternalLink href="/detail/RGNews/detail_1">
-              [상세 코드]
-            </InternalLink>
+            <ExternalLink href="/detail/RGNews/detail_1">[상세]</ExternalLink>
             <ul className="innerList">
               <li>
                 사용자 피드백을 반영하여 스와이프 전환 시 opacity를 동적으로
@@ -48,9 +46,7 @@ const RGNews = () => {
           </li>
           <li>
             종합 검색 페이지 구현
-            <InternalLink href="/detail/RGNews/detail_2">
-              [상세 코드]
-            </InternalLink>
+            <ExternalLink href="/detail/RGNews/detail_2">[상세]</ExternalLink>
             <ul className="innerList">
               <li>검색창, 맞춤/트렌딩/연관 검색어, 검색 결과 제공</li>
               <li>
@@ -60,9 +56,7 @@ const RGNews = () => {
           </li>
           <li>
             무한 스크롤 뉴스 검색 구현
-            <InternalLink href="/detail/RGNews/detail_3">
-              [상세 코드]
-            </InternalLink>
+            <ExternalLink href="/detail/RGNews/detail_3">[상세]</ExternalLink>
             <ul className="innerList">
               <li>Intersection Observer 활용한 API 연동 및 페이징 처리 구현</li>
               <li>
@@ -72,9 +66,9 @@ const RGNews = () => {
           </li>
           <li>
             마이 페이지 기능 개발
-            <InternalLink href="/detail/RGNews/detail_4">
-              [예시 화면]
-            </InternalLink>
+            <ExternalLink href="/detail/RGNews/detail_4">
+              [결과 화면]
+            </ExternalLink>
             <ul className="innerList">
               <li>관심 뉴스 및 언론사 저장/관리 기능</li>
               <li>react-beautiful-dnd 활용한 드래그 앤 드롭 인터페이스 구현</li>
@@ -82,9 +76,7 @@ const RGNews = () => {
           </li>
           <li>
             TTS(Text-to-Speech) 기능 구현
-            <InternalLink href="/detail/RGNews/detail_5">
-              [상세 코드]
-            </InternalLink>
+            <ExternalLink href="/detail/RGNews/detail_5">[상세]</ExternalLink>
             <ul className="innerList">
               <li>Web Audio API를 활용한 브라우저 내 텍스트-음성 변환</li>
               <li>재사용 가능한 React 커스텀 훅 개발</li>

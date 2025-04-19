@@ -1,4 +1,4 @@
-import { ExternalLink, InternalLink } from "../../../molecules/Links";
+import { ExternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
   Contribution,
@@ -22,7 +22,7 @@ const CHEXCARApp = () => {
       <Description>
         팀에 중간 합류하여 CHEXCAR 서비스를 이용할 수 있는 원스톱 중고차 상품화
         플랫폼 앱 개발을 맡아 작업하고 있습니다. 중고차 매매업체와 개인 고객을
-        위한{" "}
+        위한
         <ExternalLink
           href="https://play.google.com/store/apps/details?id=kr.co.chexcar.dealer"
           onClick={(event) => {
@@ -58,11 +58,13 @@ const CHEXCARApp = () => {
         <Label>What I did.</Label>
         <ul>
           <li>
-            상품화 서비스 프로세스 중 잦은 API를 호출하던 방식에서, TanStack
-            Query를 활용한 캐싱 로직으로 리팩토링하여 최소한의 API 호출을 할 수
-            있도록 설계를 개선했습니다. 렌더링 시마다 발생하던 API 요청과
-            그로인해 발생하던 불필요한 리렌더링을 대폭 개선했습니다. &nbsp;
-            <InternalLink href="/">[상세 코드]</InternalLink>
+            모달 컴포넌트의 깜빡임 현상과 레이아웃 시프트를 해결하기 위해
+            useLayoutEffect를 활용하여 DOM 조작하는 방법으로 성능 개선
+          </li>
+          <li>
+            기존 프로세스 전반에서 잦은 API 호출이 발생하던 구조를 TanStack
+            Query 기반의 캐싱 로직으로 리팩토링하여 불필요한 서버 통신과
+            스켈레톤 UI 노출 감소
           </li>
         </ul>
       </MyRole>
