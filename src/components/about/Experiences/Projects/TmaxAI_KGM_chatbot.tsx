@@ -6,7 +6,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const KGM_Project = () => {
@@ -45,23 +47,20 @@ const KGM_Project = () => {
         >
           챗봇 서비스
         </ExternalLink>
-        입니다. 2명의 FE 개발자와 2명의 개발자, 백엔드 개발자, 디자이너, PO와 함
-        팀을 이뤄 애자일 프로세스로 작업을 진행했습니다.
-        <br />
-        <br />
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>
-        ,&nbsp;
-        <CodeBlock>styled-components</CodeBlock>
-        ,&nbsp;
-        <CodeBlock>recoil</CodeBlock>,<CodeBlock>swr</CodeBlock>,&nbsp;를 이용해
-        개발했습니다.
+        입니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>styled-components</CodeBlock>
+        <CodeBlock>recoil</CodeBlock>
+        <CodeBlock>swr</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>KGM API를 챗봇에 연동하여 규칙 기반 챗봇을 개발하였습니다</li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

@@ -5,7 +5,7 @@ export const CustomTable = styled.div`
   margin-top: 16px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 `;
 
 export const RowWrapper = styled.div`

@@ -5,7 +5,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const CHEXCARNova = () => {
@@ -21,12 +23,13 @@ const CHEXCARNova = () => {
         재구성한 SaaS(Software as a Service) 플랫폼입니다. 신규 프로젝트로,
         자동차 상품화 전 과정을 통합적으로 관리할 수 있는 솔루션을 목표로 개발
         중입니다.
-        <br />
-        <CodeBlock>Next</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>shadcn</CodeBlock>, <CodeBlock>emotion</CodeBlock>,
-        <CodeBlock>vanilla-extract</CodeBlock>을 이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>Next</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>shadcn</CodeBlock> <CodeBlock>emotion</CodeBlock>
+        <CodeBlock>vanilla-extract</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -46,7 +49,7 @@ const CHEXCARNova = () => {
             </InternalLink>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

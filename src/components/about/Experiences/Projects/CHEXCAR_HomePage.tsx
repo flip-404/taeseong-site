@@ -6,6 +6,7 @@ import {
   Detail,
   Label,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const CHEXCARHomePage = () => {
@@ -32,10 +33,10 @@ const CHEXCARHomePage = () => {
         92점을 기록하였으며, 현재도 꾸준한 업데이트를 통해 성능을 개선하고
         있습니다. 또한, CI/CD 환경을 직접 설정하여 배포 자동화까지
         구현하였습니다.
-        <br />
-        <CodeBlock>Next</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>emotion</CodeBlock>, <CodeBlock>vanilla-extract</CodeBlock>을
-        이용해 개발했습니다.
+        <TechStack>
+          <CodeBlock>Next</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+          <CodeBlock>emotion</CodeBlock> <CodeBlock>vanilla-extract</CodeBlock>
+        </TechStack>
       </Description>
       <Description>
         <Label>What I did. </Label>

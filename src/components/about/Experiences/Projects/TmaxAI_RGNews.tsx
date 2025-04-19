@@ -4,7 +4,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 import { InternalLink } from "../../../molecules/Links";
 
@@ -21,13 +23,12 @@ const RGNews = () => {
         서비스입니다. 사용자의 검색 기록, 읽은 기사, 선호하는 주제 등을 분석하여
         최적화된 뉴스 콘텐츠를 추천하며, 실시간으로 업데이트되는 최신 뉴스를
         제공합니다
-        <br />
-        <br />
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,{" "}
-        <CodeBlock>mobx</CodeBlock>, <CodeBlock>styled-components</CodeBlock>를
-        이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>mobx</CodeBlock> <CodeBlock>styled-components</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -90,7 +91,7 @@ const RGNews = () => {
             </ul>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

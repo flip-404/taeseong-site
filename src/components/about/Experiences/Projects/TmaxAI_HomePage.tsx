@@ -5,7 +5,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const TmaxAIHomePage = () => {
@@ -20,13 +22,12 @@ const TmaxAIHomePage = () => {
         TmaxAI 공식 홈페이지입니다. STT(음성 인식), TTS(텍스트 음성 변환),
         OCR(문자 인식) 등의 AI 기술을 직접 체험할 수 있는 기능을 제공하며, AI
         기술 도입을 원하는 기업이나 개인을 위한 문의 기능을 지원합니다.
-        <br />
-        <br />
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>Recoil</CodeBlock>, <CodeBlock>Styled-Components</CodeBlock>
-        를 이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>Recoil</CodeBlock> <CodeBlock>Styled-Components</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -59,7 +60,7 @@ const TmaxAIHomePage = () => {
             </InternalLink>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

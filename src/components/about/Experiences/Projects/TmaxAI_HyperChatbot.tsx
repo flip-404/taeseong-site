@@ -5,7 +5,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 import { LinkIcon } from "../../../molecules/ProjectLink";
@@ -29,14 +31,13 @@ const HyperChatbot = () => {
         검색 기반 챗봇 서비스입니다. 사용자와의 대화를 미리 정해진 플로우로
         응답하도록 설정할 수 있어 특정 시나리오나 업무 프로세스에 맞게
         커스터마이징할 수 있습니다.
-        <br />
-        <br />
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>Recoil</CodeBlock>, <CodeBlock>Styled-Components</CodeBlock>
-        ,&nbsp;
-        <CodeBlock>reactFlow</CodeBlock>를 이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock>
+        <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>Recoil</CodeBlock> <CodeBlock>Styled-Components</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -56,7 +57,7 @@ const HyperChatbot = () => {
             </InternalLink>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

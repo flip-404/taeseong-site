@@ -5,7 +5,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const CHEXCARApp = () => {
@@ -33,7 +35,7 @@ const CHEXCARApp = () => {
         >
           딜러 앱
         </ExternalLink>
-        과 상품화 서비스를 제공하는 업체가 이용하는{" "}
+        과 상품화 서비스를 제공하는 업체가 이용하는
         <ExternalLink
           href="https://play.google.com/store/apps/details?id=kr.co.chexcar.partners"
           onClick={(event) => {
@@ -47,11 +49,12 @@ const CHEXCARApp = () => {
           파트너스 앱
         </ExternalLink>
         을 개발했습니다.
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,&nbsp;
-        <CodeBlock>tanstack-query</CodeBlock>, <CodeBlock>Scss</CodeBlock>를
-        이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>tanstack-query</CodeBlock> <CodeBlock>Scss</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -62,7 +65,7 @@ const CHEXCARApp = () => {
             <InternalLink href="/">[상세 코드]</InternalLink>
           </li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };

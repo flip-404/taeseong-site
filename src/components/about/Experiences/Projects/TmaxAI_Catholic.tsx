@@ -6,7 +6,9 @@ import {
   Description,
   Detail,
   Label,
+  MyRole,
   ProjectContainer,
+  TechStack,
 } from "./styles";
 
 const Catholic = () => {
@@ -32,13 +34,13 @@ const Catholic = () => {
           한국가톨릭대사전 홈페이지
         </ExternalLink>
         에 등재하였습니다.
-        <br />
-        <br />
-        <CodeBlock>React</CodeBlock>, <CodeBlock>Typescript</CodeBlock>,
-        <CodeBlock>dompurify</CodeBlock>,&nbsp;
-        <CodeBlock>Styled-Components</CodeBlock>를 이용해 개발했습니다.
       </Description>
-      <Description>
+      <TechStack>
+        <CodeBlock>React</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>dompurify</CodeBlock>
+        <CodeBlock>Styled-Components</CodeBlock>
+      </TechStack>
+      <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
@@ -51,7 +53,7 @@ const Catholic = () => {
           </li>
           <li>커스텀 에디터의 '찾기/바꾸기' 기능을 구현하였습니다.</li>
         </ul>
-      </Description>
+      </MyRole>
     </ProjectContainer>
   );
 };
