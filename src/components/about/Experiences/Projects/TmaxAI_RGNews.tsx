@@ -1,5 +1,6 @@
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
@@ -10,7 +11,9 @@ import { InternalLink } from "../../../molecules/Links";
 const RGNews = () => {
   return (
     <ProjectContainer>
-      <Label>RGNews</Label>
+      <Label>
+        RGNews <Contribution>&nbsp;(기여도: 50%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2023.06 - 2023.11</Detail>
       <Description>
@@ -28,58 +31,63 @@ const RGNews = () => {
         <Label>What I did.</Label>
         <ul>
           <li>
-            숏 뉴스 형식의 비디오를 제공하는 뉴스 페이지에서 스와이프 전환 시
-            부자연스럽다는 피드백을 반영하여, 스와이프 방향과 거리 기반으로
-            동적으로 opacity를 조정하는 로직을 구현해 사용자 경험을
-            개선했습니다. 또한, 모든 뉴스 아이템을 한 번에 렌더링하여 발생하는
-            성능 저하 문제를 해결하기 위해 현재 보고 있는 아이템 주변의 일정
-            범위만 렌더링하는 방식으로 최적화 작업을 진행했습니다.&nbsp;
+            스와이프 기반 뉴스 페이지 개선
             <InternalLink href="/detail/RGNews/detail_1">
               [상세 코드]
             </InternalLink>
+            <ul className="innerList">
+              <li>
+                사용자 피드백을 반영하여 스와이프 전환 시 opacity를 동적으로
+                조정하여 자연스러운 전환 효과 구현
+              </li>
+              <li>
+                렌더링 최적화를 통한 성능 향상 (현재 아이템 주변만 렌더링)
+              </li>
+            </ul>
           </li>
           <li>
-            검색창, 맞춤 검색어, 트렌딩 이슈, 연관 검색어, 검색 결과를 제공하는
-            종합 검색 페이지를 구현했습니다. 검색 성능 최적화를 위해 사용자의
-            검색 상태를 추적하여 렌더링과 불필요한 서버 호출을 최적화하는 작업을
-            진행했습니다.&nbsp;
+            종합 검색 페이지 구현
             <InternalLink href="/detail/RGNews/detail_2">
               [상세 코드]
             </InternalLink>
+            <ul className="innerList">
+              <li>검색창, 맞춤/트렌딩/연관 검색어, 검색 결과 제공</li>
+              <li>
+                사용자 검색 상태 추적으로 불필요한 렌더링과 서버 호출 최소화
+              </li>
+            </ul>
           </li>
           <li>
-            뉴스 검색을 위한 API 연동과 Intersection Observer를 활용한 무한
-            스크롤 기능을 구현했습니다. 한 번에 수백 개의 뉴스를 모두 가져오는
-            대신, 10개씩 데이터를 페이징하여 불러오도록 하여 사용자 경험을
-            개선하고 성능을 최적화했습니다.&nbsp;
+            무한 스크롤 뉴스 검색 구현
             <InternalLink href="/detail/RGNews/detail_3">
               [상세 코드]
             </InternalLink>
+            <ul className="innerList">
+              <li>Intersection Observer 활용한 API 연동 및 페이징 처리 구현</li>
+              <li>
+                에러 바운더리 구현을 통한 런타임 에러 감지 및 재시도 기능 구현
+              </li>
+            </ul>
           </li>
           <li>
-            사용자가 앱을 사용하며 관심 있는 뉴스와 언론사를 저장하고 관리할 수
-            있는 마이 페이지를 구현했습니다. 마이 페이지에서 사용자가 저장한
-            뉴스를 리스트로 확인할 수 있으며, 뉴스를 삭제하거나 순서를 변경할 수
-            있는 기능을 제공했습니다. 또한, react-beautiful-dnd 라이브러리를
-            활용하여 사용자가 아이템을 직관적으로 변경할 수 있는 기능을
-            구현했습니다. 드래그 앤 드롭 방식으로 아이템의 위치를 손쉽게 조정할
-            수 있어, 사용자에게 직관적이고 편리한 인터페이스 경험을
-            제공했습니다.&nbsp;
+            마이 페이지 기능 개발
             <InternalLink href="/detail/RGNews/detail_4">
               [예시 화면]
             </InternalLink>
+            <ul className="innerList">
+              <li>관심 뉴스 및 언론사 저장/관리 기능</li>
+              <li>react-beautiful-dnd 활용한 드래그 앤 드롭 인터페이스 구현</li>
+            </ul>
           </li>
           <li>
-            사용자가 기사를 음성으로 들을 수 있도록 텍스트 콘텐츠를 음성으로
-            변환하여 재생하는 TTS(Text-to-Speech) 기능을 개발했습니다. 서버에
-            의존하지 않고 브라우저 내에서 직접 오디오 처리 및 재생을 위해 Web
-            Audio API를 활용하여 구현했습니다. 이를 통해 텍스트 콘텐츠를
-            음성으로 변환하는 기능을 보다 빠르고 효율적으로 처리할 수 있었으며,
-            해당 기능을 위한 React 커스텀 훅을 개발해 재사용성을
-            높였습니다.&nbsp;
+            TTS(Text-to-Speech) 기능 구현
             <InternalLink href="/detail/RGNews/detail_5">
               [상세 코드]
             </InternalLink>
+            <ul className="innerList">
+              <li>Web Audio API를 활용한 브라우저 내 텍스트-음성 변환</li>
+              <li>재사용 가능한 React 커스텀 훅 개발</li>
+            </ul>
           </li>
         </ul>
       </Description>

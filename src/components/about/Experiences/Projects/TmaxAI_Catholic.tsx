@@ -1,6 +1,8 @@
 import { ExternalLink } from "../../../molecules/Links";
+import { LinkIcon } from "../../../molecules/ProjectLink";
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
@@ -10,7 +12,15 @@ import {
 const Catholic = () => {
   return (
     <ProjectContainer>
-      <Label>가톨릭대백과</Label>
+      <Label
+        className="hasLink"
+        onClick={() =>
+          window.open("https://encyclopedia.catholic.or.kr/", "_blank")
+        }
+      >
+        가톨릭대백과 <LinkIcon />
+        <Contribution>(기여도: 50%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2024.08 - 2024.12</Detail>
       <Description>

@@ -1,6 +1,7 @@
 import { InternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
@@ -10,7 +11,9 @@ import {
 const TmaxAIHomePage = () => {
   return (
     <ProjectContainer>
-      <Label>TmaxAI 홈페이지</Label>
+      <Label>
+        TmaxAI 홈페이지 <Contribution>&nbsp;(기여도: 50%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2023.12 - 2024.03</Detail>
       <Description>

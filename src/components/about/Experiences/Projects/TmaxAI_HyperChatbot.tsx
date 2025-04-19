@@ -1,16 +1,28 @@
 import { InternalLink } from "../../../molecules/Links";
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
   ProjectContainer,
 } from "./styles";
 
+import { LinkIcon } from "../../../molecules/ProjectLink";
+
 const HyperChatbot = () => {
   return (
     <ProjectContainer>
-      <Label>하이퍼챗봇</Label>
+      <Label
+        className="hasLink"
+        onClick={() =>
+          window.open("https://www.tmax.co.kr/hyperchatbot", "_blank")
+        }
+      >
+        하이퍼챗봇
+        <LinkIcon />
+        <Contribution>(기여도: 30%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2023.01 - 2023.06</Detail>
       <Description>

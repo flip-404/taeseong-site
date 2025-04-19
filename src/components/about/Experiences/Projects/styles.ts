@@ -13,8 +13,29 @@ export const ProjectContainer = styled.div`
 `;
 
 export const Label = styled.h4`
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   font-size: 1rem;
+  border-radius: 4px;
+  padding: 4px 0px;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  &.hasLink {
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+      color: #63c17e;
+
+      svg {
+        fill: #63c17e;
+      }
+    }
+  }
 `;
 
 export const Detail = styled.p`
@@ -26,7 +47,11 @@ export const Description = styled.div`
   line-height: 24px;
   margin-bottom: 50px;
 
-  li {
+  & > li {
+    margin-bottom: 10px;
+  }
+
+  .innerList {
     margin-bottom: 10px;
   }
 `;
@@ -36,4 +61,9 @@ export const CodeBlock = styled.code`
   background-color: rgb(242, 242, 242);
   border-radius: 4px;
   color: rgb(99, 193, 126);
+`;
+
+export const Contribution = styled.span`
+  font-weight: 500;
+  font-size: 12px;
 `;

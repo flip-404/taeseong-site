@@ -44,7 +44,7 @@ const CHEXCAR = () => {
       </CustomTable>
       <CHEXCARNova />
       <CHEXCARHomePage />
-      <CHEXCARApp/>
+      <CHEXCARApp />
     </CompanySection>
   );
 };

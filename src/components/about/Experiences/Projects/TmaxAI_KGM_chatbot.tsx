@@ -1,6 +1,8 @@
 import { ExternalLink } from "../../../molecules/Links";
+import { LinkIcon } from "../../../molecules/ProjectLink";
 import {
   CodeBlock,
+  Contribution,
   Description,
   Detail,
   Label,
@@ -8,11 +10,21 @@ import {
 } from "./styles";
 
 const KGM_Project = () => {
-  const openInNewWindow = (url: string) => {};
-
   return (
     <ProjectContainer>
-      <Label>KGM 챗봇</Label>
+      <Label
+        className="hasLink"
+        onClick={() => {
+          window.open(
+            "https://kgchat.kg-mobility.com/",
+            "_blank",
+            "width=400,height=649"
+          );
+        }}
+      >
+        KGM 챗봇 <LinkIcon />
+        <Contribution>(기여도: 40%)</Contribution>
+      </Label>
       <Detail>Frontend Engineer</Detail>
       <Detail>2024.04 - 2024.10</Detail>
       <Description>
