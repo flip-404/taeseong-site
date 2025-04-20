@@ -7,6 +7,10 @@ const FooterContainer = styled.footer`
   padding: 26px 0px;
   color: rgb(148, 148, 148);
   font-size: 12px;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const Footer = () => {

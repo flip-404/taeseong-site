@@ -9,11 +9,19 @@ const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media print {
+    margin-top: 0;
+  }
 `;
 
 const Main = styled.main`
   padding-top: 80px;
   width: 780px;
+
+  @media print {
+    padding-top: 0;
+  }
 `;
 
 type LayoutProps = {

@@ -13,6 +13,10 @@ const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   color: white;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const Link = styled(Link_)`
