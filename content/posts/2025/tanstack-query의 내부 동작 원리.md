@@ -1,6 +1,6 @@
 ---
 title: "tanstack-query의 내부 동작 원리"
-description: "tanstack-query의 내부 동작 원리에 대해 정리해 보았습니다."
+description: "tanstack-query의 내부 동작 원리에 대해 조금은 쉽게 정리해 보았습니다."
 tags: ["tanstack-query", "react"]
 date: "2025-04-22"
 ---
