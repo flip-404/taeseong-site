@@ -14,10 +14,11 @@ const CHEXCARNova = () => {
   return (
     <ProjectContainer>
       <Label>
-        NOVA (B2B SaaS) <Contribution>(기여도: 100%)</Contribution>
+        자동차 상품화 관리 플랫폼(B2B SaaS) 및 백오피스 개발
+        <Contribution>(기여도: 100%)</Contribution>
       </Label>
       <Detail>Frontend Engineer</Detail>
-      <Detail>2025.04 ~ 현재</Detail>
+      <Detail>2025.02 ~ 현재</Detail>
       <Description>
         기존 체카의 상품화 서비스를 기반으로, 새로운 B2B 비즈니스 모델에 맞춰
         재구성한 SaaS(Software as a Service) 플랫폼입니다. 신규 프로젝트로,
@@ -26,15 +27,20 @@ const CHEXCARNova = () => {
       </Description>
       <TechStack>
         <CodeBlock>Next</CodeBlock> <CodeBlock>Typescript</CodeBlock>
+        <CodeBlock>tailwindcss</CodeBlock>
         <CodeBlock>shadcn</CodeBlock> <CodeBlock>emotion</CodeBlock>
-        <CodeBlock>vanilla-extract</CodeBlock>
+        <CodeBlock>turborepo</CodeBlock>
       </TechStack>
       <MyRole>
         <Label>What I did.</Label>
         <ul>
           <li>
-            초기 프로젝트 세팅을 담당하여 개발 환경 구축
+            프로젝트 초기 세팅을 담당하여 개발 환경 전반 구축
             <ul className="innerList">
+              <li>
+                유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해
+                Monorepo 아키텍처를 설계하고 도입
+              </li>
               <li>commitlint와 husky를 적용해 일관된 커밋 메시지 규칙 설정</li>
               <li>
                 TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및
@@ -43,8 +49,8 @@ const CHEXCARNova = () => {
             </ul>
           </li>
           <li>
-            라우팅 구조와 상태 관리 전략을 포함한 전반적인 프론트엔드 아키텍처를
-            설계
+            사용자 인증 시스템과 라우팅 구조를 포함한 전반적인 프론트엔드
+            아키텍처를 설계
             <ExternalLink href="/blog/2025/Next.js로%20권한%20기반%20접근%20제어(RBAC)%20구축하기/">
               [관련 포스트]
             </ExternalLink>
@@ -59,6 +65,7 @@ const CHEXCARNova = () => {
               </li>
             </ul>
           </li>
+          <li>프로젝트의 레이아웃 구성 및 주요 페이지 개발 전반을 담당</li>
         </ul>
       </MyRole>
     </ProjectContainer>
