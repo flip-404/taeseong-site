@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Taeseong Dev Blog`,
     description: `프론트엔드 개발자 태성의 기술 블로그입니다.`,
-    siteUrl: `https://taeseong-site.vercel.app/`,
+    siteUrl: `https://taeseong-site.vercel.app`,
     author: `Taeseong`,
   },
   plugins: [
@@ -49,3 +49,4 @@ module.exports = {
     },
   ],
 };
+
