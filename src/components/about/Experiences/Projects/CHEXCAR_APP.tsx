@@ -20,9 +20,7 @@ const CHEXCARApp = () => {
       <Detail>2025.01 ~ 현재</Detail>
 
       <Description>
-        팀에 중간 합류하여 CHEXCAR 서비스를 이용할 수 있는 원스톱 중고차 상품화
-        플랫폼 앱 개발을 맡아 작업하고 있습니다. 중고차 매매업체와 개인 고객을
-        위한
+        중고차 매매업체와 개인 고객을 위한
         <ExternalLink
           href="https://play.google.com/store/apps/details?id=kr.co.chexcar.dealer"
           onClick={(event) => {
@@ -48,7 +46,9 @@ const CHEXCARApp = () => {
         >
           파트너스 앱
         </ExternalLink>
-        을 개발했습니다.
+        의 유지보수를 맡아 개발했습니다. 레이아웃 시프트 현상 개선과 캐싱 로직
+        최적화에 집중하여 앱의 성능과 사용자 경험을 향상시키는 것에
+        주력했습니다.
       </Description>
       <TechStack>
         <CodeBlock>React</CodeBlock> <CodeBlock>Typescript</CodeBlock>
