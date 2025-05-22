@@ -2,7 +2,7 @@
 title: 'Turborepo에서 Tailwind v4 사용 시 공통 라이브러리 인식 문제 해결법'
 description: "Turborepo 환경에서 Tailwind CSS v4를 사용하면서 공통 라이브러리(UI 패키지)의 스타일이 제대로 인식되지 않는 문제를 만났다. 이 글에서는 문제의 원인과 여러 가지 해결 방법을 정리해보았다."
 tags: ["turborepo", "tailwind v4", "오류"]
-date: "2025-05-01"
+date: "2025-05-22"
 ---
 
 
