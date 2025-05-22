@@ -168,3 +168,7 @@ Turborepo에서 Tailwind v4를 사용할 때 가장 중요한 포인트는 `@con
 
 Tailwind v4는 아직 초기 단계이므로 일부 기능(IntelliSense 등)이 완전하지 않을 수 있다. 하지만 위의 방법들을 통해 monorepo 환경에서도 충분히 활용할 수 있다.
 
+---
+
+이 글은 Turborepo GitHub 저장소의 [Tailwind v4 관련 이슈 토론](https://github.com/vercel/turborepo/issues/9895)
+을 바탕으로 작성되었습니다.
