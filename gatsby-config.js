@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Markdown Blog",
-    description: "A simple blog built with Gatsby and Markdown",
-    author: "@yourhandle",
+    title: `Taeseong Dev Blog`,
+    description: `프론트엔드 개발자 태성의 기술 블로그입니다.`,
+    siteUrl: `https://taeseong-site.vercel.app`,
+    author: `Taeseong`,
   },
   plugins: [
     "gatsby-plugin-typescript",
@@ -38,5 +39,14 @@ module.exports = {
         icon: `static/favicon.png`,
       },
     },
+    `gatsby-plugin-react-helmet`,       // SEO 메타 태그 삽입
+    `gatsby-plugin-sitemap`,            // sitemap.xml 자동 생성
+    {
+      resolve: `gatsby-plugin-robots-txt`, // robots.txt 생성
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
   ],
 };
+
