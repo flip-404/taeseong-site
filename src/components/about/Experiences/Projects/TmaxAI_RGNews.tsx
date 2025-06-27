@@ -7,6 +7,7 @@ import {
   MyRole,
   ProjectContainer,
   TechStack,
+  Subtitle
 } from "./styles";
 import { ExternalLink } from "../../../molecules/Links";
 
@@ -30,57 +31,31 @@ const RGNews = () => {
       </TechStack>
       <MyRole>
         <Label>What I did.</Label>
+        <Subtitle>유저의 불편함을 찾고, 주도적으로 개선했습니다.</Subtitle>
         <ul>
           <li>
-            스와이프 기반 뉴스 페이지 개선
-            <ExternalLink href="/detail/RGNews/detail_1">[상세]</ExternalLink>
+            숏 뉴스 컴포넌트의 스와이프 전환 시 부자연스러운 화면 전환 발생 <ExternalLink href="/detail/RGNews/detail_1">[상세]</ExternalLink>
             <ul className="innerList">
+              <li>디자인 팀에 동적 애니메이션을 제안 및 구현</li>
               <li>
-                사용자 피드백을 반영하여 스와이프 전환 시 opacity를 동적으로
-                조정하여 자연스러운 전환 효과 구현
-              </li>
-              <li>
-                렌더링 최적화를 통한 성능 향상 (현재 아이템 주변만 렌더링)
+                윈도잉 기법을 도입하여 현재 보고 있는 숏뉴스 주변의 일정 범위만 렌더링하는 작업 진행
               </li>
             </ul>
           </li>
+        </ul>
+        <Subtitle>사용자 경험 전반에 필요한 핵심 기능을 설계하고, 성능과 접근성을 함께 고려했습니다.</Subtitle>
+        <ul>
           <li>
-            종합 검색 페이지 구현
-            <ExternalLink href="/detail/RGNews/detail_2">[상세]</ExternalLink>
-            <ul className="innerList">
-              <li>검색창, 맞춤/트렌딩/연관 검색어, 검색 결과 제공</li>
-              <li>
-                사용자 검색 상태 추적으로 불필요한 렌더링과 서버 호출 최소화
-              </li>
-            </ul>
+            종합 검색 페이지 구현 및 렌더링·서버 호출 최적화 <ExternalLink href="/detail/RGNews/detail_2">[상세]</ExternalLink>
           </li>
           <li>
-            무한 스크롤 뉴스 검색 구현
-            <ExternalLink href="/detail/RGNews/detail_3">[상세]</ExternalLink>
-            <ul className="innerList">
-              <li>Intersection Observer 활용한 API 연동 및 페이징 처리 구현</li>
-              <li>
-                에러 바운더리 구현을 통한 런타임 에러 감지 및 재시도 기능 구현
-              </li>
-            </ul>
+            뉴스 검색 무한 스크롤 구현 및 에러 바운더리로 재시도 처리 <ExternalLink href="/detail/RGNews/detail_3">[상세]</ExternalLink>
           </li>
           <li>
-            마이 페이지 기능 개발
-            <ExternalLink href="/detail/RGNews/detail_4">
-              [결과 화면]
-            </ExternalLink>
-            <ul className="innerList">
-              <li>관심 뉴스 및 언론사 저장/관리 기능</li>
-              <li>react-beautiful-dnd 활용한 드래그 앤 드롭 인터페이스 구현</li>
-            </ul>
+            관심 뉴스/언론사 저장 및 드래그 앤 드롭 UI 구현 <ExternalLink href="/detail/RGNews/detail_4">[상세]</ExternalLink>
           </li>
           <li>
-            TTS(Text-to-Speech) 기능 구현
-            <ExternalLink href="/detail/RGNews/detail_5">[상세]</ExternalLink>
-            <ul className="innerList">
-              <li>Web Audio API를 활용한 브라우저 내 텍스트-음성 변환</li>
-              <li>재사용 가능한 React 커스텀 훅 개발</li>
-            </ul>
+            Web Audio API 기반 TTS(음성 변환) 구현 <ExternalLink href="/detail/RGNews/detail_5">[상세]</ExternalLink>
           </li>
         </ul>
       </MyRole>

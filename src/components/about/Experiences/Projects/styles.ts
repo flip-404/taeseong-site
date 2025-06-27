@@ -87,3 +87,10 @@ export const Contribution = styled.span`
   font-weight: 500;
   font-size: 12px;
 `;
+
+export const Subtitle = styled.h3`
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+  margin: 10px 0px;
+`;
