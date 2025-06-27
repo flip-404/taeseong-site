@@ -1,9 +1,9 @@
-import { CompanySection, CompanyTitle } from "../../../styles/common";
-import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
-import ChexcarLogo from "../../../images/chexcar_logo.png";
-import CHEXCARHomePage from "./Projects/CHEXCAR_HomePage";
-import CHEXCARNova from "./Projects/CHEXCAR_Nova";
-import CHEXCARApp from "./Projects/CHEXCAR_APP";
+import { CompanySection, CompanyTitle } from '../../../styles/common';
+import { CustomTable, RowWrapper, T_Key, T_Value } from '../../molecules/Table';
+import ChexcarLogo from '../../../images/chexcar_logo.png';
+import CHEXCARHomePage from './Projects/CHEXCAR_HomePage';
+import CHEXCARNova from './Projects/CHEXCAR_Nova';
+import CHEXCARApp from './Projects/CHEXCAR_APP';
 
 const CHEXCAR = () => {
   return (
@@ -17,11 +17,7 @@ const CHEXCAR = () => {
         <RowWrapper>
           <T_Key>Company</T_Key>
           <T_Value>
-            <a
-              href="https://www.chexcar.co.kr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.chexcar.co.kr" target="_blank" rel="noopener noreferrer">
               CHEXCAR
             </a>
           </T_Value>
@@ -37,8 +33,7 @@ const CHEXCAR = () => {
         <RowWrapper>
           <T_Key>Stack</T_Key>
           <T_Value>
-            Next, React, TanStack Query, Jotai, Typescript, ShadCN, Tailwindcss,
-            Storybook
+            Next, React, TanStack Query, Jotai, Typescript, ShadCN, Tailwindcss, Storybook
           </T_Value>
         </RowWrapper>
       </CustomTable>

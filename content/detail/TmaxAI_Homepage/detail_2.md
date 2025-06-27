@@ -29,11 +29,11 @@ useEffect(() => {
 
   // OffscreenCanvas 생성 및 Worker로 전송
   const offscreen = canvasRef.current.transferControlToOffscreen();
-  workerRef.current = new Worker("/bboxRenderer.worker.js");
+  workerRef.current = new Worker('/bboxRenderer.worker.js');
 
   workerRef.current.postMessage(
     {
-      type: "INIT",
+      type: 'INIT',
       canvas: offscreen,
       data: parsedOCRData,
       dimensions: {

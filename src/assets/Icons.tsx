@@ -12,14 +12,16 @@ export const Icons = {
       enableBackground="new 0 0 72 72"
       xmlSpace="preserve"
       stroke="#2db400"
-      stroke-width="1.0799999999999998">
+      stroke-width="1.0799999999999998"
+    >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
         stroke-linecap="round"
         stroke-linejoin="round"
         stroke="#2db400"
-        stroke-width="0.576"></g>
+        stroke-width="0.576"
+      ></g>
       <g id="SVGRepo_iconCarrier">
         <g>
           <g>

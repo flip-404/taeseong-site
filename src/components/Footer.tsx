@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const FooterContainer = styled.footer`
   margin-top: 100px;
@@ -17,20 +17,12 @@ const Footer = () => {
   return (
     <FooterContainer>
       <p>
-        © {new Date().getFullYear()}{" "}
-        <a
-          href="https://github.com/flip-404"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        © {new Date().getFullYear()}{' '}
+        <a href="https://github.com/flip-404" target="_blank" rel="noopener noreferrer">
           Taeseong
         </a>
         , Built with&nbsp;
-        <a
-          href="https://www.gatsbyjs.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">
           Gatsby
         </a>
       </p>

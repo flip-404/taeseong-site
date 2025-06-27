@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Link } from "gatsby";
+import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 
 export const ExternalLink = ({
   href,
@@ -25,13 +25,7 @@ export const ExternalLink = ({
   );
 };
 
-export const InternalLink = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => {
+export const InternalLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   return <StyledLink to={href}>{children}</StyledLink>;
 };
 

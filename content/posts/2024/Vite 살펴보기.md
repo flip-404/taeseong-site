@@ -1,8 +1,8 @@
 ---
-title: "Vite 살펴보기"
-description: "Vite에 대해 정리해보았습니다."
-tags: ["Vite"]
-date: "2024-03-14"
+title: 'Vite 살펴보기'
+description: 'Vite에 대해 정리해보았습니다.'
+tags: ['Vite']
+date: '2024-03-14'
 ---
 
 ## Vite란?
@@ -101,7 +101,6 @@ CRA는 이처럼 Webpack을 기반으로 한 강력한 도구였지만 Webpack�
    예를 들면, 컴포넌트 라이브러리와 같은 일반적인 node_modules 패키지들이 있다.
 
    Vite는 이러한 Dependencies 들을 **Esbuild를 사용하여 Pre-bundling** 함으로써 각 파일에서 필요한 모듈만을 추출한다. Go로 작성된 Esbuild는 작업을 병렬로 처리하기 때문에 기존 번들러보다 훨씬 빠르다.
-
    - Esbuild
      이전까지는 모두 Javascript 기반의 번들러였으나 Esbuild는 Go로 작성된 번들러로 매우 빠르다.
      병렬처리 최적화, 메모리 사용 최적화, 자체 Javascript 파서 사용 등의 장점이 있다.
@@ -113,7 +112,6 @@ CRA는 이처럼 Webpack을 기반으로 한 강력한 도구였지만 Webpack�
    Vite는 Native ESM(ESModule)을 사용해 소스코드를 제공하고 브라우저가 번들러 작업을 수행하도록 한다. 즉, Vite는 번들링없이 브라우저의 요청대로 소스코드를 변환해 제공하기만 하면 된다.
 
    Vite는 ESM을 활용하여 변경된 파일만 변환해 브라우저에 전달한다.
-
    - ESM(ECMAScript Module)
      모듈화된 코드를 관리하고 가져오는 방식을 표준화한 것
      import, export를 별도의 도구 없이 브라우저에서 바로 사용 가능한 모듈 방식

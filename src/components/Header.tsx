@@ -1,7 +1,7 @@
-import React from "react";
-import { Link as Link_ } from "gatsby";
-import styled from "@emotion/styled";
-import { useLocation } from "@reach/router";
+import React from 'react';
+import { Link as Link_ } from 'gatsby';
+import styled from '@emotion/styled';
+import { useLocation } from '@reach/router';
 
 const HeaderContainer = styled.header`
   z-index: 1000;
@@ -33,15 +33,12 @@ const Link = styled(Link_)`
 const Header = () => {
   const location = useLocation();
 
-  let linkTo = "/";
-  let label = "Taeseong Blog";
+  let linkTo = '/';
+  let label = 'Taeseong Blog';
 
-  if (
-    location.pathname.startsWith("/about") ||
-    location.pathname.startsWith("/detail")
-  ) {
-    label = "Taeseong Resume";
-    linkTo = "/about";
+  if (location.pathname.startsWith('/about') || location.pathname.startsWith('/detail')) {
+    label = 'Taeseong Resume';
+    linkTo = '/about';
   }
 
   return (

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "@emotion/styled";
-import Header from "./Header";
-import Footer from "./Footer";
+import React from 'react';
+import styled from '@emotion/styled';
+import Header from './Header';
+import Footer from './Footer';
 
 const LayoutContainer = styled.div`
   position: relative;
