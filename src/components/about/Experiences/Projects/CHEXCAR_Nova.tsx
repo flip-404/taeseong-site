@@ -7,6 +7,7 @@ import {
   Label,
   MyRole,
   ProjectContainer,
+  Subtitle,
   TechStack,
 } from './styles';
 
@@ -31,10 +32,10 @@ const CHEXCARNova = () => {
         <CodeBlock>turborepo</CodeBlock>
       </TechStack>
       <MyRole>
-        <Label>What I did.</Label>
+        <Subtitle>회사 내 주요 B2B 시스템을 서비스를 단독으로 개발했습니다.</Subtitle>
         <ul>
           <li>
-            프로젝트 초기 세팅을 담당하여 개발 환경 전반 구축
+            서비스 구조 설계부터 개발·운영까지 전면적으로 주도
             <ul className="innerList">
               <li>
                 유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해 Monorepo 아키텍처를
@@ -44,6 +45,7 @@ const CHEXCARNova = () => {
               <li>
                 TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전 관리 프로세스 구축
               </li>
+              <li>프로젝트의 레이아웃 구성 및 주요 페이지 개발 전반을 담당</li>
             </ul>
           </li>
           <li>
@@ -59,7 +61,6 @@ const CHEXCARNova = () => {
               </li>
             </ul>
           </li>
-          <li>프로젝트의 레이아웃 구성 및 주요 페이지 개발 전반을 담당</li>
         </ul>
       </MyRole>
     </ProjectContainer>

@@ -1,3 +1,4 @@
+import { Icons } from '../../../../assets/Icons';
 import { ExternalLink } from '../../../molecules/Links';
 import { LinkIcon } from '../../../molecules/ProjectLink';
 import {
@@ -8,6 +9,7 @@ import {
   Label,
   MyRole,
   ProjectContainer,
+  Subtitle,
   TechStack,
 } from './styles';
 
@@ -30,23 +32,19 @@ const CHEXCARHomePage = () => {
         <CodeBlock>emotion</CodeBlock> <CodeBlock>vanilla-extract</CodeBlock>
       </TechStack>
       <MyRole>
-        <Label>What I did. </Label>
-        <ul>
+        <Subtitle>렌더링 사이클을 최적화하여 렌더링 호출 횟수를 100분의 1로 줄였습니다.</Subtitle>
+        <ul className="innerList">
           <li>
-            각 페이지의 인터랙션 UI 성능을 React Profiler로 측정하여 불필요한 리렌더링 방지
-            <ExternalLink href="/detail/CHEXCAR_Homepage/detail_1">[상세]</ExternalLink>
-            <ul className="innerList">
-              <li>transform 속성 기반 GPU 가속 적용</li>
-            </ul>
+            transform 속성 기반 GPU 가속 적용 및 스크롤 이벤트 처리 시 렌더링 호출이 95% 이상 감소{' '}
+            <ExternalLink href="/detail/CHEXCAR_Homepage/detail_1">
+              <Icons.Link />
+            </ExternalLink>
           </li>
-
           <li>
-            Lighthouse 기준의 웹 성능 성능(92), 접근성(100), SEO(100), PWA(100)으로 점수 기록
-            <ExternalLink href="/detail/CHEXCAR_Homepage/detail_2">[결과 화면]</ExternalLink>
-            <ul className="innerList">
-              <li>스크롤 이벤트 최적화와 이미지·비디오 포맷 변환을 통해 렌더링 성능 개선</li>
-              <li>시맨틱 태그와 ARIA 속성을 활용해 웹 접근성 개선</li>
-            </ul>
+            Lighthouse 기준의 웹 성능 92으로 점수 기록
+            <ExternalLink href="/detail/CHEXCAR_Homepage/detail_2">
+              <Icons.Link />
+            </ExternalLink>
           </li>
         </ul>
       </MyRole>
