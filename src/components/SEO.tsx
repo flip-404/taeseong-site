@@ -1,11 +1,11 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 interface SEOProps {
-  title?: string
-  description?: string
-  pathname?: string
+  title?: string;
+  description?: string;
+  pathname?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({ title, description, pathname }) => {
@@ -19,19 +19,19 @@ const SEO: React.FC<SEOProps> = ({ title, description, pathname }) => {
         }
       }
     }
-  `)
+  `);
 
   const {
     title: defaultTitle,
     description: defaultDescription,
     siteUrl,
-  } = site?.siteMetadata ?? {}
+  } = site?.siteMetadata ?? {};
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    url: `${siteUrl}${pathname || ""}`,
-  }
+    url: `${siteUrl}${pathname || ''}`,
+  };
 
   return (
     <Helmet title={seo.title}>
@@ -41,7 +41,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, pathname }) => {
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

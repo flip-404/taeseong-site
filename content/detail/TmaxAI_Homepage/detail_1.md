@@ -19,10 +19,10 @@ useEffect(() => {
     setScrollY(window.scrollY);
   };
 
-  window.addEventListener("scroll", throttle(handleScroll, 100));
+  window.addEventListener('scroll', throttle(handleScroll, 100));
 
   return () => {
-    window.removeEventListener("scroll", throttle(handleScroll, 100));
+    window.removeEventListener('scroll', throttle(handleScroll, 100));
   };
 }, []);
 ```

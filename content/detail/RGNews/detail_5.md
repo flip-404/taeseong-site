@@ -18,10 +18,7 @@ const useTTS = ({ autoSkip = false, skipFn } = {}) => {
   // ... 기타 상태 관리 변수들
 
   // 오디오 진행률 계산
-  const audioProceedPercent = getProceedTimePercent(
-    proceedTime,
-    audioDuration.current
-  );
+  const audioProceedPercent = getProceedTimePercent(proceedTime, audioDuration.current);
 
   // TTS 오디오 데이터 재생 함수
   const playTtsAudioData = () => {
@@ -56,14 +53,11 @@ const useTTS = ({ autoSkip = false, skipFn } = {}) => {
   const audioProgressAnimation = (timeStamp) => {
     if (prevTimeStamp.current)
       proceedTimeStampRef.current =
-        proceedTimeStampRef.current +
-        (timeStamp - prevTimeStamp.current) / 1000;
+        proceedTimeStampRef.current + (timeStamp - prevTimeStamp.current) / 1000;
     setProceedTime(proceedTimeStampRef.current);
     prevTimeStamp.current = timeStamp;
     // requestAnimationFrame을 사용한 실시간 진행 시간 업데이트
-    progressAnimationFrameRef.current = requestAnimationFrame(
-      audioProgressAnimation
-    );
+    progressAnimationFrameRef.current = requestAnimationFrame(audioProgressAnimation);
   };
 
   // TTS 상태 초기화 함수
@@ -102,9 +96,7 @@ const useTTSQueries = (content, resetTtsStates) => {
   // 텍스트를 API 호출에 포맷으로 변환
   const ttsPostTexts = makeTTSPostText(content);
   // API 요청 취소를 위한 AbortController 참조 배열
-  const controllerRefs = useRef(
-    new Array(ttsPostTexts.length).map(() => new AbortController())
-  );
+  const controllerRefs = useRef(new Array(ttsPostTexts.length).map(() => new AbortController()));
 
   const result = useQueries(
     ttsQueries(ttsPostTexts, controllerRefs, resetTtsStates) // React Query 설정 함수

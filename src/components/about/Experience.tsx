@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import { SectionTitle } from "../../styles/common";
-import CHEXCAR from "./Experiences/CHEXCAR";
-import TmaxCoreAI from "./Experiences/TmaxCoreAI";
+import styled from '@emotion/styled';
+import { SectionTitle } from '../../styles/common';
+import CHEXCAR from './Experiences/CHEXCAR';
+import TmaxCoreAI from './Experiences/TmaxCoreAI';
 
 const Container = styled.div`
   display: flex;

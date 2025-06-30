@@ -1,10 +1,9 @@
 ---
 title: 'Turborepo에서 Tailwind v4 사용 시 공통 라이브러리 인식 문제 해결법'
-description: "Turborepo 환경에서 Tailwind CSS v4를 사용하면서 공통 라이브러리(UI 패키지)의 스타일이 제대로 인식되지 않는 문제를 만났다. 이 글에서는 문제의 원인과 여러 가지 해결 방법을 정리해보았다."
-tags: ["turborepo", "tailwind v4", "오류"]
-date: "2025-05-22"
+description: 'Turborepo 환경에서 Tailwind CSS v4를 사용하면서 공통 라이브러리(UI 패키지)의 스타일이 제대로 인식되지 않는 문제를 만났다. 이 글에서는 문제의 원인과 여러 가지 해결 방법을 정리해보았다.'
+tags: ['turborepo', 'tailwind v4', '오류']
+date: '2025-05-22'
 ---
-
 
 # Turborepo에서 Tailwind v4 사용 시 공통 라이브러리 인식 문제 해결법
 
@@ -51,11 +50,11 @@ Tailwind v4에서는 설정 파일을 자동으로 감지하지 않는다. 따�
 
 ```typescript
 // packages/ui/tailwind.config.ts
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config = {
   // UI 패키지에 있지만 앱에서도 사용되므로 경로 주의
-  content: ["app/**/*.{ts,tsx}", "../../packages/ui/src/**/*.{ts,tsx}"],
+  content: ['app/**/*.{ts,tsx}', '../../packages/ui/src/**/*.{ts,tsx}'],
 } satisfies Config;
 
 export default config;
@@ -64,7 +63,7 @@ export default config;
 ```javascript
 // packages/ui/postcss.config.mjs
 const config = {
-  plugins: ["@tailwindcss/postcss"],
+  plugins: ['@tailwindcss/postcss'],
 };
 
 export default config;
@@ -80,12 +79,12 @@ import '@repo/ui/src/styles/global.css';
 
 ```javascript
 // apps/web/postcss.config.mjs
-export { default } from "@repo/ui/postcss.config";
+export { default } from '@repo/ui/postcss.config';
 ```
 
 ```typescript
 // apps/web/tailwind.config.ts
-export * from "@repo/ui/tailwind.config";
+export * from '@repo/ui/tailwind.config';
 ```
 
 ### 방법 2: @source 지시어 사용
@@ -94,7 +93,7 @@ export * from "@repo/ui/tailwind.config";
 
 ```css
 /* packages/ui/styles.css */
-@import "tailwindcss";
+@import 'tailwindcss';
 @source "./";
 ```
 
@@ -109,8 +108,8 @@ export * from "@repo/ui/tailwind.config";
 
 ```css
 /* apps/web/app/globals.css */
-@import "tailwindcss";
-@import "@repo/ui/styles.css";
+@import 'tailwindcss';
+@import '@repo/ui/styles.css';
 ```
 
 ### 방법 3: 루트 설정 파일 사용
@@ -121,10 +120,10 @@ export * from "@repo/ui/tailwind.config";
 // apps/web/tailwind.config.js
 export default {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "../../packages/ui/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../packages/ui/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {},
@@ -136,9 +135,8 @@ export default {
 ```css
 /* apps/web/app/globals.css */
 @config "../tailwind.config.js";
-@import "tailwindcss";
+@import 'tailwindcss';
 ```
-
 
 ## 커스텀 테마 사용하기
 
@@ -146,8 +144,8 @@ export default {
 
 ```css
 /* apps/web/app/globals.css */
-@import "tailwindcss";
-@import "@repo/ui/styles.css";
+@import 'tailwindcss';
+@import '@repo/ui/styles.css';
 
 @theme {
   --font-primary: 'Arapey';
@@ -162,7 +160,7 @@ export default {
 
 ## 결론
 
-Turborepo에서 Tailwind v4를 사용할 때 가장 중요한 포인트는 `@config` 지시어를 사용해 설정 파일을 명시적으로 참조하는 것이다. 
+Turborepo에서 Tailwind v4를 사용할 때 가장 중요한 포인트는 `@config` 지시어를 사용해 설정 파일을 명시적으로 참조하는 것이다.
 
 개인적으로는 <strong>방법 1(@config 사용)</strong>을 권장한다. 설정이 명확하고 각 패키지의 역할이 분명하며, 확장성도 좋기 때문이다.
 
