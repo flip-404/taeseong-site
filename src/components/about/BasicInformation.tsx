@@ -4,6 +4,10 @@ import { CustomTable, RowWrapper, T_Key, T_Value } from "../molecules/Table";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 780px) {
+    padding: 0 24px;
+  }
 `;
 
 const Name = styled.h1`

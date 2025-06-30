@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 
 export const PostDetails = styled.div`
   border-bottom: 1px solid #d0d0d0;
+
+
+  @media (max-width: 780px) {
+    padding: 0 24px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -91,5 +96,9 @@ export const Content = styled.div`
     margin: 0;
   }
 }
+
+  @media (max-width: 780px) {
+    padding: 0 24px;
+  }
 
 `;

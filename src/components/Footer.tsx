@@ -13,6 +13,10 @@ const FooterContainer = styled.footer`
   @media print {
     display: none;
   }
+
+  @media (max-width: 780px) {
+    padding: 26px 24px;
+  }
 `;
 
 const Footer = () => {
