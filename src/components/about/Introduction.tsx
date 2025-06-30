@@ -120,6 +120,7 @@ const Introduction = () => {
               노력합니다.
             </li>
           </ul>
+          <div>소통방식 보러가기 🙌🏻</div>
         </div>
         <div>
           <h5>만드는 제품에 진심을 담습니다.</h5>
