@@ -1,8 +1,8 @@
 ---
-title: "CSS와 Reflow의 상관관계"
-description: "CSS 옵션을 통해 렌더링 속도를 높일 수 있다는 것을 알고 계셨나요?"
-tags: ["Reflow", "Css"]
-date: "2025-01-20"
+title: 'CSS와 Reflow의 상관관계'
+description: 'CSS 옵션을 통해 렌더링 속도를 높일 수 있다는 것을 알고 계셨나요?'
+tags: ['Reflow', 'Css']
+date: '2025-01-20'
 ---
 
 # 1. Reflow가 발생하는 이유
@@ -131,11 +131,11 @@ Graphics Layer를 활용하면 여기서 사람 모양의 그림만 분리해서
 - 여러 스타일을 한 번에 변경:
 
 ```jsx
-element.style.width = "100px";
-element.style.height = "50px";
+element.style.width = '100px';
+element.style.height = '50px';
 
 // 효율적
-element.style.cssText = "width: 100px; height: 50px;";
+element.style.cssText = 'width: 100px; height: 50px;';
 ```
 
 ### (2) **클래스 활용**
@@ -143,7 +143,7 @@ element.style.cssText = "width: 100px; height: 50px;";
 - 개별 스타일 변경 대신 CSS 클래스를 추가/제거:
 
 ```jsx
-element.classList.add("new-class");
+element.classList.add('new-class');
 ```
 
 ### (3) **DOM 변경 작업 병합**
@@ -152,7 +152,7 @@ element.classList.add("new-class");
 
 ```jsx
 // 비효율적
-const parent = document.querySelector("#parent");
+const parent = document.querySelector('#parent');
 parent.appendChild(child1);
 parent.appendChild(child2);
 

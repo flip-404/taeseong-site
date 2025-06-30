@@ -15,7 +15,7 @@
 <small>\* 예시 코드입니다.</small>
 
 ```javascript
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 
 const useDebounce = (value, delay = 150) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -32,7 +32,7 @@ const useDebounce = (value, delay = 150) => {
 
 // 사용 예시
 const isSearchEnd = question !== null;
-const isSearching = searchContent !== "" && !isSearchEnd;
+const isSearching = searchContent !== '' && !isSearchEnd;
 const beforeSearch = !isSearchEnd && !isSearching;
 const debounceSearchContent = useDebounce(searchContent, 150);
 ```

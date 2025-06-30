@@ -13,19 +13,12 @@
 <small>\* 예시 코드입니다.</small>
 
 ```javascript
-const {
-  data,
-  status,
-  hasNextPage,
-  fetchNextPage,
-  isFetchingNextPage,
-  error,
-  refetch,
-} = useInfiniteQuery(createQueryConfig(currentCategory), {
-  staleTime: 5 * 60 * 1000,
-  retry: 2,
-  retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
-});
+const { data, status, hasNextPage, fetchNextPage, isFetchingNextPage, error, refetch } =
+  useInfiniteQuery(createQueryConfig(currentCategory), {
+    staleTime: 5 * 60 * 1000,
+    retry: 2,
+    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
+  });
 
 const handleObserver = useCallback(
   (entries) => {
@@ -56,7 +49,7 @@ useEffect(() => {
 <small>\* 예시 코드입니다.</small>
 
 ```javascript
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // 에러 바운더리 컴포넌트
 class NewsErrorBoundary extends Component {

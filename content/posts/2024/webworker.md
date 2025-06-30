@@ -1,8 +1,8 @@
 ---
-title: "웹 워커(Web Worker)"
-description: "웹 워커(Web Worker)에 대해 정리해보았습니다."
-tags: ["Web Worker"]
-date: "2024-10-07"
+title: '웹 워커(Web Worker)'
+description: '웹 워커(Web Worker)에 대해 정리해보았습니다.'
+tags: ['Web Worker']
+date: '2024-10-07'
 ---
 
 웹 워커(Web Worker)는 브라우저에서 자바스크립트를 실행할 때 메인 스레드와는 별도의 백그라운드 스레드에서 작업을 수행할 수 있도록 도와주는 API입니다. 이를 통해 무거운 작업(예: 데이터 처리, 계산, 파일 파싱 등)을 실행하면서도 사용자 인터페이스가 멈추거나 느려지는 것을 방지할 수 있습니다.
@@ -55,10 +55,10 @@ self.onmessage = function (e) {
 javascript;
 복사편집;
 // main.js
-const worker = new Worker("worker.js");
+const worker = new Worker('worker.js');
 
 worker.onmessage = function (e) {
-  console.log("결과:", e.data); // 워커에서 받은 결과 출력
+  console.log('결과:', e.data); // 워커에서 받은 결과 출력
 };
 
 worker.postMessage(10); // 워커에 데이터 전달

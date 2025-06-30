@@ -1,5 +1,5 @@
-import { ExternalLink } from "../../../molecules/Links";
-import { LinkIcon } from "../../../molecules/ProjectLink";
+import { ExternalLink } from '../../../molecules/Links';
+import { LinkIcon } from '../../../molecules/ProjectLink';
 import {
   CodeBlock,
   Contribution,
@@ -9,7 +9,7 @@ import {
   MyRole,
   ProjectContainer,
   TechStack,
-} from "./styles";
+} from './styles';
 
 const KGM_Project = () => {
   return (
@@ -17,11 +17,7 @@ const KGM_Project = () => {
       <Label
         className="hasLink"
         onClick={() => {
-          window.open(
-            "https://kgchat.kg-mobility.com/",
-            "_blank",
-            "width=400,height=649"
-          );
+          window.open('https://kgchat.kg-mobility.com/', '_blank', 'width=400,height=649');
         }}
       >
         KGM 챗봇 <LinkIcon />
@@ -30,19 +26,13 @@ const KGM_Project = () => {
       <Detail>Frontend Engineer</Detail>
       <Detail>2024.04 - 2024.10</Detail>
       <Description>
-        <ExternalLink href="https://www.kg-mobility.com/">
-          KGM 공식 홈페이지
-        </ExternalLink>
+        <ExternalLink href="https://www.kg-mobility.com/">KGM 공식 홈페이지</ExternalLink>
         내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는
         <ExternalLink
           href="https://kgchat.kg-mobility.com/"
           onClick={(event) => {
             event.preventDefault();
-            window.open(
-              "https://kgchat.kg-mobility.com/",
-              "_blank",
-              "width=400,height=649"
-            );
+            window.open('https://kgchat.kg-mobility.com/', '_blank', 'width=400,height=649');
           }}
         >
           챗봇 서비스
