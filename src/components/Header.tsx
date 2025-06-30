@@ -4,9 +4,10 @@ import styled from "@emotion/styled";
 import { useLocation } from "@reach/router";
 
 const HeaderContainer = styled.header`
+  box-sizing: border-box;
   z-index: 1000;
   position: fixed;
-  top: 0px;
+  top: 0;
   height: 60px;
   width: 100%;
   background-color: #2db400;
@@ -14,19 +15,32 @@ const HeaderContainer = styled.header`
   align-items: center;
   color: white;
 
+
+
+  @media (max-width: 780px) {
+    height: 45px;
+    padding: 0 8px;
+  }
+
   @media print {
     display: none;
   }
 `;
 
 const Link = styled(Link_)`
-  padding-left: 26px;
+padding-left: 26px;
   font-size: 24px;
   font-weight: 900;
   text-decoration: none;
   color: inherit;
   &:visited {
     color: inherit;
+  }
+
+
+  @media (max-width: 780px) {
+    padding-left: 16px;
+    font-size: 18px;
   }
 `;
 

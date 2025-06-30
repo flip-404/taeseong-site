@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
 const FooterContainer = styled.footer`
+  box-sizing: border-box;
+  width: 100%;
   margin-top: 100px;
   display: flex;
   justify-content: start;
