@@ -7,6 +7,7 @@ import {
   Label,
   MyRole,
   ProjectContainer,
+  Subtitle,
   TechStack,
 } from './styles';
 
@@ -29,8 +30,7 @@ const CHEXCARApp = () => {
               'https://play.google.com/store/apps/details?id=kr.co.chexcar.dealer',
               '_blank'
             );
-          }}
-        >
+          }}>
           딜러 앱
         </ExternalLink>
         과 상품화 서비스를 제공하는 업체가 이용하는
@@ -42,8 +42,7 @@ const CHEXCARApp = () => {
               'https://play.google.com/store/apps/details?id=kr.co.chexcar.partners',
               '_blank'
             );
-          }}
-        >
+          }}>
           파트너스 앱
         </ExternalLink>
         의 유지보수를 맡아 개발했습니다. 레이아웃 시프트 현상 개선과 캐싱 로직 최적화에 집중하여
@@ -54,7 +53,7 @@ const CHEXCARApp = () => {
         <CodeBlock>tanstack-query</CodeBlock> <CodeBlock>Scss</CodeBlock>
       </TechStack>
       <MyRole>
-        <Label>What I did.</Label>
+        <Subtitle>유저의 불편함을 주도적으로 찾고, 개선했습니다.</Subtitle>
         <ul>
           <li>
             모달 컴포넌트의 깜빡임 현상과 레이아웃 시프트를 해결하기 위해 useLayoutEffect를 활용하여
