@@ -54,6 +54,9 @@ const IntroductionDescription = styled.div`
   }
 
   h5 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin: 0;
     font-size: 20px;
     font-weight: 600;
@@ -62,6 +65,23 @@ const IntroductionDescription = styled.div`
   ul {
     margin: 0 0 0 24px;
     padding: 12px 0;
+  }
+`;
+
+const CommunicationButton = styled.div`
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #94ea75;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #84d965;
   }
 `;
 
@@ -105,7 +125,15 @@ const Introduction = () => {
       <SectionTitle>Introduction.</SectionTitle>
       <IntroductionDescription>
         <div>
-          <h5>옆자리 동료와 함께 성장하기 위해 코딩합니다.</h5>
+          <h5>
+            옆자리 동료와 함께 성장하기 위해 코딩합니다.{' '}
+            <CommunicationButton
+              onClick={() => {
+                window.open('/detail/other/communication', '_blank');
+              }}>
+              소통방식 보러가기 🙌🏻
+            </CommunicationButton>
+          </h5>
           <ul>
             <li>
               <strong>옆자리 동료가 편안하게 읽을 수 있는 코드</strong>를 작성하기 위해 꾸준히
@@ -120,7 +148,6 @@ const Introduction = () => {
               노력합니다.
             </li>
           </ul>
-          <div>소통방식 보러가기 🙌🏻</div>
         </div>
         <div>
           <h5>만드는 제품에 진심을 담습니다.</h5>
