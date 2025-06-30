@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const LayoutContainer = styled.div`
+  box-sizing: border-box;
   position: relative;
   margin-top: 60px;
   display: flex;
@@ -16,11 +17,21 @@ const LayoutContainer = styled.div`
 `;
 
 const Main = styled.main`
+  box-sizing: border-box;
   padding-top: 80px;
   width: 780px;
 
   @media print {
     padding-top: 0;
+  }
+
+  @media (max-width: 1200px) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: 780px) {
+    padding-top: 20px;
+    width: 100%;
   }
 `;
 

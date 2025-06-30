@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 const BlogPreviewWrapper = styled.div`
+  box-sizing: border-box;
   width: 100%;
   border-radius: 8px;
   padding: 16px;
@@ -58,7 +59,8 @@ const BlogPreview = ({
   description: string;
   date: string;
   tags: string[];
-}) => {
+  }) => {
+
   return (
     <BlogPreviewWrapper>
       <Title>{title}</Title>

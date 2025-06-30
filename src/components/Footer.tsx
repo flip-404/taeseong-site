@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 const FooterContainer = styled.footer`
+  box-sizing: border-box;
+  width: 100%;
   margin-top: 100px;
   display: flex;
   justify-content: start;
@@ -10,6 +12,11 @@ const FooterContainer = styled.footer`
 
   @media print {
     display: none;
+  }
+
+  @media (max-width: 780px) {
+    margin-top: 20px;
+    padding: 26px 24px;
   }
 `;
 

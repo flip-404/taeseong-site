@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 import { SectionTitle } from '../../styles/common';
 import { CustomTable, RowWrapper, T_Key, T_Value } from '../molecules/Table';
 
@@ -7,6 +6,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
+
+  @media (max-width: 780px) {
+    padding: 0 16px;
+  }
 `;
 
 const Label = styled.h2`

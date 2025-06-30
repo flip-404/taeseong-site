@@ -6,6 +6,10 @@ import TmaxCoreAI from './Experiences/TmaxCoreAI';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 780px) {
+    padding: 0 16px;
+  }
 `;
 
 const Experience = () => {

@@ -1,7 +1,12 @@
 import styled from '@emotion/styled';
 
 export const PostDetails = styled.div`
+  box-sizing: border-box;
   border-bottom: 1px solid #d0d0d0;
+
+  @media (max-width: 780px) {
+    padding: 0 24px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -27,6 +32,8 @@ export const Tag = styled.span`
 `;
 
 export const Content = styled.div`
+  box-sizing: border-box;
+  width: 100%;
   padding-top: 24px;
 
   h1 {
@@ -89,5 +96,9 @@ export const Content = styled.div`
     p {
       margin: 0;
     }
+  }
+
+  @media (max-width: 780px) {
+    padding: 0 24px;
   }
 `;
