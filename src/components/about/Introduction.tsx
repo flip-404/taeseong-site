@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../styles/common';
 import { CustomTable, RowWrapper, T_Key, T_Value } from '../molecules/Table';
+import { Link } from 'gatsby';
 
 const Container = styled.div`
   display: flex;
@@ -68,7 +69,7 @@ const IntroductionDescription = styled.div`
   }
 `;
 
-const CommunicationButton = styled.div`
+const CommunicationLink = styled(Link)`
   cursor: pointer;
   display: inline-block;
   padding: 6px 12px;
@@ -127,12 +128,9 @@ const Introduction = () => {
         <div>
           <h5>
             옆자리 동료와 함께 성장하기 위해 코딩합니다.{' '}
-            <CommunicationButton
-              onClick={() => {
-                window.open('/detail/other/communication', '_blank');
-              }}>
+            <CommunicationLink to="/detail/other/communication" target="_blank">
               소통방식 보러가기 🙌🏻
-            </CommunicationButton>
+            </CommunicationLink>
           </h5>
           <ul>
             <li>
