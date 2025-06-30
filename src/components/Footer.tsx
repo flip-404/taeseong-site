@@ -15,6 +15,7 @@ const FooterContainer = styled.footer`
   }
 
   @media (max-width: 780px) {
+    margin-top: 20px;
     padding: 26px 24px;
   }
 `;

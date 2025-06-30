@@ -17,6 +17,7 @@ const LayoutContainer = styled.div`
 `;
 
 const Main = styled.main`
+  box-sizing: border-box;
   padding-top: 80px;
   width: 780px;
 
