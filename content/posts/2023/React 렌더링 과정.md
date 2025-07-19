@@ -1,8 +1,8 @@
 ---
-title: "React 렌더링 과정"
-description: ""
-tags: ["React.js"]
-date: "2023-01-03"
+title: 'React 렌더링 과정'
+description: ''
+tags: ['React.js']
+date: '2023-01-03'
 ---
 
 ## 1. 브라우저 렌더링 원리
@@ -137,7 +137,7 @@ const PageMemoized = React.memo(Page);
 const App = () => {
   const [state, setState] = useState(1);
   const onClick = () => {
-    console.log("Do something on click");
+    console.log('Do something on click');
   };
 
   return (
@@ -160,7 +160,7 @@ const PageMemoized = React.memo(Page);
 const App = () => {
   const [state, setState] = useState(1);
   const onClick = useCallback(() => {
-    console.log("Do something on click");
+    console.log('Do something on click');
   }, []);
 
   return <PageMemoized onClick={onClick} />;

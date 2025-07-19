@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { SectionTitle } from '../../styles/common';
-import CHEXCAR from './Experiences/CHEXCAR';
-import TmaxCoreAI from './Experiences/TmaxCoreAI';
+import KCanberra from './Services/KCanberra';
+import Nambti from './Services/Nambti';
 
 const Container = styled.div`
   display: flex;
@@ -12,14 +12,14 @@ const Container = styled.div`
   }
 `;
 
-const Experience = () => {
+const Service = () => {
   return (
     <Container>
-      <SectionTitle>Experience.</SectionTitle>
-      <CHEXCAR />
-      <TmaxCoreAI />
+      <SectionTitle>Personal Project.</SectionTitle>
+      <KCanberra />
+      <Nambti />
     </Container>
   );
 };
 
-export default Experience;
+export default Service;
