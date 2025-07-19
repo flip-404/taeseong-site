@@ -72,12 +72,12 @@ const IntroductionDescription = styled.div`
 const CommunicationLink = styled(Link)`
   cursor: pointer;
   display: inline-block;
-  padding: 6px 12px;
+  padding: 2px 6px;
   background-color: #94ea75;
   color: white;
   border-radius: 4px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
   transition: background-color 0.3s ease;
 
