@@ -6,6 +6,8 @@ import KCanberraLogo from '../../../images/kcanberra_logo.png';
 const KCanberra = () => {
   return (
     <CompanySection>
+
+
       <CompanyTitle>
         <img src={KCanberraLogo} alt="Company logo" />
         K-캔버라
@@ -29,8 +31,16 @@ const KCanberra = () => {
         <RowWrapper>
           <T_Key>Link</T_Key>
           <T_Value>
-            <a href="https://www.kcanberra.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.kcanberra.com/" target="_blank" rel="noopener noreferrer" >
               www.kcanberra.com
+            </a>
+          </T_Value>
+        </RowWrapper>
+        <RowWrapper>
+          <T_Key>Github</T_Key>
+          <T_Value>
+            <a href="https://github.com/flip-404/cbrconnects" target="_blank" rel="noopener noreferrer">
+            https://github.com/flip-404/cbrconnects
             </a>
           </T_Value>
         </RowWrapper>
