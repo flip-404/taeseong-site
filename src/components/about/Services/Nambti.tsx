@@ -14,7 +14,7 @@ const Nambti = () => {
       <CustomTable>
         <RowWrapper>
           <T_Key>Role</T_Key>
-          <T_Value>Fullstack Developer (단독 개발)</T_Value>
+          <T_Value>Fullstack Developer</T_Value>
         </RowWrapper>
         <RowWrapper>
           <T_Key>Period</T_Key>
