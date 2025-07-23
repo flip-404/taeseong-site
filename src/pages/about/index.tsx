@@ -4,6 +4,7 @@ import Introduction from '../../components/about/Introduction';
 import Layout from '../../components/Layout';
 import { Helmet } from 'react-helmet';
 import SEO from '../../components/SEO';
+import Service from '../../components/about/Service';
 
 const AboutPage = () => {
   return (
@@ -19,6 +20,7 @@ const AboutPage = () => {
       <Layout>
         <BasicInformation />
         <Introduction />
+        <Service />
         <Experience />
       </Layout>
     </>
