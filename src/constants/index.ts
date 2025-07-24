@@ -3,9 +3,9 @@ import { WorkExperience, PersonalProject, Activity, Education } from '../types';
 export const PERSONAL_INFO = {
   name: '김태성',
   position: 'Frontend Developer',
-  email: '',
-  github: '#',
-  blog: '#',
+  email: 'aka404365@gmail.com',
+  github: 'https://github.com/flip-404',
+  blog: 'https://taeseong-site.vercel.app/',
 };
 
 export const PHILOSOPHY_ITEMS = [
@@ -37,33 +37,88 @@ export const PHILOSOPHY_ITEMS = [
   },
 ];
 
+// 프로젝트의 레이아웃 구성 및 주요 페이지 개발 전반을 담당
+// 사용자 인증 시스템과 라우팅 구조를 포함한 전반적인 프론트엔드 아키텍처를 설계[관련 포스트]
+// RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어
+// Next.js의 middleware를 활용한 쿠키 기반 인증으로 서버 사이드 검증 로직 구현
+
+// 일단 .. 멘트 수정 및 추가?
+// 디자인은 나중에
+
 export const WORK_EXPERIENCES: WorkExperience[] = [
   {
-    id: 'toss-securities',
-    companyName: '토스증권',
+    id: 'chexcar',
+    companyName: '체카',
     position: 'Frontend Engineer',
-    team: 'Securities Lending Silo',
-    duration: '2025.07 - 재직중',
+    team: 'CHEXCAR LAB. Development Team',
+    duration: '2025.01 - 재직중',
     logo: {
-      text: '토스',
+      text: '체카',
       bgColor: 'bg-blue-600',
     },
+    projects: [
+      {
+        name: '차량 상품화 관리 플랫폼(B2B SaaS) 및 백오피스 개발',
+        description:
+          '기존 체카의 상품화 서비스를 기반으로, 새로운 B2B 비즈니스 모델에 맞춰 재구성한 SaaS(Software as a Service) 플랫폼입니다.',
+        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        achievements: [
+          {
+            title: '팀이 효율적으로 일할 수 있는 환경을 구축했습니다',
+            description: '',
+            type: 'business',
+            items: [
+              '유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해 Monorepo 아키텍처를 설계하고 도입 (포스트)',
+              'commitlint와 husky를 적용해 일관된 커밋 메시지 규칙 설정',
+              'TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전 관리 프로세스 구축',
+              '개발계와 운영계 환경을 분리하여 개발 환경에서 테스트 및 배포 가능하도록 설정',
+            ],
+          },
+          {
+            title: '',
+            description: '',
+            type: 'business',
+            items: [],
+          },
+        ],
+        blogLink: '#',
+        externalLink: '#',
+      },
+      {
+        name: 'Kyte 서비스',
+        description:
+          '전 세계 항공권, 호텔, 투어&티켓 등 여행에 필요한 다양한 상품을 판매하는 여행 서비스 Kyte의 유지보수를 담당했습니다.',
+        technologies: ['React', 'emotion', 'TanStack Query'],
+        achievements: [
+          {
+            title: '빌드 프로세스를 개선하여 매달 프론트엔드 팀의 100시간을 절약했습니다',
+            description:
+              'CRA에서 Vite로 마이그레이션하여 빌드 시간 75% 단축(10분 → 2분 30초). 팀원 7명이 일평균 5회 이상 푸시하는 환경에서 팀 전체의 월간 대기시간 약 100시간을 절약했습니다.',
+            type: 'business',
+            items: [],
+          },
+        ],
+        externalLink: '#',
+        blogLink: '#',
+      },
+    ],
   },
   {
-    id: 'tidesquare',
-    companyName: 'TIDESQUARE',
+    id: 'TMAXAI',
+    companyName: 'Tmax AI',
     position: 'Frontend Engineer',
-    duration: '2024.06 - 2025.06',
+    team: 'Service Development Team',
+    duration: '2023.01 - 2024.12',
     logo: {
-      text: 'TIDE',
+      text: 'TMAX',
       bgColor: 'bg-teal-600',
     },
     projects: [
       {
-        name: 'PRIVIA 여행 서비스',
+        name: '차량 상품화 관리 플랫폼(B2B SaaS) 및 백오피스 개발',
         description:
-          '현대카드와 제휴를 맺은 종합 온라인 여행 서비스입니다. 25년 4월 완료 예정인 서비스 전면 리뉴얼 프로젝트에서 항공 서비스 파트의 개발에 참여하고 있습니다.',
-        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'i18next'],
+          '기존 체카의 상품화 서비스를 기반으로, 새로운 B2B 비즈니스 모델에 맞춰 재구성한 SaaS(Software as a Service) 플랫폼입니다.',
+        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
         achievements: [
           {
             title: '기술적 도전을 통해 코드 품질을 개선했습니다',
@@ -95,6 +150,7 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
           },
         ],
         externalLink: '#',
+        blogLink: '#',
       },
       {
         name: 'Kyte 서비스',
@@ -112,45 +168,6 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
         ],
         externalLink: '#',
         blogLink: '#',
-      },
-    ],
-  },
-  {
-    id: 'pozalabs',
-    companyName: 'Pozalabs',
-    position: 'Frontend Engineer',
-    duration: '2023.08 - 2024.05',
-    logo: {
-      text: 'POZA',
-      bgColor: 'bg-purple-600',
-    },
-    projects: [
-      {
-        name: 'LAIVE 서비스',
-        description:
-          'Multi-Step-Form 형태의 인공지능 작곡 및 편집 웹 서비스 LAIVE의 Zero to One 개발을 담당했습니다.',
-        technologies: ['Next.js(page)', 'tailwind', 'TanStack Query'],
-        achievements: [],
-      },
-    ],
-  },
-  {
-    id: 'toss-viva',
-    companyName: '비바리퍼블리카',
-    position: 'UX Engineer Assistant',
-    team: 'Design Platform Team',
-    duration: '2023.01 - 2023.08',
-    logo: {
-      text: 'TOSS',
-      bgColor: 'bg-blue-500',
-    },
-    projects: [
-      {
-        name: 'TDS(Toss Design System) 유지보수',
-        description:
-          '토스팀 전체가 사용하는 컴포넌트를 만들고 유지보수하며, 생산성을 저해하는 문제를 찾고 해결했습니다.',
-        technologies: [],
-        achievements: [],
       },
     ],
   },
