@@ -175,46 +175,31 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
 
 export const PERSONAL_PROJECTS: PersonalProject[] = [
   {
-    name: 'promi-safe',
-    date: '2025.02',
+    name: '남비티아이',
+    date: '2025.08월 배포 예정',
+    description: '친구들이 생각하는 내 MBTI는 과연 무엇일까? 추측을 통해 알아보는 서비스',
+    tech: ['Next.js', 'Zustand', 'TypeScript', 'Prisma', 'Supabase', 'Tailwindcss'],
+    logo: 'Nambti',
+    link: 'https://nambti.site/',
+  },
+  {
+    name: 'K-캔버라',
+    date: '2025.01 - 현재',
     description:
-      '서버 응답 데이터의 런타임 타입 불일치를 감지하기 위한 Promise 확장 라이브러리입니다.',
-    tech: ['StandardSchema', 'TypeScript', 'Promise'],
-    logo: 'PS',
-    link: 'https://github.com/sangziii/promi-safe',
+      '1인 개발로 호주 캔버라 거주 한인들을 위한 유일한 커뮤니티 웹사이트를 운영 중이며, 활성화를 위해 캔버라 한인회와의 협력을 추진하고 있습니다.',
+    tech: ['Next.js', 'Zustand', 'TypeScript', 'Prisma', 'Supabase', 'Emotion'],
+    logo: 'KCanberra',
+    link: 'https://www.kcanberra.com/',
   },
   {
-    name: 'Very Simple Blog',
-    date: '2024.05 - 2024.06',
-    description: '아주 심플한 플랫 디자인의 오픈소스 블로그 템플릿.',
-    tech: ['Next.js', 'TypeScript', 'tailwind', 'contentlayer'],
-    logo: 'VSB',
-    link: 'https://github.com/sangziii/very-simple-blog',
-  },
-  {
-    name: 'Na Lab',
-    date: '2023.04 - 2023.07',
-    description: '동료의 익명 피드백으로 자신의 성향과 장단점 등을 파악할 수 있는 서비스.',
-    tech: ['Next.js', 'TypeScript', 'emotion', 'framer motion'],
-    logo: 'NL',
-    achievement: 'MAU 600명 이상 달성',
-    link: 'https://nalab.app',
-  },
-  {
-    name: 'Very Simple Portfolio',
-    date: '2023.01 - 2023.05',
-    description: '아주 심플한 플랫 디자인의 오픈소스 포트폴리오 템플릿.',
-    tech: ['Next.js', 'TypeScript', 'tailwind', 'react-markdown'],
-    logo: 'VSP',
-    link: 'https://github.com/sangziii/very-simple-portfolio',
-  },
-  {
-    name: 'eslint-plugin-function-return-type',
-    date: '2024.01',
-    description: '함수의 반환 타입을 명시하도록 하는 Typescript ESlint Plugin',
-    tech: ['TypeScript', 'eslint', 'tsup'],
-    logo: 'EP',
-    link: 'https://www.npmjs.com/package/eslint-plugin-function-return-type',
+    name: 'net-perf',
+    date: '2022.06 - 2022.12',
+    description:
+      'net-perf는 네트워크 성능을 측정하는 웹 도구입니다. 성능 개선이 이루어진 지점을 시각적으로 보여줌으로써 효율적인 분석을 제공합니다.',
+    tech: ['React', 'Kernal', 'iperf3', 'ftrace'],
+    logo: 'net-perf',
+    achievement: '한국지식정보기술학회 2022년 제17권 제4호(8월호) 논문 게재',
+    link: 'https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002869064',
   },
 ];
 
