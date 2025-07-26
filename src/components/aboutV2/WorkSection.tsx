@@ -17,7 +17,7 @@ const WorkExperienceItem: React.FC<{ experience: WorkExperience }> = ({ experien
     <div className="mb-8 print:mb-6">
       <div className="flex">
         <div className="w-20 flex-shrink-0 mr-6 print:w-16 print:mr-4">
-          <CompanyLogo text={logo.text} bgColor={logo.bgColor} />
+          <CompanyLogo text={logo.text} bgColor={logo.bgColor} image={logo.image} />
         </div>
         <Card className="flex-1">
           <div className="flex justify-between items-start mb-4">
@@ -70,7 +70,7 @@ const WorkExperienceItem: React.FC<{ experience: WorkExperience }> = ({ experien
 const WorkSection: React.FC = () => {
   return (
     <section className="mb-12 print:mb-8">
-      <SectionHeader title="Work Experience" icon={Briefcase} />
+      <SectionHeader title="Work Experience" />
       {WORK_EXPERIENCES.map((experience) => (
         <WorkExperienceItem key={experience.id} experience={experience} />
       ))}

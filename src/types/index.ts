@@ -7,6 +7,7 @@ export interface WorkExperience {
   logo: {
     text: string;
     bgColor: string;
+    image?: string;
   };
   projects?: Project[];
 }
@@ -40,7 +41,13 @@ export interface PersonalProject {
 export interface Activity {
   title: string;
   date: string;
-  type: 'education' | 'mentoring' | 'study';
+  type: 'education' | 'mentoring' | 'study' | 'award' | 'certificate';
+}
+
+export interface Award {
+  title: string;
+  date: string;
+  description?: string[];
 }
 
 export interface Education {

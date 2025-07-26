@@ -1,4 +1,6 @@
-import { WorkExperience, PersonalProject, Activity, Education } from '../types';
+import { WorkExperience, PersonalProject, Activity, Education, Award } from '../types';
+import ChexcarLogo from '../images/chexcar_logo.jpg';
+import TmaxLogo from '../images/tmaxai_logo.png';
 
 export const PERSONAL_INFO = {
   name: '김태성',
@@ -53,7 +55,8 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
     team: 'CHEXCAR LAB. Development Team',
     duration: '2025.01 - 재직중',
     logo: {
-      text: '체카',
+      text: 'CHEXCAR',
+      image: ChexcarLogo,
       bgColor: 'bg-blue-600',
     },
     projects: [
@@ -110,7 +113,8 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
     team: 'Service Development Team',
     duration: '2023.01 - 2024.12',
     logo: {
-      text: 'TMAX',
+      text: 'Tmax AI',
+      image: TmaxLogo,
       bgColor: 'bg-teal-600',
     },
     projects: [
@@ -204,21 +208,57 @@ export const PERSONAL_PROJECTS: PersonalProject[] = [
 ];
 
 export const ACTIVITIES: Activity[] = [
-  { title: 'Toss Frontend Accelerator 1기', date: '2024.07-08', type: 'education' },
-  { title: '카카오테크 캠퍼스 2기 멘토', date: '2024.06', type: 'mentoring' },
-  { title: '디프만 13기, 14기', date: '2023.04-2024.02', type: 'education' },
+  { title: '소프트웨어 마에스트로 13기', date: '2022.04-11', type: 'education' },
+  {
+    title: '숭실대학교 SW 멘토링 멘토 참여',
+    date: '2021.01-2022.12',
+    type: 'mentoring',
+  },
+  {
+    title: 'SQL 개발자(SQLD) - 한국데이터진흥원',
+    date: '2023.12.15',
+    type: 'certificate',
+  },
+  {
+    title: '정보처리기사(검정형) - 한국산업인력공단',
+    date: '2023.11.15',
+    type: 'certificate',
+  },
+  {
+    title: '네트워크관리사 - 한국정보통신자격협회',
+    date: '2022.07.12',
+    type: 'certificate',
+  },
+  {
+    title: '데이터분석 준전문가(ADsP) - 한국데이터진흥원',
+    date: '2020.09.29',
+    type: 'certificate',
+  },
 ];
 
-export const BOOK_STUDIES = [
-  '모던 자바스크립트 Deep Dive',
-  '모던 리액트 Deep Dive',
-  '사용자를 끌어들이는 UX/UI의 비밀',
-  '실용주의 프로그래머',
-  '자바스크립트 + 리액트 디자인 패턴',
+export const AWARD: Award[] = [
+  {
+    title: 'SW중심대학협의회 인재페스티벌 우수상 수상',
+    date: '2022.12.08',
+    description: [
+      '텍스트를 수어로 번역하는 웹 애플리케이션 개발',
+      '우수팀 선정으로 동대문디자인플라자(DDP) 아트홀 시연 부스 운영',
+    ],
+  },
+  {
+    title: '숭실대학교 소프트웨어 공모전 학장상 수상',
+    date: '2022.09.16',
+    description: ['안전모 검출 프로그램 개발'],
+  },
+  {
+    title: 'SW 중심대학 공동해커톤 참여 한국소프트웨어산업협회장상 수상',
+    date: '2022.06.24',
+    description: ['법률 상담 챗봇 개발'],
+  },
 ];
 
 export const EDUCATION: Education = {
-  school: '고려대학교',
-  major: '일어일문학과 전공, 인문학과 문화산업 융합전공',
-  duration: '2013.02 - 2020.02',
+  school: '숭실대학교',
+  major: '컴퓨터학부',
+  duration: '2016.03 - 2023.02',
 };

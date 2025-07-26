@@ -5,6 +5,7 @@ interface CompanyLogoProps {
   bgColor: string;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  image?: string;
 }
 
 const CompanyLogo: React.FC<CompanyLogoProps> = ({
@@ -12,6 +13,7 @@ const CompanyLogo: React.FC<CompanyLogoProps> = ({
   bgColor,
   size = 'md',
   className = '',
+  image,
 }) => {
   const sizeClasses = {
     sm: 'w-12 h-12 text-xs',
@@ -21,8 +23,8 @@ const CompanyLogo: React.FC<CompanyLogoProps> = ({
 
   return (
     <div
-      className={`${sizeClasses[size]} ${bgColor} rounded-xl flex items-center justify-center text-white font-bold sticky top-24 print:static ${className}`}>
-      {text}
+      className={`${sizeClasses[size]} overflow-hidden bg-white rounded-xl flex items-center justify-center text-white font-bold sticky top-24 print:static ${className}`}>
+      {image ? <img src={image} alt={text} className="w-full h-full object-contain" /> : text}
     </div>
   );
 };
