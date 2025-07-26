@@ -39,14 +39,6 @@ export const PHILOSOPHY_ITEMS = [
   },
 ];
 
-// 프로젝트의 레이아웃 구성 및 주요 페이지 개발 전반을 담당
-// 사용자 인증 시스템과 라우팅 구조를 포함한 전반적인 프론트엔드 아키텍처를 설계[관련 포스트]
-// RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어
-// Next.js의 middleware를 활용한 쿠키 기반 인증으로 서버 사이드 검증 로직 구현
-
-// 일단 .. 멘트 수정 및 추가?
-// 디자인은 나중에
-
 export const WORK_EXPERIENCES: WorkExperience[] = [
   {
     id: 'chexcar',
@@ -71,34 +63,58 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              '유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해 Monorepo 아키텍처를 설계하고 도입 (포스트)',
+              '유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해 Monorepo 아키텍처를 설계하고 도입',
               'commitlint와 husky를 적용해 일관된 커밋 메시지 규칙 설정',
               'TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전 관리 프로세스 구축',
               '개발계와 운영계 환경을 분리하여 개발 환경에서 테스트 및 배포 가능하도록 설정',
             ],
           },
           {
-            title: '',
+            title: '프로젝트의 성격에 맞는 아키텍처를 설계하고 적용했습니다',
             description: '',
             type: 'business',
-            items: [],
+            items: [
+              'RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어 (포스트)',
+              'Next.js의 middleware를 활용한 쿠키 기반 인증으로 서버 사이드 검증 로직 구현',
+            ],
           },
         ],
         blogLink: '#',
         externalLink: '#',
       },
       {
-        name: 'Kyte 서비스',
-        description:
-          '전 세계 항공권, 호텔, 투어&티켓 등 여행에 필요한 다양한 상품을 판매하는 여행 서비스 Kyte의 유지보수를 담당했습니다.',
-        technologies: ['React', 'emotion', 'TanStack Query'],
+        name: 'CHEXCAR 홈페이지',
+        description: '체카 공식 홈페이지를 단독 개발하여 총 7개의 핵심 페이지 구축했습니다.',
+        technologies: ['Next.js 14(app)', 'emotion', 'vanilla-extract css'],
         achievements: [
           {
-            title: '빌드 프로세스를 개선하여 매달 프론트엔드 팀의 100시간을 절약했습니다',
-            description:
-              'CRA에서 Vite로 마이그레이션하여 빌드 시간 75% 단축(10분 → 2분 30초). 팀원 7명이 일평균 5회 이상 푸시하는 환경에서 팀 전체의 월간 대기시간 약 100시간을 절약했습니다.',
+            title: '렌더링 최적화와 웹 표준을 적극 준수하여 높은 성능 점수를 기록했습니다',
+            description: '',
             type: 'business',
-            items: [],
+            items: [
+              'Lighthouse 기준의 웹 성능 성능(92), 접근성(100), SEO(100), PWA(100)으로 점수 기록',
+              '스크린 리더 테스트 및 시맨틱 태그와 ARIA 속성을 활용한 웹 접근성 준수 (결과 화면)',
+              'transform 속성 기반 GPU 가속과 이미지·비디오 포맷 변환을 통해 렌더링 성능 개선 (포스트)',
+            ],
+          },
+        ],
+        externalLink: '#',
+        blogLink: '#',
+      },
+      {
+        name: '상품화 서비스 앱',
+        description:
+          '차량 상품화 서비스를 제공하는 업체가 이용하는 파트너스 앱의 유지보수를 맡아 개발했습니다.',
+        technologies: ['React Native', 'TypeScript', 'tanstack query', 'Scss'],
+        achievements: [
+          {
+            title: '',
+            description: '',
+            type: 'business',
+            items: [
+              'useLayoutEffect를 활용하여 모달 컴포넌트의 깜빡임 현상과 레이아웃 시프트를 해결',
+              '잦은 API 호출이 발생하던 구조를 TanStack Query 기반으로 리팩토링하여 불필요한 서버 통신과 스켈레톤 UI 노출 감소',
+            ],
           },
         ],
         externalLink: '#',
@@ -119,58 +135,77 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
     },
     projects: [
       {
-        name: '차량 상품화 관리 플랫폼(B2B SaaS) 및 백오피스 개발',
+        name: '가톨릭대백과',
         description:
-          '기존 체카의 상품화 서비스를 기반으로, 새로운 B2B 비즈니스 모델에 맞춰 재구성한 SaaS(Software as a Service) 플랫폼입니다.',
+          '가톨릭대사전의 디지털화를 위해 OCR 기반 검수 페이지를 개발하였으며, 이를 통해 오인식된 내용을 쉽게 수정할 수 있는 기능을 제공했습니다. 이 검수 시스템을 활용해 약 45,000개의 사전 데이터를 한국가톨릭대사전 홈페이지에 등재하였습니다.',
         technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
         achievements: [
           {
-            title: '기술적 도전을 통해 코드 품질을 개선했습니다',
-            description: '',
-            type: 'technical',
-            items: [
-              '상황에 따라 적절한 HTML Semantic 요소를 유연하게 사용할 수 있도록 다형성 컴포넌트 구현',
-              '@types/react 18.3.5 버전 이후 다형성 컴포넌트에 forwardRef를 적용하면 타입 추론이 제대로 이루어지지 않는 문제를 발견하고 해결',
-              'Next.js의 정적 최적화와 부분 프리렌더링을 활용할 수 있는 적응형 UI 구현',
-            ],
-          },
-          {
-            title: '현실의 제약을 기술로 해결했습니다',
+            title: '',
             description: '',
             type: 'business',
             items: [
-              '기술 스택에 관계없이 복잡한 UI를 재사용할 수 있도록 웹 컴포넌트 도입',
-              '규정상 서버 간 통신만 가능하다는 제약 속에서 데이터 통신 방식을 설계',
-            ],
-          },
-          {
-            title: '팀이 효율적으로 일할 수 있는 환경을 구축했습니다',
-            description: '',
-            type: 'team',
-            items: [
-              '코드 품질 검사를 자동화하는 CI를 구축하여 코드베이스의 안정성 확보',
-              '프로젝트 초기 기획-디자인 단계에서 디자인 시스템 구축을 주도',
+              '텍스트, 이미지 캡션, 테이블 등 다양한 형식의 데이터를 입력할 수 있는 커스텀 에디터 개발',
+              '오탈자 검출 및 검색어 하이라이팅 기능 추가',
+              '신속한 검수 및 수정을 위한 찾기/바꾸기 기능 구현',
             ],
           },
         ],
-        externalLink: '#',
+        externalLink: 'https://encyclopedia.catholic.or.kr/',
         blogLink: '#',
       },
       {
-        name: 'Kyte 서비스',
+        name: 'KGM 챗봇',
         description:
-          '전 세계 항공권, 호텔, 투어&티켓 등 여행에 필요한 다양한 상품을 판매하는 여행 서비스 Kyte의 유지보수를 담당했습니다.',
-        technologies: ['React', 'emotion', 'TanStack Query'],
+          'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는 챗봇 서비스입니다.',
+        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
         achievements: [
           {
-            title: '빌드 프로세스를 개선하여 매달 프론트엔드 팀의 100시간을 절약했습니다',
-            description:
-              'CRA에서 Vite로 마이그레이션하여 빌드 시간 75% 단축(10분 → 2분 30초). 팀원 7명이 일평균 5회 이상 푸시하는 환경에서 팀 전체의 월간 대기시간 약 100시간을 절약했습니다.',
+            title: '',
+            description: '',
             type: 'business',
-            items: [],
+            items: ['메시지 컴포넌트 및 챗봇 UI 개발', 'KGM API 연동 및 채팅 상태 관리 구현'],
           },
         ],
-        externalLink: '#',
+        externalLink: 'https://encyclopedia.catholic.or.kr/',
+        blogLink: '#',
+      },
+      {
+        name: 'TmaxAI 홈페이지',
+        description:
+          'TmaxAI 공식 홈페이지입니다. STT(음성 인식), TTS(텍스트 음성 변환), OCR(문자 인식) 등의 AI 기술을 직접 체험할 수 있는 기능을 제공하며, AI 기술 도입을 원하는 기업이나 개인을 위한 문의 기능을 지원합니다.',
+        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        achievements: [
+          {
+            title: '웹 워커를 사용해 렌더링 속도를 5분의 1로 개선했습니다',
+            description: '',
+            type: 'business',
+            items: [
+              '최대 수백개의 바운딩 박스를 렌더링하는 페이지에서 웹 워커를 사용해 렌더링 속도를 5분의 1로 개선',
+              '인터랙티브 스크롤 애니메이션 개발 및 쓰로틀링 기법을 통한 성능 저하 방지',
+              'React-hook-form을 활용한 기술 도입 문의 폼 개발',
+            ],
+          },
+        ],
+        externalLink: 'https://encyclopedia.catholic.or.kr/',
+        blogLink: '#',
+      },
+      {
+        name: 'RGNews',
+        description:
+          'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는챗봇 서비스입니다.',
+        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        achievements: [],
+        externalLink: 'https://encyclopedia.catholic.or.kr/',
+        blogLink: '#',
+      },
+      {
+        name: '하이퍼챗봇',
+        description:
+          'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는챗봇 서비스입니다.',
+        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        achievements: [],
+        externalLink: 'https://encyclopedia.catholic.or.kr/',
         blogLink: '#',
       },
     ],
