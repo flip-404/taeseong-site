@@ -21,6 +21,10 @@ const CompanyLogo: React.FC<CompanyLogoProps> = ({
     lg: 'w-20 h-20 text-lg',
   };
 
+  if (!image) {
+    return null;
+  }
+
   return (
     <div
       className={`${sizeClasses[size]} overflow-hidden bg-white rounded-xl flex items-center justify-center text-white font-bold sticky top-24 print:static ${className}`}>

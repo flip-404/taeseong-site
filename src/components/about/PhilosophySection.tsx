@@ -9,7 +9,7 @@ const PhilosophySection: React.FC = () => {
       <div className="bg-transparent">
         <SectionHeader title="Philosophy" />
         {PHILOSOPHY_ITEMS.map((item, index) => (
-          <div key={index} className={`rounded-xl print:bg-gray-50`}>
+          <div key={index} className={`rounded-xl`}>
             {item.hasTitle && (
               <h3 className={`font-semibold text-gray-900 ${index === 0 ? '' : 'mt-4'}`}>
                 {item.title}

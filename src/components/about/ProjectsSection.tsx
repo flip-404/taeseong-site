@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { PersonalProject } from '../../types';
 import Card from './Card';
 import SectionHeader from './SectionHeader';
@@ -53,7 +53,7 @@ const ProjectItem: React.FC<{ project: PersonalProject }> = ({ project }) => {
 const ProjectsSection: React.FC = () => {
   return (
     <section className="mb-12 print:mb-8">
-      <SectionHeader title="Projects" icon={Code} />
+      <SectionHeader title="Projects" />
       <div className="grid gap-6">
         {PERSONAL_PROJECTS.map((project, index) => (
           <ProjectItem key={index} project={project} />
