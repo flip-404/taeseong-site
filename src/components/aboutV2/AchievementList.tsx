@@ -22,8 +22,8 @@ const AchievementList: React.FC<AchievementListProps> = ({ achievements, classNa
         <h5 className="font-semibold text-gray-900 mb-2">{title}</h5>
         <ul className="space-y-2 text-sm text-gray-700">
           {items.map((item, itemIndex) => (
-            <li key={itemIndex} className="flex items-start">
-              <div className={`w-2 h-2 ${colorClass} rounded-full mt-2 mr-3 flex-shrink-0`}></div>
+            <li key={itemIndex} className="flex items-center">
+              <div className={`w-2 h-2 ${colorClass} rounded-full ml-2 mr-2 flex-shrink-0`}></div>
               {item.title}
               {item.link && (
                 <Link to={item.link} target="_blank">

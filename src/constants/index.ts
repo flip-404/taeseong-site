@@ -83,7 +83,9 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             items: [
               {
                 title:
-                  'RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어 (포스트)',
+                  'RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어',
+                link: '/blog/2025/Next.js로%20권한%20기반%20접근%20제어(RBAC)%20구축하기/',
+                linkDescription: '포스트',
               },
               {
                 title:
@@ -106,16 +108,17 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
               {
                 title:
                   'Lighthouse 기준의 웹 성능 성능(92), 접근성(100), SEO(100), PWA(100)으로 점수 기록',
-                link: 'test',
-                linkDescription: 'test',
+                link: '/detail/CHEXCAR_Homepage/detail_2',
+                linkDescription: '상세',
+              },
+              {
+                title: '스크린 리더 테스트 및 시맨틱 태그와 ARIA 속성을 활용한 웹 접근성 준수',
               },
               {
                 title:
-                  '스크린 리더 테스트 및 시맨틱 태그와 ARIA 속성을 활용한 웹 접근성 준수 (결과 화면)',
-              },
-              {
-                title:
-                  'transform 속성 기반 GPU 가속과 이미지·비디오 포맷 변환을 통해 렌더링 성능 개선 (포스트)',
+                  'transform 속성 기반 GPU 가속과 이미지·비디오 포맷 변환을 통해 렌더링 성능 개선',
+                link: '/detail/CHEXCAR_Homepage/detail_1',
+                linkDescription: '상세',
               },
             ],
           },
@@ -175,6 +178,8 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
               {
                 title:
                   '텍스트, 이미지 캡션, 테이블 등 다양한 형식의 데이터를 입력할 수 있는 커스텀 에디터 개발',
+                link: '/detail/Catholic/detail_1',
+                linkDescription: '상세',
               },
               {
                 title: '오탈자 검출 및 검색어 하이라이팅 기능 추가',
@@ -223,12 +228,18 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
               {
                 title:
                   '최대 수백개의 바운딩 박스를 렌더링하는 페이지에서 웹 워커를 사용해 렌더링 속도를 5분의 1로 개선',
+                link: '/detail/TmaxAI_Homepage/detail_1',
+                linkDescription: '상세',
               },
               {
                 title: '인터랙티브 스크롤 애니메이션 개발 및 쓰로틀링 기법을 통한 성능 저하 방지',
+                link: '/detail/TmaxAI_Homepage/detail_2',
+                linkDescription: '상세',
               },
               {
                 title: 'React-hook-form을 활용한 기술 도입 문의 폼 개발',
+                link: '/detail/TmaxAI_Homepage/detail_3',
+                linkDescription: '상세',
               },
             ],
           },
@@ -238,19 +249,47 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
       {
         name: 'RGNews',
         description:
-          'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는챗봇 서비스입니다.',
+          '개인 맞춤형 뉴스 서비스로, 사용자의 관심사에 맞춘 뉴스를 제공하는 서비스입니다. 전반적인 UI/UX 개발을 맡아 진행했습니다.',
         technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
-        achievements: [],
+        achievements: [
+          {
+            title: '',
+            description: '',
+            type: 'business',
+            items: [
+              {
+                title: '스와이프 기반 뉴스 페이지 개발',
+                link: '/detail/RGNews/detail_1',
+                linkDescription: '상세',
+              },
+              {
+                title: '종합 검색 페이지 개발',
+                link: '/detail/RGNews/detail_2',
+                linkDescription: '상세',
+              },
+              {
+                title: '무한 스크롤 뉴스 검색 개발',
+                link: '/detail/RGNews/detail_3',
+                linkDescription: '상세',
+              },
+              {
+                title: '마이 페이지 기능 개발',
+                link: '/detail/RGNews/detail_4',
+                linkDescription: '상세',
+              },
+            ],
+          },
+        ],
         externalLink: 'https://encyclopedia.catholic.or.kr/',
       },
-      {
-        name: '하이퍼챗봇',
-        description:
-          'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는챗봇 서비스입니다.',
-        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
-        achievements: [],
-        externalLink: 'https://encyclopedia.catholic.or.kr/',
-      },
+      // {
+      //   name: '하이퍼챗봇',
+      //   description:
+      //     'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는챗봇 서비스입니다.',
+      //   technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+      //   achievements: [],
+      //   externalLink: 'https://encyclopedia.catholic.or.kr/',
+      // },
     ],
   },
 ];
