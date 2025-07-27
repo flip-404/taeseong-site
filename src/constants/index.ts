@@ -168,7 +168,7 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
         name: '가톨릭대백과',
         description:
           '가톨릭대사전의 디지털화를 위해 OCR 기반 검수 페이지를 개발하였으며, 이를 통해 오인식된 내용을 쉽게 수정할 수 있는 기능을 제공했습니다. 이 검수 시스템을 활용해 약 45,000개의 사전 데이터를 한국가톨릭대사전 홈페이지에 등재하였습니다.',
-        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        technologies: ['React', 'Typescript', 'dompurify', 'Zustand', 'Styled-Components'],
         achievements: [
           {
             title: '',
@@ -196,7 +196,7 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
         name: 'KGM 챗봇',
         description:
           'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는 챗봇 서비스입니다.',
-        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        technologies: ['React', 'Typescript', 'styled-components', 'recoil', 'swr'],
         achievements: [
           {
             title: '',
@@ -218,7 +218,7 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
         name: 'TmaxAI 홈페이지',
         description:
           'TmaxAI 공식 홈페이지입니다. STT(음성 인식), TTS(텍스트 음성 변환), OCR(문자 인식) 등의 AI 기술을 직접 체험할 수 있는 기능을 제공하며, AI 기술 도입을 원하는 기업이나 개인을 위한 문의 기능을 지원합니다.',
-        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        technologies: ['React', 'Typescript', 'Recoil', 'Styled-Components'],
         achievements: [
           {
             title: '웹 워커를 사용해 렌더링 속도를 5분의 1로 개선했습니다',
@@ -244,13 +244,12 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             ],
           },
         ],
-        externalLink: 'https://encyclopedia.catholic.or.kr/',
       },
       {
         name: 'RGNews',
         description:
           '개인 맞춤형 뉴스 서비스로, 사용자의 관심사에 맞춘 뉴스를 제공하는 서비스입니다. 전반적인 UI/UX 개발을 맡아 진행했습니다.',
-        technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
+        technologies: ['React', 'Typescript', 'styled-components'],
         achievements: [
           {
             title: '',
@@ -280,15 +279,9 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             ],
           },
         ],
-        externalLink: 'https://encyclopedia.catholic.or.kr/',
       },
       // {
       //   name: '하이퍼챗봇',
-      //   description:
-      //     'KGM 공식 홈페이지내에서 고객이 원하는 정보를 쉽게 찾을 수 있도록 도와주는챗봇 서비스입니다.',
-      //   technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
-      //   achievements: [],
-      //   externalLink: 'https://encyclopedia.catholic.or.kr/',
       // },
     ],
   },

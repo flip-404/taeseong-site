@@ -1,30 +1,28 @@
-import BasicInformation from '../../components/about/BasicInformation';
-import Experience from '../../components/about/Experience';
-import Introduction from '../../components/about/Introduction';
-import Layout from '../../components/Layout';
-import { Helmet } from 'react-helmet';
-import SEO from '../../components/SEO';
-import Service from '../../components/about/Service';
+import React from 'react';
+import PhilosophySection from '../../components/about/PhilosophySection';
+import Header from '../../components/about/Header';
+import WorkSection from '../../components/about/WorkSection';
+import ProjectsSection from '../../components/about/ProjectsSection';
+import ActivitiesSection from '../../components/about/ActivitiesSection';
+import EducationSection from '../../components/about/EducationSection';
+import Footer from '../../components/about/Footer';
 
-const AboutPage = () => {
+const Portfolio = () => {
   return (
-    <>
-      <SEO
-        title="Taeseong Dev Blog | Resume"
-        description="프론트엔드 개발자 김태성의 이력서, 경력 및 자기소개를 담은 페이지입니다."
-        pathname="/about"
-      />
-      <Helmet>
-        <title>Taeseong Dev Blog | Resume</title>
-      </Helmet>
-      <Layout>
-        <BasicInformation />
-        <Introduction />
-        <Service />
-        <Experience />
-      </Layout>
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 print:bg-white">
+      <Header />
+
+      <div className="max-w-6xl mx-auto px-6 py-8">
+        <PhilosophySection />
+        <WorkSection />
+        <ProjectsSection />
+        <ActivitiesSection />
+        <EducationSection />
+      </div>
+
+      <Footer />
+    </div>
   );
 };
 
-export default AboutPage;
+export default Portfolio;
