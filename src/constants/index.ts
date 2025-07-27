@@ -228,12 +228,12 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
               {
                 title:
                   '최대 수백개의 바운딩 박스를 렌더링하는 페이지에서 웹 워커를 사용해 렌더링 속도를 5분의 1로 개선',
-                link: '/detail/TmaxAI_Homepage/detail_1',
+                link: '/detail/TmaxAI_Homepage/detail_2',
                 linkDescription: '상세',
               },
               {
                 title: '인터랙티브 스크롤 애니메이션 개발 및 쓰로틀링 기법을 통한 성능 저하 방지',
-                link: '/detail/TmaxAI_Homepage/detail_2',
+                link: '/detail/TmaxAI_Homepage/detail_1',
                 linkDescription: '상세',
               },
               {
