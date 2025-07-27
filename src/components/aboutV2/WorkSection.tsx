@@ -9,6 +9,7 @@ import DateDisplay from './DateDisplay';
 import TechBadge from './TechBadge';
 import AchievementList from './AchievementList';
 import { WORK_EXPERIENCES } from '../../constants';
+import { Link } from 'gatsby';
 
 const WorkExperienceItem: React.FC<{ experience: WorkExperience }> = ({ experience }) => {
   const { companyName, position, team, duration, logo, projects = [] } = experience;
@@ -36,7 +37,9 @@ const WorkExperienceItem: React.FC<{ experience: WorkExperience }> = ({ experien
                   <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                     {project.name}
                     {project.externalLink && (
-                      <ExternalLink size={16} className="ml-2 text-gray-400" />
+                      <Link to={project.externalLink} target="_blank">
+                        <ExternalLink size={16} className="ml-2 text-gray-400 cursor-pointer" />
+                      </Link>
                     )}
                   </h4>
                   <p className="text-gray-700 text-sm mb-4 leading-relaxed">
@@ -53,10 +56,7 @@ const WorkExperienceItem: React.FC<{ experience: WorkExperience }> = ({ experien
                     />
                   )}
 
-                  <AchievementList
-                    achievements={project.achievements || []}
-                    blogLink={project.blogLink}
-                  />
+                  <AchievementList achievements={project.achievements || []} />
                 </div>
               ))}
             </div>

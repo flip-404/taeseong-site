@@ -25,7 +25,13 @@ export interface Achievement {
   title: string;
   description: string;
   type: 'technical' | 'business' | 'team';
-  items: string[];
+  items: AchievementItem[];
+}
+
+export interface AchievementItem {
+  title: string;
+  link?: string;
+  linkDescription?: string;
 }
 
 export interface PersonalProject {

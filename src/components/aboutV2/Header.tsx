@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   return (
     <header
       className={`bg-white/80 backdrop-blur-sm border-b border-blue-100 print:border-gray-300 print:bg-white sticky top-0 z-50 ${className}`}>
-      <div className="max-w-6xl mx-auto px-6 py-6">
+      <div className="max-w-6xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{name}</h1>

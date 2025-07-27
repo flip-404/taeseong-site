@@ -59,10 +59,21 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              '유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해 Monorepo 아키텍처를 설계하고 도입',
-              'commitlint와 husky를 적용해 일관된 커밋 메시지 규칙 설정',
-              'TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전 관리 프로세스 구축',
-              '개발계와 운영계 환경을 분리하여 개발 환경에서 테스트 및 배포 가능하도록 설정',
+              {
+                title:
+                  '유사한 구조의 두 백오피스 프로젝트를 효율적으로 관리하기 위해 Monorepo 아키텍처를 설계하고 도입',
+              },
+              {
+                title: 'commitlint와 husky를 적용해 일관된 커밋 메시지 규칙 설정',
+              },
+              {
+                title:
+                  'TeamCity를 활용해 CI/CD 파이프라인을 구축하여 배포 자동화 및 버전 관리 프로세스 구축',
+              },
+              {
+                title:
+                  '개발계와 운영계 환경을 분리하여 개발 환경에서 테스트 및 배포 가능하도록 설정',
+              },
             ],
           },
           {
@@ -70,13 +81,17 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              'RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어 (포스트)',
-              'Next.js의 middleware를 활용한 쿠키 기반 인증으로 서버 사이드 검증 로직 구현',
+              {
+                title:
+                  'RBAC(Role-Based Access Control) 방식으로 사용자 권한에 따라 페이지 접근 제어 (포스트)',
+              },
+              {
+                title:
+                  'Next.js의 middleware를 활용한 쿠키 기반 인증으로 서버 사이드 검증 로직 구현',
+              },
             ],
           },
         ],
-        blogLink: '#',
-        externalLink: '#',
       },
       {
         name: 'CHEXCAR 홈페이지',
@@ -88,14 +103,24 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              'Lighthouse 기준의 웹 성능 성능(92), 접근성(100), SEO(100), PWA(100)으로 점수 기록',
-              '스크린 리더 테스트 및 시맨틱 태그와 ARIA 속성을 활용한 웹 접근성 준수 (결과 화면)',
-              'transform 속성 기반 GPU 가속과 이미지·비디오 포맷 변환을 통해 렌더링 성능 개선 (포스트)',
+              {
+                title:
+                  'Lighthouse 기준의 웹 성능 성능(92), 접근성(100), SEO(100), PWA(100)으로 점수 기록',
+                link: 'test',
+                linkDescription: 'test',
+              },
+              {
+                title:
+                  '스크린 리더 테스트 및 시맨틱 태그와 ARIA 속성을 활용한 웹 접근성 준수 (결과 화면)',
+              },
+              {
+                title:
+                  'transform 속성 기반 GPU 가속과 이미지·비디오 포맷 변환을 통해 렌더링 성능 개선 (포스트)',
+              },
             ],
           },
         ],
-        externalLink: '#',
-        blogLink: '#',
+        externalLink: 'https://www.chexcar.co.kr/',
       },
       {
         name: '상품화 서비스 앱',
@@ -108,13 +133,19 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              'useLayoutEffect를 활용하여 모달 컴포넌트의 깜빡임 현상과 레이아웃 시프트를 해결',
-              '잦은 API 호출이 발생하던 구조를 TanStack Query 기반으로 리팩토링하여 불필요한 서버 통신과 스켈레톤 UI 노출 감소',
+              {
+                title:
+                  'useLayoutEffect를 활용하여 모달 컴포넌트의 깜빡임 현상과 레이아웃 시프트를 해결',
+              },
+              {
+                title:
+                  '잦은 API 호출이 발생하던 구조를 TanStack Query 기반으로 리팩토링하여 불필요한 서버 통신과 스켈레톤 UI 노출 감소',
+              },
             ],
           },
         ],
-        externalLink: '#',
-        blogLink: '#',
+        externalLink:
+          'https://apps.apple.com/kr/app/chexcar-%ED%8C%8C%ED%8A%B8%EB%84%88%EC%8A%A4/id6739533256',
       },
     ],
   },
@@ -141,14 +172,20 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              '텍스트, 이미지 캡션, 테이블 등 다양한 형식의 데이터를 입력할 수 있는 커스텀 에디터 개발',
-              '오탈자 검출 및 검색어 하이라이팅 기능 추가',
-              '신속한 검수 및 수정을 위한 찾기/바꾸기 기능 구현',
+              {
+                title:
+                  '텍스트, 이미지 캡션, 테이블 등 다양한 형식의 데이터를 입력할 수 있는 커스텀 에디터 개발',
+              },
+              {
+                title: '오탈자 검출 및 검색어 하이라이팅 기능 추가',
+              },
+              {
+                title: '신속한 검수 및 수정을 위한 찾기/바꾸기 기능 구현',
+              },
             ],
           },
         ],
         externalLink: 'https://encyclopedia.catholic.or.kr/',
-        blogLink: '#',
       },
       {
         name: 'KGM 챗봇',
@@ -160,11 +197,17 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             title: '',
             description: '',
             type: 'business',
-            items: ['메시지 컴포넌트 및 챗봇 UI 개발', 'KGM API 연동 및 채팅 상태 관리 구현'],
+            items: [
+              {
+                title: '메시지 컴포넌트 및 챗봇 UI 개발',
+              },
+              {
+                title: 'KGM API 연동 및 채팅 상태 관리 구현',
+              },
+            ],
           },
         ],
-        externalLink: 'https://encyclopedia.catholic.or.kr/',
-        blogLink: '#',
+        externalLink: 'https://kgchat.kg-mobility.com/',
       },
       {
         name: 'TmaxAI 홈페이지',
@@ -177,14 +220,20 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
             description: '',
             type: 'business',
             items: [
-              '최대 수백개의 바운딩 박스를 렌더링하는 페이지에서 웹 워커를 사용해 렌더링 속도를 5분의 1로 개선',
-              '인터랙티브 스크롤 애니메이션 개발 및 쓰로틀링 기법을 통한 성능 저하 방지',
-              'React-hook-form을 활용한 기술 도입 문의 폼 개발',
+              {
+                title:
+                  '최대 수백개의 바운딩 박스를 렌더링하는 페이지에서 웹 워커를 사용해 렌더링 속도를 5분의 1로 개선',
+              },
+              {
+                title: '인터랙티브 스크롤 애니메이션 개발 및 쓰로틀링 기법을 통한 성능 저하 방지',
+              },
+              {
+                title: 'React-hook-form을 활용한 기술 도입 문의 폼 개발',
+              },
             ],
           },
         ],
         externalLink: 'https://encyclopedia.catholic.or.kr/',
-        blogLink: '#',
       },
       {
         name: 'RGNews',
@@ -193,7 +242,6 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
         technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
         achievements: [],
         externalLink: 'https://encyclopedia.catholic.or.kr/',
-        blogLink: '#',
       },
       {
         name: '하이퍼챗봇',
@@ -202,7 +250,6 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
         technologies: ['Next.js 14(app)', 'tailwind', 'TanStack Query', 'Zustand', 'recharts'],
         achievements: [],
         externalLink: 'https://encyclopedia.catholic.or.kr/',
-        blogLink: '#',
       },
     ],
   },
