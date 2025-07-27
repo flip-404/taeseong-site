@@ -1,8 +1,8 @@
 ---
-title: "Next.js로 권한 기반 접근 제어(RBAC) 구축하기"
-description: "Next.js에서 권한 기반 접근 제어(RBAC)를 구현하는 방법에 대해 간단히 정리해보았습니다."
-tags: ["Next.js", "RBAC"]
-date: "2025-04-09"
+title: 'Next.js로 권한 기반 접근 제어(RBAC) 구축하기'
+description: 'Next.js에서 권한 기반 접근 제어(RBAC)를 구현하는 방법에 대해 간단히 정리해보았습니다.'
+tags: ['Next.js', 'RBAC']
+date: '2025-04-09'
 ---
 
 회사에서 새로운 SaaS 프로젝트를 시작하게 되었습니다. 이번 SaaS는 체카 운영팀뿐만 아니라, 현장 작업자, 협력사, 딜러사 등 다양한 이해관계자들이 모두 사용할 수 있는 통합 플랫폼을 만드는 것을 목표로 했습니다. 더불어, 각 소속별로 직급이 세분화되어 있기 때문에, 소속과 직급에 따라 접근 가능한 기능을 유연하게 제어할 수 있는 구조가 필요했습니다.
@@ -16,7 +16,6 @@ date: "2025-04-09"
 아래(예시 사진)과 같이 사이드바에 각 기능에 대한 navigation(라우트)가 있다고 가정하고, 유저의 권한에 따라 보여지는 (접근할 수 있는) 기능이 다르다고 가정해보겠습니다.
 
 ![](https://velog.velcdn.com/images/flip_404/post/c9e76439-c6b6-4e6b-bb5f-0b63cc00f16e/image.png)
-
 
 아래부터 관련한 예시 코드와 함께 권한(Role) 기반 접근 제어 방식에 대해 알아보겠습니다.
 
@@ -36,7 +35,6 @@ export interface Permission {
   editContent: boolean;
   viewReports: boolean;
 }
-
 ```
 
 ### 권한 매핑
@@ -131,7 +129,6 @@ export function Sidebar({ role }: SidebarProps) {
     </nav>
   );
 }
-
 ```
 
 ## 서버 사이드 권한 제어하기
@@ -163,7 +160,6 @@ export default async function UsersPage() {
     </div>
   );
 }
-
 ```
 
 ### Next.js Middleware를 활용한 권한 제어
@@ -189,8 +185,8 @@ Middleware를 사용한 권한 보호 흐름은 다음과 같습니다
 Next.js 루트(`/`)에 `middleware.ts` 파일을 생성합니다
 
 ```tsx
-tsx
-복사편집
+tsx;
+복사편집;
 // middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
@@ -241,11 +237,9 @@ export async function middleware(request: NextRequest) {
 `middleware.ts` 파일 아래에 다음과 같이 `matcher`를 설정하면, 해당 경로로 요청이 올 때만 Middleware가 발동됩니다.
 
 ```tsx
-
 export const config = {
   matcher: ['/users/:path*', '/content/:path*', '/reports/:path*'],
 };
-
 ```
 
 **마무리하며**

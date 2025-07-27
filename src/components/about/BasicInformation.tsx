@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { CustomTable, RowWrapper, T_Key, T_Value } from "../molecules/Table";
+import styled from '@emotion/styled';
+import { CustomTable, RowWrapper, T_Key, T_Value } from '../molecules/Table';
 
 const Container = styled.div`
   display: flex;

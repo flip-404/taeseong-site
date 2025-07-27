@@ -1,8 +1,8 @@
 ---
-title: "모노레포 적용하기 with 🚀Turborepo (2/2)"
-description: "모노레포에 대해 정리해보았습니다."
-tags: ["Monorepo", "Turborepo"]
-date: "2025-01-05"
+title: '모노레포 적용하기 with 🚀Turborepo (2/2)'
+description: '모노레포에 대해 정리해보았습니다.'
+tags: ['Monorepo', 'Turborepo']
+date: '2025-01-05'
 ---
 
 # Turborepo 도입기
@@ -116,8 +116,8 @@ packages/ui/index.tsx 파일을 살펴봅시다:
 
 ```tsx
 // packages/ui/index.tsx
-import * as React from "react";
-export * from "./Button";
+import * as React from 'react';
+export * from './Button';
 ```
 
 해당 파일에 있는 것은 ui에 의존하는 web이나 docs 등 모든 작업 공간이 사용할 수 있습니다.
@@ -126,7 +126,7 @@ index.tsx는 ./Button에 있는 것들을 모두 내보냅니다.
 
 ```tsx
 // packages/ui/Button.tsx
-import * as React from "react";
+import * as React from 'react';
 
 export const Button = () => {
   return <button>Boop</button>;
@@ -220,7 +220,7 @@ Turborepo는 모노레포 환경에서 프로젝트를 효율적으로 관리할
 
 ```js
 module.exports = {
-  extends: ["next", "turbo", "prettier"],
+  extends: ['next', 'turbo', 'prettier'],
 };
 ```
 
@@ -233,7 +233,7 @@ module.exports = {
 ```js
 module.exports = {
   root: true,
-  extends: ["custom"],
+  extends: ['custom'],
 };
 ```
 
@@ -319,7 +319,7 @@ turbo lint
 
 ```tsx
 // apps/docs/pages/index.tsx
-import { Button } from "ui";
+import { Button } from 'ui';
 
 export default function Docs() {
   return (

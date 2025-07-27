@@ -1,37 +1,30 @@
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO" // 추가
-import "prismjs/themes/prism-solarizedlight.css"
-import "prismjs/plugins/line-numbers/prism-line-numbers.css"
-import {
-  Content,
-  CreatedAt,
-  PostDetails,
-  Tag,
-  Tags,
-  Title,
-} from "../styles/post"
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO'; // 추가
+import 'prismjs/themes/prism-solarizedlight.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import { Content, CreatedAt, PostDetails, Tag, Tags, Title } from '../styles/post';
 
 interface BlogPostProps {
   data: {
     markdownRemark: {
       frontmatter: {
-        title: string
-        date: string
-        tags: string[]
-        description?: string
-      }
-      html: string
-    }
-  }
+        title: string;
+        date: string;
+        tags: string[];
+        description?: string;
+      };
+      html: string;
+    };
+  };
   location: {
-    pathname: string
-  }
+    pathname: string;
+  };
 }
 
 export default function BlogPost({ data, location }: BlogPostProps) {
-  const post = data.markdownRemark
-  const { title, tags, date } = post.frontmatter
+  const post = data.markdownRemark;
+  const { title, tags, date } = post.frontmatter;
 
   return (
     <>
@@ -53,7 +46,7 @@ export default function BlogPost({ data, location }: BlogPostProps) {
         <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       </Layout>
     </>
-  )
+  );
 }
 
 export const query = graphql`
@@ -68,4 +61,4 @@ export const query = graphql`
       html
     }
   }
-`
+`;

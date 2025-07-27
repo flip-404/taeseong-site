@@ -1,7 +1,4 @@
 // .babelrc or babel.config.js
 {
-  "presets": [
-    "babel-preset-gatsby",
-    ["@babel/preset-react", { "runtime": "automatic" }]
-  ]
+  "presets": ["babel-preset-gatsby", ["@babel/preset-react", { "runtime": "automatic" }]]
 }

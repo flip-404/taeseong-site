@@ -1,7 +1,7 @@
-import React from "react";
-import { Link as Link_ } from "gatsby";
-import styled from "@emotion/styled";
-import ChillGuy from "../images/chill-guy.png";
+import React from 'react';
+import { Link as Link_ } from 'gatsby';
+import styled from '@emotion/styled';
+import ChillGuy from '../images/chill-guy.png';
 
 const ProfileCardContainer = styled.div`
   display: flex;
@@ -76,16 +76,12 @@ const ProfileCard = () => {
       <Info>
         <Name to="/about">@김태성</Name>
         <Description>
-          사용자 경험을 최우선으로 생각하는 3년차 프론트엔드 개발자입니다.
-          효율적인 코드 작성과 유지보수를 위해 항상 노력합니다.
+          사용자 경험을 최우선으로 생각하는 3년차 프론트엔드 개발자입니다. 효율적인 코드 작성과
+          유지보수를 위해 항상 노력합니다.
         </Description>
         <Links>
           <Link to="/about">About</Link>
-          <a
-            href="https://github.com/flip-404"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/flip-404" target="_blank" rel="noopener noreferrer">
             Github
           </a>
         </Links>

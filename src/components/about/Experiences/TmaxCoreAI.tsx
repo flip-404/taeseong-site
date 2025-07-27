@@ -1,11 +1,11 @@
-import { CompanySection, CompanyTitle } from "../../../styles/common";
-import { CustomTable, RowWrapper, T_Key, T_Value } from "../../molecules/Table";
-import KGM_Project from "./Projects/TmaxAI_KGM_chatbot";
-import Catholic from "./Projects/TmaxAI_Catholic";
-import TmaxAIHomePage from "./Projects/TmaxAI_HomePage";
-import RGNews from "./Projects/TmaxAI_RGNews";
-import TmaxLogo from "../../../images/tmaxai_logo.jpeg";
-import HyperChatbot from "./Projects/TmaxAI_HyperChatbot";
+import { CompanySection, CompanyTitle } from '../../../styles/common';
+import { CustomTable, RowWrapper, T_Key, T_Value } from '../../molecules/Table';
+import KGM_Project from './Projects/TmaxAI_KGM_chatbot';
+import Catholic from './Projects/TmaxAI_Catholic';
+import TmaxAIHomePage from './Projects/TmaxAI_HomePage';
+import RGNews from './Projects/TmaxAI_RGNews';
+import TmaxLogo from '../../../images/tmaxai_logo.jpeg';
+import HyperChatbot from './Projects/TmaxAI_HyperChatbot';
 
 const TmaxCoreAI = () => {
   return (
@@ -19,11 +19,7 @@ const TmaxCoreAI = () => {
         <RowWrapper>
           <T_Key>Company</T_Key>
           <T_Value>
-            <a
-              href="https://www.tmax.co.kr/tmaxai"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.tmax.co.kr/tmaxai" target="_blank" rel="noopener noreferrer">
               Tmax AI
             </a>
           </T_Value>
@@ -38,9 +34,7 @@ const TmaxCoreAI = () => {
         </RowWrapper>
         <RowWrapper>
           <T_Key>Stack</T_Key>
-          <T_Value>
-            React, TanStack Query, useSWR, Recoil, Typescript, Styled-Components
-          </T_Value>
+          <T_Value>React, TanStack Query, useSWR, Recoil, Typescript, Styled-Components</T_Value>
         </RowWrapper>
       </CustomTable>
       <Catholic />

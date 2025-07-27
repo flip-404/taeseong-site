@@ -1,9 +1,9 @@
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import "prismjs/themes/prism-solarizedlight.css";
-import "prismjs/plugins/line-numbers/prism-line-numbers.css";
-import { Helmet } from "react-helmet";
-import { Content } from "../styles/post";
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import 'prismjs/themes/prism-solarizedlight.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import { Helmet } from 'react-helmet';
+import { Content } from '../styles/post';
 
 interface DetailPostProps {
   data: {
