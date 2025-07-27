@@ -85,13 +85,13 @@ export default function VideoComponent() {
         const roundedProgress = Math.round(progress * 100) / 100;
 
         // React 상태를 사용하지 않고, CSS 변수를 직접 설정하여 해당 변수로 transform 스타일을 제어
-        container.style.setProperty("--scroll-progress", roundedProgress);
+        container.style.setProperty('--scroll-progress', roundedProgress);
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
       cancelAnimationFrame(rafId);
     };
   }, []);

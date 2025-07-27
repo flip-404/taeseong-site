@@ -1,9 +1,9 @@
-import "../globalStyle.css";
-import { graphql, Link } from "gatsby";
-import BlogPreview from "../components/BlogPreview";
-import Layout from "../components/Layout";
-import ProfileCard from "../components/ProfileCard";
-import { Helmet } from "react-helmet";
+import '../globalStyle.css';
+import { graphql, Link } from 'gatsby';
+import BlogPreview from '../components/BlogPreview';
+import Layout from '../components/Layout';
+import ProfileCard from '../components/ProfileCard';
+import { Helmet } from 'react-helmet';
 
 type BlogListProps = {
   data: {
@@ -38,7 +38,7 @@ const IndexPage = ({ data }: BlogListProps) => {
           <Link
             to={`${node.fields.slug}`}
             key={node.fields.slug}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
           >
             <BlogPreview
               title={node.frontmatter.title}

@@ -1,8 +1,8 @@
 ---
-title: "Docker 시작하기"
-description: "도커(Docker) 튜토리얼"
-tags: ["Docker"]
-date: "2024-05-18"
+title: 'Docker 시작하기'
+description: '도커(Docker) 튜토리얼'
+tags: ['Docker']
+date: '2024-05-18'
 ---
 
 ## 도커(Docker)의 등장

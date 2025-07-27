@@ -1,8 +1,8 @@
 ---
-title: "크롬 개발자도구 Performance 탭 활용"
-description: "Performance 탭을 분석하여 사이트의 성능 개선이 필요한 부분을 파악하는 방법, 그리고 이에 대한 예시 코드를 작성해 보았습니다."
-tags: ["Chrome Developer Tools", "Performance", "최적화"]
-date: "2025-03-19"
+title: '크롬 개발자도구 Performance 탭 활용'
+description: 'Performance 탭을 분석하여 사이트의 성능 개선이 필요한 부분을 파악하는 방법, 그리고 이에 대한 예시 코드를 작성해 보았습니다.'
+tags: ['Chrome Developer Tools', 'Performance', '최적화']
+date: '2025-03-19'
 ---
 
 # 크롬 개발자 도구 퍼포먼스 탭 활용법
@@ -202,7 +202,7 @@ Event Log 탭은 기록 중 발생한 모든 이벤트(DOM 이벤트, 네트워�
 
 ```javascript
 // 기존 방식 (모든 코드를 한 번에 로드)
-import { heavyFunction } from "./heavyModule";
+import { heavyFunction } from './heavyModule';
 
 function handleClick() {
   heavyFunction();
@@ -210,7 +210,7 @@ function handleClick() {
 
 // 최적화 방식 (필요할 때만 동적 import)
 function handleClick() {
-  import("./heavyModule").then((module) => {
+  import('./heavyModule').then((module) => {
     module.heavyFunction();
   });
 }
@@ -223,17 +223,17 @@ function handleClick() {
 
 ```javascript
 // main.js (메인 스레드)
-const worker = new Worker("worker.js");
+const worker = new Worker('worker.js');
 
 // 무거운 작업을 워커에 위임
-document.querySelector("#calculate-btn").addEventListener("click", () => {
+document.querySelector('#calculate-btn').addEventListener('click', () => {
   const data = { numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] };
   worker.postMessage(data);
 });
 
 // 워커로부터 결과 받기
 worker.onmessage = function (e) {
-  document.querySelector("#result").textContent = e.data.result;
+  document.querySelector('#result').textContent = e.data.result;
 };
 
 // worker.js (별도 스레드)
@@ -260,7 +260,7 @@ function heavyCalculation(numbers) {
 
 ```javascript
 // 기존 코드 (스크롤 이벤트마다 실행)
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
   updateElementsPosition();
 });
 
@@ -279,7 +279,7 @@ function throttle(func, limit) {
 }
 
 window.addEventListener(
-  "scroll",
+  'scroll',
   throttle(function () {
     updateElementsPosition();
   }, 100)
@@ -302,11 +302,11 @@ window.addEventListener(
 ```javascript
 // 비효율적인 방식 (각 변경 후 레이아웃 재계산 발생)
 function updateBoxes(items) {
-  const container = document.getElementById("container");
+  const container = document.getElementById('container');
 
   for (let i = 0; i < items.length; i++) {
-    const div = document.createElement("div");
-    div.className = "box";
+    const div = document.createElement('div');
+    div.className = 'box';
     div.textContent = items[i].name;
     container.appendChild(div); // 매번 DOM이 업데이트됨
 
@@ -321,17 +321,17 @@ function updateBoxesOptimized(items) {
   const measurements = [];
 
   for (let i = 0; i < items.length; i++) {
-    const div = document.createElement("div");
-    div.className = "box";
+    const div = document.createElement('div');
+    div.className = 'box';
     div.textContent = items[i].name;
     fragment.appendChild(div);
   }
 
   // 한 번에 DOM에 추가
-  document.getElementById("container").appendChild(fragment);
+  document.getElementById('container').appendChild(fragment);
 
   // 읽기 작업은 쓰기 작업 이후에 모아서 처리
-  const boxes = document.querySelectorAll(".box");
+  const boxes = document.querySelectorAll('.box');
   for (let i = 0; i < boxes.length; i++) {
     measurements.push(boxes[i].offsetHeight);
   }
@@ -442,19 +442,16 @@ function updateBoxesOptimized(items) {
 
 ```javascript
 // 인터섹션 옵저버를 활용한 레이지 로딩 구현
-document.addEventListener("DOMContentLoaded", function () {
-  const lazyImages = document.querySelectorAll("img.lazy");
+document.addEventListener('DOMContentLoaded', function () {
+  const lazyImages = document.querySelectorAll('img.lazy');
 
-  if ("IntersectionObserver" in window) {
-    const imageObserver = new IntersectionObserver(function (
-      entries,
-      observer
-    ) {
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver(function (entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           const image = entry.target;
           image.src = image.dataset.src;
-          image.classList.remove("lazy");
+          image.classList.remove('lazy');
           imageObserver.unobserve(image);
         }
       });
@@ -478,19 +475,19 @@ document.addEventListener("DOMContentLoaded", function () {
         lazyImages.forEach(function (img) {
           if (img.offsetTop < window.innerHeight + scrollTop) {
             img.src = img.dataset.src;
-            img.classList.remove("lazy");
+            img.classList.remove('lazy');
           }
         });
 
         if (lazyImages.length == 0) {
-          document.removeEventListener("scroll", lazyLoad);
-          window.removeEventListener("resize", lazyLoad);
+          document.removeEventListener('scroll', lazyLoad);
+          window.removeEventListener('resize', lazyLoad);
         }
       }, 20);
     }
 
-    document.addEventListener("scroll", lazyLoad);
-    window.addEventListener("resize", lazyLoad);
+    document.addEventListener('scroll', lazyLoad);
+    window.addEventListener('resize', lazyLoad);
   }
 });
 ```
@@ -573,13 +570,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ```html
 <!-- 주요 리소스 미리 로드 -->
-<link
-  rel="preload"
-  href="critical-font.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/>
+<link rel="preload" href="critical-font.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="hero-image.jpg" as="image" />
 
 <!-- 향후 필요한 리소스 미리 연결 설정 -->
@@ -608,8 +599,8 @@ document.addEventListener("DOMContentLoaded", function () {
 ```css
 /* font-display 속성 활용 */
 @font-face {
-  font-family: "MyCustomFont";
-  src: url("my-font.woff2") format("woff2");
+  font-family: 'MyCustomFont';
+  src: url('my-font.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   /* swap: 폰트 로딩 중 시스템 폰트 먼저 표시 후 교체 */
@@ -618,8 +609,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* 필수 아이콘 폰트만 선택적으로 로드 */
 @font-face {
-  font-family: "IconFont";
-  src: url("icon-font-subset.woff2") format("woff2");
+  font-family: 'IconFont';
+  src: url('icon-font-subset.woff2') format('woff2');
   unicode-range: U+E000-E005; /* 필요한 아이콘만 포함하는 유니코드 범위 */
   font-display: block;
 }
@@ -627,13 +618,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ```html
 <!-- 중요 폰트 미리 로드 -->
-<link
-  rel="preload"
-  href="my-font.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/>
+<link rel="preload" href="my-font.woff2" as="font" type="font/woff2" crossorigin />
 ```
 
 </details>
