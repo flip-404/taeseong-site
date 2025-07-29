@@ -6,6 +6,7 @@ module.exports = {
     author: `Taeseong`,
   },
   plugins: [
+    'gatsby-plugin-postcss',
     'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-source-filesystem',
