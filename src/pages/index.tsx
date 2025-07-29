@@ -38,8 +38,7 @@ const IndexPage = ({ data }: BlogListProps) => {
           <Link
             to={`${node.fields.slug}`}
             key={node.fields.slug}
-            style={{ textDecoration: 'none' }}
-          >
+            style={{ textDecoration: 'none' }}>
             <BlogPreview
               title={node.frontmatter.title}
               description={node.frontmatter.description}

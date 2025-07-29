@@ -1,4 +1,4 @@
-import React from 'react';
+import '../../globalStyle.css';
 import PhilosophySection from '../../components/about/PhilosophySection';
 import Header from '../../components/about/Header';
 import WorkSection from '../../components/about/WorkSection';
