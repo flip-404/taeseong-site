@@ -14,6 +14,7 @@ interface BlogPostProps {
         tags: string[];
         description?: string;
       };
+
       html: string;
     };
   };
