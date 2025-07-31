@@ -59,8 +59,7 @@ const BlogPreview = ({
   description: string;
   date: string;
   tags: string[];
-  }) => {
-
+}) => {
   return (
     <BlogPreviewWrapper>
       <Title>{title}</Title>
