@@ -61,18 +61,56 @@ const BlogPreview = ({
   tags: string[];
 }) => {
   return (
-    <BlogPreviewWrapper>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      <Meta>
-        <CreatedAt>{date}</CreatedAt>
-        <TagList>
-          {tags.map((tag) => (
-            <Tag>{tag}</Tag>
-          ))}
-        </TagList>
-      </Meta>
-    </BlogPreviewWrapper>
+    <article className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300 cursor-pointer mb-4">
+      {/* 날짜 */}
+      <div className="flex items-center text-sm text-gray-500 mb-1">
+        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
+        {date}
+      </div>
+
+      {/* 제목 */}
+      <h2 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors duration-200">
+        {title}
+      </h2>
+
+      {/* 설명 */}
+      <p className="text-gray-600 mb-1 leading-relaxed">{description}</p>
+
+      {/* 태그 */}
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {/* 호버 시 나타나는 화살표 아이콘 */}
+      <div className="mt-4 flex items-center text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <span className="text-sm font-medium mr-2">자세히 보기</span>
+        <svg
+          className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </svg>
+      </div>
+    </article>
   );
 };
 

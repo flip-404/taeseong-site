@@ -27,7 +27,7 @@ const AchievementList: React.FC<AchievementListProps> = ({ achievements, classNa
               {item.title}
               {item.link && (
                 <Link to={item.link} target="_blank">
-                  <span className="ml-2 flex items-center bg-amber-300 gap-1 px-1 rounded-md text-xs text-gray-700">
+                  <span className="ml-2 flex items-center bg-amber-300 gap-1 px-1 rounded-md text-xs text-gray-700 whitespace-nowrap">
                     <ExternalLink size={12} />
                     {item.linkDescription}
                   </span>

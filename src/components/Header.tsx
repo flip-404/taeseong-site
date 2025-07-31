@@ -10,12 +10,11 @@ const HeaderContainer = styled.header`
   top: 0;
   height: 60px;
   width: 100%;
-  background-color: #2db400;
+  background-color: white;
   display: flex;
   align-items: center;
-  color: white;
-
-
+  color: black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
   @media (max-width: 780px) {
     height: 45px;
@@ -28,7 +27,7 @@ const HeaderContainer = styled.header`
 `;
 
 const Link = styled(Link_)`
-padding-left: 26px;
+  padding-left: 26px;
   font-size: 24px;
   font-weight: 900;
   text-decoration: none;
@@ -36,7 +35,6 @@ padding-left: 26px;
   &:visited {
     color: inherit;
   }
-
 
   @media (max-width: 780px) {
     padding-left: 16px;
