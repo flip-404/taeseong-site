@@ -31,6 +31,8 @@ const Main = styled.main`
 
   @media (max-width: 780px) {
     padding-top: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
     width: 100%;
   }
 `;
