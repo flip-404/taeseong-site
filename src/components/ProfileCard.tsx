@@ -10,7 +10,7 @@ const ProfileCardContainer = styled.div`
 `;
 
 const ProfileImage = styled.div`
-  flex-shrink: 0; 
+  flex-shrink: 0;
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -34,7 +34,7 @@ const Name = styled(Link_)`
   width: fit-content;
   border-radius: 8px;
   padding: 3px 6px;
-  background-color: #baefb4;
+  background-color: #dbeafe;
 
   text-decoration: none;
   color: black;
@@ -55,7 +55,7 @@ const Links = styled.div`
   a {
     text-decoration: none;
     font-size: 0.8rem;
-    color: #35ba09;
+    color: #1240af;
     font-weight: 600;
   }
 `;
@@ -63,7 +63,7 @@ const Links = styled.div`
 const Link = styled(Link_)`
   text-decoration: none;
   font-size: 0.8rem;
-  color: #35ba09;
+  color: #1240af;
   font-weight: 600;
 `;
 
