@@ -1,6 +1,6 @@
 ---
 title: '웹 워커(Web Worker)'
-description: '웹 워커(Web Worker)에 대해 정리해보았습니다.'
+description: '이모 여기 스레드 하나 더 추가요'
 tags: ['Web Worker']
 date: '2024-10-07'
 ---
