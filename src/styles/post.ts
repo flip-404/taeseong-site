@@ -145,7 +145,7 @@ export const Content = styled.div`
 
   /* 단락 스타일링 */
   p {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 
     &:first-child {
       margin-top: 0;
@@ -234,8 +234,12 @@ export const Content = styled.div`
   /* 리스트 스타일링 */
   ul,
   ol {
-    margin: 1.5rem 0;
+    margin: 0.5rem 0;
     padding-left: 2rem;
+
+    li {
+      margin: 0;
+    }
   }
 
   ul {
