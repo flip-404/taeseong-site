@@ -91,6 +91,14 @@ export const WORK_EXPERIENCES: WorkExperience[] = [
                 title:
                   'Next.js의 middleware를 활용한 쿠키 기반 인증으로 서버 사이드 검증 로직 구현',
               },
+              {
+                title: '서버액션과 fetch API를 통한 네트워크 요청 모듈화',
+                link: '/blog/2025/네트워크%20요청%20모듈화%20하기/',
+                linkDescription: '포스트',
+              },
+              {
+                title: '약 40+개의 페이지 단독 개발 및 유지보수',
+              },
             ],
           },
         ],
