@@ -1,6 +1,6 @@
 ---
 title: '프론트엔드 에러 모니터링 with Sentry'
-description: '프론트엔드에서 어떻게 에러를 모니터링할까?'
+description: '이젠 "어디서 터졌어?" 안 해도 됨. Sentry가 먼저 말함'
 tags: ['Sentry', 'Error']
 date: '2025-02-14'
 ---

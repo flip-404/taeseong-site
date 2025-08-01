@@ -1,6 +1,6 @@
 ---
 title: 'Vite 살펴보기'
-description: 'Vite에 대해 정리해보았습니다.'
+description: 'Vite는 어떻게 빠를까?'
 tags: ['Vite']
 date: '2024-03-14'
 ---

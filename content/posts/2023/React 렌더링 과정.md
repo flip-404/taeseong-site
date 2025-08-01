@@ -1,6 +1,6 @@
 ---
 title: 'React 렌더링 과정'
-description: ''
+description: '브라우저 렌더링과 React 렌더링 과정 이해하기'
 tags: ['React.js']
 date: '2023-01-03'
 ---
