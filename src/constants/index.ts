@@ -300,7 +300,7 @@ export const PERSONAL_PROJECTS: PersonalProject[] = [
     name: '남비티아이',
     date: '2025.08월 5일 배포 - 현재',
     description:
-      '친구들이 생각하는 내 MBTI는 과연 무엇일까? 추측을 통해 알아보는 서비스 \n 배포 하루만에 DAU 500+을 달성하고, 총 1000명 이상의 사용자가 이용하고 있습니다.',
+      '친구들이 생각하는 내 MBTI는 과연 무엇일까? 추측을 통해 알아보는 서비스 \n 배포 하루만에 활성 사용자 500+ 달성하고, 총 2000+개의 MBTI 설문 결과를 달성했습니다. (08.06 기준)',
     tech: ['Next.js', 'Zustand', 'TypeScript', 'Prisma', 'Supabase', 'Tailwindcss'],
     logo: 'Nambti',
     link: 'https://nambti.site/',
