@@ -43,7 +43,9 @@ const ProjectItem: React.FC<{ project: PersonalProject }> = ({ project }) => {
           </div>
           <DateDisplay date={date} />
         </div>
-        <p className="text-gray-700 text-sm mb-4 leading-relaxed">{description}</p>
+        <p className="text-gray-700 text-sm mb-4 leading-relaxed whitespace-pre-line">
+          {description}
+        </p>
         <TechBadge technologies={tech} />
       </Card>
     </div>
