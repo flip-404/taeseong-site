@@ -451,4 +451,62 @@ export const Content = styled.div`
       padding: 0.5rem 0.75rem;
     }
   }
+
+  /* 이미지 + 캡션 (figure/figcaption) */
+  figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  figure img,
+  figure a > img {
+    margin: 0; /* 기존 img 기본 마진 제거 */
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  figcaption,
+  .caption {
+    /* 보조 캡션 선택자도 동일 스타일 */
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6b7280;
+  }
+
+  /* 좌/우/가운데 정렬 유틸 */
+  figure.align-left {
+    text-align: left;
+  }
+  figure.align-right {
+    text-align: right;
+  }
+  figure.align-center {
+    text-align: center;
+  }
+
+  /* 번호 매겨진 캡션을 쓰고 싶다면: Content에 .numbered를 추가 */
+  &.numbered {
+    counter-reset: fig;
+    figure {
+      counter-increment: fig;
+    }
+    figcaption::before {
+      content: '그림 ' counter(fig) '. ';
+      font-weight: 600;
+      color: #4b5563;
+    }
+  }
+
+  /* 모바일에서 캡션 글자 조금 줄이기 */
+  @media (max-width: 768px) {
+    figcaption,
+    .caption {
+      font-size: 0.85rem;
+    }
+  }
 `;
